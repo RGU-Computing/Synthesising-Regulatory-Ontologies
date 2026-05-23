@@ -1,0 +1,2947 @@
+Sample_ID,Chunk_ID,Provision_Type,Jurisdiction,Source_Text,Extracted_RDF,Q1_Subject_Faithful,Q2_Predicate_Faithful,Q3_Object_Faithful,Q4_Overall_Faithful
+001,AUS-UNIT-00594,CalculationRule,AU,"Parts of the levy are calculated using a provider’s validated data from previous years so that it reflects the provider’s actual enrolments and risk. Therefore, it is essential that you ensure your reportable data is up to date. The levy is held in a sector-specific quarantined account and is used to support students and providers. Tuition protection arrangements can be used only for tuition fees paid using a VET Student Loan.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00594 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00594"" .
+
+gro-au:LevyPart a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Levy Part"" ;
+    skos:definition ""A portion of the levy that is calculated using a provider's validated data from previous years to reflect actual enrolments and risk."" .
+
+data:AUS_UNIT_00594_subject_2c8009 a gro-au:LevyPart ;
+    rdfs:label ""Levy Part"" ;
+    skos:definition ""Parts of the levy that are calculated using a provider's validated data from previous years so that it reflects the provider's actual enrolments and risk."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00594 .
+
+data:AUS_UNIT_00594_object_ec2f7e a cco:Resource ;
+    rdfs:label ""Validated Provider Data"" ;
+    skos:definition ""A provider's validated data from previous years used in the calculation of levy parts."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00594 .
+
+data:AUS_UNIT_00594_action_c50b59 a cco:Action ;
+    rdfs:label ""Levy Part Calculation"" ;
+    cco:hasActionExpression ""Parts of the levy are calculated using a provider's validated data from previous years"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00594 .
+
+data:AUS_UNIT_00594_condition_prev_years a cco:Condition ;
+    rdfs:label ""Previous Years Data"" ;
+    cco:hasConditionExpression ""from previous years"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00594 .
+
+data:AUS_UNIT_00594_norm_4b7e57 a cco:Norm ;
+    rdfs:label ""Levy Calculation Rule"" ;
+    skos:definition ""Parts of the levy are calculated using a provider's validated data from previous years so that it reflects the provider's actual enrolments and risk."" ;
+    cco:hasObject data:AUS_UNIT_00594_subject_2c8009 ;
+    cco:hasAction data:AUS_UNIT_00594_action_c50b59 ;
+    cco:appliesUnder data:AUS_UNIT_00594_condition_prev_years ;
+    prov:wasDerivedFrom data:AUS_UNIT_00594 .",P,P,P,P
+002,CAN-UNIT-00357,CalculationRule,CA,"StudentAid BC assesses a student’s financial need based on information provided through a student’s StudentAid BC application. The assessment of need process evaluates the student’s allowable costs and the student and/or family’s available resources to determine the student’s assessed financial need. Some financial information provided in the application may be verified against the applicant’s Income Tax Return Notice of Assessment. Applicants are considered for student financial assistance through both federal and provincial loan and grant programs. Each student’s application is subject to both a federal financial need assessment calculation based on Canada Student Financial Assistance Program policy, and a provincial financial need assessment calculation based on StudentAid BC policy. As a result, each StudentAid BC application will result in both a federal assessed need and a provincial assessed need.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00357 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00357"" .
+
+gro-ca:AssessedFinancialNeed a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Assessed Financial Need"" ;
+    skos:definition ""The calculated financial need of a student, determined by evaluating allowable costs against available resources as part of the StudentAid BC assessment process."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+gro-ca:StudentAidBC a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""StudentAid BC"" ;
+    skos:definition ""The provincial organisation responsible for assessing student financial need and administering student financial assistance in British Columbia, Canada."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+data:CAN_UNIT_00357_subject_d9cf90 a gro-ca:StudentAidBC ;
+    rdfs:label ""StudentAid BC"" ;
+    skos:altLabel ""StudentAid BC"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+data:CAN_UNIT_00357_action_2e8c39 a cco:Action ;
+    rdfs:label ""Financial Need Assessment"" ;
+    cco:hasActionExpression ""assesses a student’s financial need based on information provided through a student’s StudentAid BC application"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+data:CAN_UNIT_00357_object_b0b89d a gro-ca:AssessedFinancialNeed ;
+    rdfs:label ""Student Financial Need"" ;
+    skos:definition ""The financial need of a student as assessed by StudentAid BC, based on allowable costs and available resources."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+data:CAN_UNIT_00357_authority_cd231e a cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""StudentAid BC Authority"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .
+
+data:CAN_UNIT_00357_norm_fca4c6 a cco:Obligation ;
+    rdfs:label ""Financial Need Assessment Obligation"" ;
+    gro:hasSubject data:CAN_UNIT_00357_subject_d9cf90 ;
+    cco:hasAction data:CAN_UNIT_00357_action_2e8c39 ;
+    cco:hasObject data:CAN_UNIT_00357_object_b0b89d ;
+    prov:wasDerivedFrom data:CAN_UNIT_00357 .",Y,P,P,P
+003,UK-UNIT-00111,CalculationRule,UK,"Calculate the percentage of prior learning that the individual has, as a percentage of the off-the-job training hours that would be delivered to an individual with no relevant prior learning for the same standard. Providers must use their own planned hours which must be at least (but can be higher than) the volume of off-the-job training hours published on the standard (or in Annex C) as the starting point for the calculation (see paragraph 80). For example, if the individual’s prior learning accounts for 300 off-the-job training hours and typically, for the same standard, the provider would usually plan to deliver 1,000 hours to an individual with no prior learning, this would equate to a 30% prior learning percentage. Further examples can be found in the RPL guidance (see paragraph 30.2).","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00111 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00111"" .
+
+gro-uk:PriorLearningPercentage a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Prior Learning Percentage"" ;
+    skos:definition ""The percentage of prior learning that an individual has, calculated as a percentage of the off-the-job training hours that would be delivered to an individual with no relevant prior learning for the same standard."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .
+
+data:UK_UNIT_00111_subject_37e0da a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that delivers training and must calculate the prior learning percentage."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .
+
+data:UK_UNIT_00111_action_137735 a cco:Action ;
+    rdfs:label ""Calculate Prior Learning Percentage"" ;
+    cco:hasActionExpression ""Calculate the percentage of prior learning that the individual has, as a percentage of the off-the-job training hours that would be delivered to an individual with no relevant prior learning for the same standard."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .
+
+data:UK_UNIT_00111_object_a89e5e a gro-uk:PriorLearningPercentage ;
+    rdfs:label ""Prior Learning Percentage"" ;
+    skos:definition ""The calculated percentage representing an individual's prior learning relative to standard off-the-job training hours."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .
+
+data:UK_UNIT_00111_condition_planned_hours a cco:Condition ;
+    rdfs:label ""Planned Hours Starting Point"" ;
+    cco:hasConditionExpression ""Providers must use their own planned hours which must be at least (but can be higher than) the volume of off-the-job training hours published on the standard (or in Annex C) as the starting point for the calculation (see paragraph 80)."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .
+
+data:UK_UNIT_00111_norm_1ee185 a cco:Obligation ;
+    rdfs:label ""Prior Learning Calculation Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00111_subject_37e0da ;
+    cco:hasAction data:UK_UNIT_00111_action_137735 ;
+    cco:hasObject data:UK_UNIT_00111_object_a89e5e ;
+    cco:appliesUnder data:UK_UNIT_00111_condition_planned_hours ;
+    prov:wasDerivedFrom data:UK_UNIT_00111 .",Y,Y,Y,Y
+004,USA-UNIT-00193,CalculationRule,US,"Student's (and Spouse's) available income. The student's (and spouse's) available income is calculated by subtracting certain allowances from the student's (and spouse's) total income. These allowances account for certain nondiscretionary expenses, such as taxes and basic living expenses. Once a minimum level of support has been offset for those expenses, the formula assumes that the remaining income is available for discretionary purposes, including paying for a postsecondary education. The available income can be a negative number. The student's (and spouse's) available income is the sum of the taxable and untaxed income minus amounts reported in the income but excluded from the formula (offsets and allowances). Student's (and spouse's) taxed/untaxed income. The sum of the following items, reported on a U.S. tax return, is the student's (and spouse's) total income:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00193 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00193"" .
+
+gro-us:AvailableIncome a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Available Income"" ;
+    skos:definition ""The student's (and spouse's) available income, calculated by subtracting certain allowances from total income. It represents income available for discretionary purposes, including postsecondary education costs."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00193 .
+
+data:USA_UNIT_00193_subject_2f0f1c a gro-us:AvailableIncome ;
+    rdfs:label ""Student and Spouse Available Income"" ;
+    skos:definition ""The student's (and spouse's) available income is calculated by subtracting certain allowances from the student's (and spouse's) total income. These allowances account for certain nondiscretionary expenses, such as taxes and basic living expenses. Once a minimum level of support has been offset for those expenses, the formula assumes that the remaining income is available for discretionary purposes, including paying for a postsecondary education. The available income can be a negative number. The student's (and spouse's) available income is the sum of the taxable and untaxed income minus amounts reported in the income but excluded from the formula (offsets and allowances)."" ;
+    skos:altLabel ""Student's (and Spouse's) available income"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00193 .
+
+data:USA_UNIT_00193_action_d4629c a cco:Action ;
+    rdfs:label ""Calculate Available Income"" ;
+    cco:hasActionExpression ""The student's (and spouse's) available income is calculated by subtracting certain allowances from the student's (and spouse's) total income."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00193 .
+
+data:USA_UNIT_00193_object_b0c5f2 a cco:Resource ;
+    rdfs:label ""Available Income"" ;
+    skos:definition ""The resulting available income amount, which can be a negative number."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00193 .
+
+data:USA_UNIT_00193_norm_cc02c4 a cco:Norm ;
+    rdfs:label ""Available Income Calculation Rule"" ;
+    cco:hasAction data:USA_UNIT_00193_action_d4629c ;
+    cco:hasObject data:USA_UNIT_00193_object_b0c5f2 ;
+    prov:wasDerivedFrom data:USA_UNIT_00193 .",P,P,P,P
+005,AUS-UNIT-00165,Definition,AU,"A tuition fee for a course includes the maximum amount covered by a VET Student Loan and the remaining tuition cost not covered by the loan – the ‘gap fee’. As it’s part of the tuition fee, the gap fee can’t include fees for non -tuition services such as items and equipment that become the student’s physical property and are not consumed in the course (for example, maps, charts or textbooks). These are fees that are not covered by a VET Student Loan. You can offer students a payment plan to help them pay a gap fee or pay all their tuition fees upfront. This will allow them to pay in instalments or defer the payment.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00165 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00165"" .
+
+gro-au:GapFee a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Gap Fee"" ;
+    skos:definition ""A tuition fee for a course includes the maximum amount covered by a VET Student Loan and the remaining tuition cost not covered by the loan – the ‘gap fee’. As it’s part of the tuition fee, the gap fee can’t include fees for non-tuition services such as items and equipment that become the student’s physical property and are not consumed in the course (for example, maps, charts or textbooks)."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00165 .",Y,Y,Y,Y
+006,CAN-UNIT-00434,Definition,CA,"• All children 18 years of age and under • All children aged 19 and over who are full-time dependent students • Children with disabilities aged 19 and over • Elderly relatives who are fully supported by the parent(s) and declared on the T1 General Income Tax and Benefit Return • Foster children, where foster parent income is claimed on Appendix 1","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00434 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00434"" .
+
+gro-ca:FamilySize a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Family Size"" ;
+    skos:definition ""Family size includes all children 18 years of age and under, all children aged 19 and over who are full-time dependent students, children with disabilities aged 19 and over, elderly relatives who are fully supported by the parent(s) and declared on the T1 General Income Tax and Benefit Return, and foster children where foster parent income is claimed on Appendix 1."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00434 .",Y,Y,Y,Y
+007,CAN-UNIT-00404,Definition,CA,"To describe the various student and/or family resources that are included in the financial need assessment to determine an expected student, spousal and/or parental contribution(s) to meet the assessed costs of post-secondary study. Each student’s application is subject to both a federal need assessment calculation based on Canada Student Financial Assistance Program policies regarding income and other resources, and a provincial need assessment calculation based on Student Aid BC policies regarding income and other resources. The need assessment calculation considers three main types of resources: A. Student expected contribution; B. Spousal/common-law partner expected contribution; and C. Parental/step-parent/legal guardian/sponsor expected contribution. Each type of resource is described in the following sections. A. Student expected contribution The expected student contribution is composed of:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00404 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00404"" .
+
+gro-ca:StudentAndFamilyResources a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student and Family Resources"" ;
+    skos:definition ""To describe the various student and/or family resources that are included in the financial need assessment to determine an expected student, spousal and/or parental contribution(s) to meet the assessed costs of post-secondary study."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00404 .",Y,Y,P,P
+008,UK-UNIT-00269,Definition,UK,The start and end date of the practical period (this is the part of the apprenticeship where evidenced learning is delivered; this does not include the end-point assessment);,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00269 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00269"" .
+
+gro-uk:PracticalPeriod a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Practical Period"" ;
+    skos:definition ""The start and end date of the practical period (this is the part of the apprenticeship where evidenced learning is delivered; this does not include the end-point assessment)"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00269 .",Y,Y,Y,Y
+009,UK-UNIT-00241,Definition,UK,"An apprenticeship is a job with training. Through an apprenticeship, an apprentice will gain the technical knowledge, practical experience and wider skills and behaviours that they need to be competent in their immediate job and future career. The apprentice will gain this through:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00241 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00241"" .
+
+gro-uk:Apprenticeship a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprenticeship"" ;
+    skos:definition ""An apprenticeship is a job with training. Through an apprenticeship, an apprentice will gain the technical knowledge, practical experience and wider skills and behaviours that they need to be competent in their immediate job and future career."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00241 .",Y,Y,Y,Y
+010,UK-UNIT-01208,Definition,UK,"Learning planned end date When learning towards the apprenticeship is planned to finish. Learning start date This is when learning, which is being funded by the apprenticeship budget, begins. It can include off-the-job training and English and maths. It does not include enrolment, initial assessment or induction. There must be evidence of learning on this date. Learning support Financial support that providers can claim to help with the cost of any reasonable adjustments directly related to an apprenticeship. Currently a fixed monthly amount of £150. Any extra cost can be claimed through the Earnings Adjustment Statement (EAS). Learning support must only be used to support apprentices who have been assessed as having a learning disability or difficulty (for which a reasonable adjustment is required in order for them to undertake their apprenticeship) and is not to be used to address learning gaps. Levy See ‘Apprenticeship levy’. Levy-paying employer An employer, or group of connected employers, with a collective annual pay bill of over £3 million who therefore pay the levy. Main provider A main provider is an organisation that is on the ‘main provider’ route of the Apprenticeship Provider and Assessment Register (APAR). They may be a ‘provider’ or a ‘subcontractor’. See also ‘Provider’ and ‘Subcontractor’.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_01208 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-01208"" .
+
+gro-uk:LearningSupport a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Learning Support"" ;
+    skos:definition ""Financial support that providers can claim to help with the cost of any reasonable adjustments directly related to an apprenticeship, currently a fixed monthly amount of £150."" ;
+    prov:wasDerivedFrom data:UK_UNIT_01208 .",Y,Y,P,P
+011,USA-UNIT-00043,Definition,US,"<Contributor= refers to anyone who is required to provide information, consent, and approval, and a signature on the FAFSA form. The FAFSA form is organized by contributor. Each contributor will complete their own section of the form which contains specific questions and instructions pertaining to that contributor. The guidance in this chapter supplements those instructions and explains why some of the questions are needed on the FAFSA form. The following sections discuss the questions found within each contributor section on the FAFSA form. The parents mentioned are the legal parents of dependent students. The numbers in parentheses are for the items as they appear on the FAFSA Submission Summary, ISIR, paper (PDF) FAFSA, and FAFSA Partner Portal. The FAFSA form is considered a <snapshot= of the family's information as of the date the application is signed and it can be updated only in certain circumstances and only for certain items. See Chapter 4 for more information about updating a FAFSA form.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00043 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00043"" .
+
+gro-us:Contributor a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Contributor"" ;
+    skos:definition ""Contributor refers to anyone who is required to provide information, consent, and approval, and a signature on the FAFSA form."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00043 .",Y,Y,Y,Y
+012,AUS-UNIT-00020,EligibilityRule,AU,"• have a record of satisfactory conduct in relation to the provision of previous vocational education and training for which the Commonwealth, a state or territory provided funding. To apply to be an approved provider, you must:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00020 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00020"" .
+
+gro-au:ApprovedCourseProvider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""A role held by an entity that is approved to provide vocational education and training courses."" .
+
+gro-au:PreviousGovernmentFundedVET a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Previous Government-Funded VET"" ;
+    skos:definition ""Previous vocational education and training for which the Commonwealth, a state or territory provided funding."" .
+
+data:AUS_UNIT_00020_subject_2bd36e a gro-au:ApprovedCourseProvider ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00020 .
+
+data:AUS_UNIT_00020_action_92b61d a cco:Action ;
+    rdfs:label ""Record of Satisfactory Conduct"" ;
+    cco:hasActionExpression ""have a record of satisfactory conduct in relation to the provision of previous vocational education and training for which the Commonwealth, a state or territory provided funding"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00020 .
+
+data:AUS_UNIT_00020_object_7bc382 a gro-au:PreviousGovernmentFundedVET ;
+    rdfs:label ""Previous Government-Funded VET"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00020 .
+
+data:AUS_UNIT_00020_condition_010be3 a cco:Condition ;
+    rdfs:label ""Application for Approved Provider"" ;
+    cco:hasConditionExpression ""To apply to be an approved provider"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00020 .
+
+data:AUS_UNIT_00020_norm_d581ba a cco:Obligation ;
+    rdfs:label ""Satisfactory Conduct Record Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00020_subject_2bd36e ;
+    cco:hasAction data:AUS_UNIT_00020_action_92b61d ;
+    cco:hasObject data:AUS_UNIT_00020_object_7bc382 ;
+    cco:appliesUnder data:AUS_UNIT_00020_condition_010be3 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00020 .",Y,Y,Y,Y
+013,CAN-UNIT-00081,EligibilityRule,CA,"• Only registered with one of the institutions, • Paying all required fees to the institution, and • Receive their formal credential from that same institution All the participating institutions must have an agreement and be StudentAid BC designated. Programs of study that are brokered (the institution provides a formal credential while another agency or institution provides the actual program of study) are not eligible for StudentAid BC funding.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-ca:BrokeredProgramOfStudy a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Brokered Program of Study"" ;
+    skos:definition ""A program of study where the institution provides a formal credential while another agency or institution provides the actual program of study."" .
+
+gro-ca:StudentAidBCFunding a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""StudentAid BC Funding"" ;
+    skos:definition ""Financial funding provided by StudentAid BC for eligible programs of study."" .
+
+data:CAN_UNIT_00081 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00081"" .
+
+data:CAN_UNIT_00081_norm_1b9353 a cco:Prohibition ;
+    rdfs:label ""Brokered Program Funding Prohibition"" ;
+    cco:hasAction data:CAN_UNIT_00081_action_219832 ;
+    cco:hasObject data:CAN_UNIT_00081_object_736b42 ;
+    cco:appliesUnder data:CAN_UNIT_00081_condition_876880 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .
+
+data:CAN_UNIT_00081_subject_0566cf a gro-ca:BrokeredProgramOfStudy ;
+    rdfs:label ""Brokered Program of Study"" ;
+    skos:definition ""Programs of study that are brokered (the institution provides a formal credential while another agency or institution provides the actual program of study)."" ;
+    skos:altLabel ""Programs of study that are brokered"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .
+
+data:CAN_UNIT_00081_action_219832 a cco:Action ;
+    rdfs:label ""Funding Ineligibility"" ;
+    cco:hasActionExpression ""are not eligible for StudentAid BC funding"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .
+
+data:CAN_UNIT_00081_object_736b42 a gro-ca:StudentAidBCFunding ;
+    rdfs:label ""StudentAid BC Funding"" ;
+    skos:definition ""StudentAid BC funding for programs of study."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .
+
+data:CAN_UNIT_00081_condition_876880 a cco:Condition ;
+    rdfs:label ""Brokered Program Condition"" ;
+    cco:hasConditionExpression ""the institution provides a formal credential while another agency or institution provides the actual program of study"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .
+
+data:CAN_UNIT_00081_authority_f8ea07 a cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""StudentAid BC"" ;
+    skos:definition ""StudentAid BC, the regulatory authority for student financial assistance in British Columbia, Canada."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00081 .",P,N,Y,N
+014,CAN-UNIT-00155,EligibilityRule,CA,• Has completed an undergraduate degree and is enrolled in the unclassified studies or qualifying year to satisfy prerequisite requirements for a specific graduate program; or • Cannot enter into an undergraduate major without first completing courses necessary to meet the entrance requirements for the undergraduate major. The post-secondary institution where the student is enrolled in unclassified studies or a qualifying year must identify the program on their Institutional Appendix.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-ca:StudentFinancialAssistance a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Financial Assistance"" ;
+    skos:definition ""Financial assistance provided to eligible students under Canadian regulations."" .
+
+data:CAN_UNIT_00155 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00155"" .
+
+data:CAN_UNIT_00155_norm_021031 a cco:Permission ;
+    rdfs:label ""Student Financial Assistance Eligibility"" ;
+    cco:appliesToRole data:CAN_UNIT_00155_subject_6142e7 ;
+    cco:hasAction data:CAN_UNIT_00155_action_c09c4c ;
+    cco:hasObject data:CAN_UNIT_00155_object_c66a86 ;
+    cco:appliesUnder data:CAN_UNIT_00155_condition_99fa39 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00155 .
+
+data:CAN_UNIT_00155_subject_6142e7 a cco:Role ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A student who may be eligible for financial assistance."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00155 .
+
+data:CAN_UNIT_00155_action_c09c4c a cco:Action ;
+    rdfs:label ""Enrollment in Unclassified Studies"" ;
+    cco:hasActionExpression ""is enrolled in unclassified studies or a qualifying year to satisfy prerequisite requirements"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00155 .
+
+data:CAN_UNIT_00155_object_c66a86 a gro-ca:StudentFinancialAssistance ;
+    rdfs:label ""Student Financial Assistance"" ;
+    skos:definition ""Financial assistance for which the student may be eligible."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00155 .
+
+data:CAN_UNIT_00155_condition_99fa39 a cco:Condition ;
+    rdfs:label ""Eligibility Criteria"" ;
+    cco:hasConditionExpression ""Has completed an undergraduate degree and is enrolled in the unclassified studies or qualifying year to satisfy prerequisite requirements for a specific graduate program; or Cannot enter into an undergraduate major without first completing courses necessary to meet the entrance requirements for the undergraduate major. The post-secondary institution where the student is enrolled in unclassified studies or a qualifying year must identify the program on their Institutional Appendix."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00155 .",Y,P,P,P
+015,CAN-UNIT-00160,EligibilityRule,CA,"Course load averaging Students are permitted to ‘average’ the course load to equal 60% (or 40% for students with a permanent, or persistent or prolonged disability), provided the study period is no longer than four months. Appeals may be considered for exceptional circumstances. For more information, please refer to","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00160 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00160"" .
+
+gro-ca:Student a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A person enrolled in an educational program."" .
+
+gro-ca:CourseLoad a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Course Load"" ;
+    skos:definition ""The set of courses or credits a student is enrolled in during a study period."" .
+
+data:CAN_UNIT_00160_subject_3e6ab6 a gro-ca:Student ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A student subject to course load averaging rules."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00160 .
+
+data:CAN_UNIT_00160_object_5bb183 a gro-ca:CourseLoad ;
+    rdfs:label ""Course Load"" ;
+    skos:definition ""The course load that may be averaged under this provision."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00160 .
+
+data:CAN_UNIT_00160_action_cf4d7b a cco:Action ;
+    rdfs:label ""Course Load Averaging"" ;
+    cco:hasActionExpression ""average the course load to equal 60% (or 40% for students with a permanent, or persistent or prolonged disability)"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00160 .
+
+data:CAN_UNIT_00160_condition_3938a8 a cco:Condition ;
+    rdfs:label ""Study Period Duration Condition"" ;
+    cco:hasConditionExpression ""the study period is no longer than four months"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00160 .
+
+data:CAN_UNIT_00160_norm_66a568 a cco:Permission ;
+    rdfs:label ""Course Load Averaging Permission"" ;
+    cco:appliesToRole data:CAN_UNIT_00160_subject_3e6ab6 ;
+    cco:hasAction data:CAN_UNIT_00160_action_cf4d7b ;
+    cco:hasObject data:CAN_UNIT_00160_object_5bb183 ;
+    cco:appliesUnder data:CAN_UNIT_00160_condition_3938a8 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00160 .",Y,P,Y,P
+016,CAN-UNIT-00439,EligibilityRule,CA,"federally and provincially assessed resources are subtracted from the assessed costs, resulting in a federal calculated need and a provincial calculated need. If both the federal and provincial assessed need calculations are negative, the student is considered to have sufficient resources to finance their education and does not qualify for either federal or provincial student financial assistance. If either the federal or provincial assessed need calculation is positive the student is considered eligible to receive a student financial assistance award up to this calculated need, subject to annual limits and allocation rules. Before calculating the award, outstanding overawards will be taken into consideration and may be deducted from the student’s new entitlement. For award configuration, please see Chapter 8.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00439 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00439"" .
+
+gro-ca:StudentFinancialAssistanceAward a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Financial Assistance Award"" ;
+    skos:definition ""A monetary award provided to eligible students under federal or provincial student financial assistance programs."" .
+
+gro-ca:StudentRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student Role"" ;
+    skos:definition ""The role of an individual enrolled in an educational program who may be eligible for financial assistance."" .
+
+data:CAN_UNIT_00439_subject_c9126b a gro-ca:StudentRole ;
+    rdfs:label ""Student"" ;
+    skos:definition ""The student who is the subject of the eligibility rule for student financial assistance."" ;
+    skos:altLabel ""the student"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00439 .
+
+data:CAN_UNIT_00439_object_87e2aa a gro-ca:StudentFinancialAssistanceAward ;
+    rdfs:label ""Student Financial Assistance Award"" ;
+    skos:definition ""A student financial assistance award that a student may be eligible to receive."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00439 .
+
+data:CAN_UNIT_00439_action_e2750e a cco:Action ;
+    rdfs:label ""Receive Award Eligibility"" ;
+    cco:hasActionExpression ""is considered eligible to receive a student financial assistance award up to this calculated need"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00439 .
+
+data:CAN_UNIT_00439_condition_ccbce9 a cco:Condition ;
+    rdfs:label ""Positive Assessed Need"" ;
+    cco:hasConditionExpression ""If either the federal or provincial assessed need calculation is positive"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00439 .
+
+data:CAN_UNIT_00439_norm_c41302 a cco:Permission ;
+    rdfs:label ""Positive Need Award Eligibility"" ;
+    cco:appliesToRole data:CAN_UNIT_00439_subject_c9126b ;
+    cco:hasAction data:CAN_UNIT_00439_action_e2750e ;
+    cco:hasObject data:CAN_UNIT_00439_object_87e2aa ;
+    cco:appliesUnder data:CAN_UNIT_00439_condition_ccbce9 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00439 .",Y,P,P,P
+017,CAN-UNIT-00556,EligibilityRule,CA,"When a student has a change in circumstances that requires a reassessment of their original award, any student financial assistance already provided that exceeds the student’s reassessed eligibility for student financial assistance may be considered an overaward.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-ca:FinancialResource a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Financial Resource"" ;
+    skos:definition ""A resource representing student financial assistance or other monetary allocations."" .
+
+gro-ca:Overaward a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Overaward"" ;
+    skos:definition ""Student financial assistance already provided that exceeds the student's reassessed eligibility."" .
+
+data:CAN_UNIT_00556 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00556"" .
+
+data:CAN_UNIT_00556_norm_9dece8 a cco:Permission ;
+    rdfs:label ""Overaward Classification Permission"" ;
+    cco:hasAction data:CAN_UNIT_00556_action_9efb73 ;
+    cco:hasObject data:CAN_UNIT_00556_object_7f2b02 ;
+    cco:appliesUnder data:CAN_UNIT_00556_condition_2e1a6e ;
+    prov:wasDerivedFrom data:CAN_UNIT_00556 .
+
+data:CAN_UNIT_00556_subject_bd4b13 a gro-ca:FinancialResource ;
+    rdfs:label ""Excess Student Financial Assistance"" ;
+    skos:definition ""Student financial assistance already provided that exceeds the student's reassessed eligibility."" ;
+    skos:altLabel ""student financial assistance already provided that exceeds the student\u2019s reassessed eligibility"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00556 .
+
+data:CAN_UNIT_00556_action_9efb73 a cco:Action ;
+    rdfs:label ""Consider as Overaward"" ;
+    cco:hasActionExpression ""may be considered an overaward"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00556 .
+
+data:CAN_UNIT_00556_object_7f2b02 a gro-ca:Overaward ;
+    rdfs:label ""Overaward"" ;
+    skos:definition ""An amount of student financial assistance that exceeds reassessed eligibility and may be classified as an overaward."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00556 .
+
+data:CAN_UNIT_00556_condition_2e1a6e a cco:Condition ;
+    rdfs:label ""Change in Circumstances Reassessment"" ;
+    cco:hasConditionExpression ""When a student has a change in circumstances that requires a reassessment of their original award"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00556 .",P,P,Y,P
+018,UK-UNIT-00049,EligibilityRule,UK,"An apprentice’s eligibility for funding will not change during the apprenticeship unless their employment status also changes (e.g. they become unemployed). If an apprentice is made redundant, we may continue to fund their training, even if they cannot find another employer (see paragraphs 279 to 283).","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00049 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00049"" .
+
+gro-uk:ApprenticeRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Apprentice Role"" ;
+    skos:definition ""The role of an individual undertaking an apprenticeship, involving training and employment."" .
+
+gro-uk:FundingResource a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Funding Resource"" ;
+    skos:definition ""Financial resources allocated to support training or education, such as apprenticeship funding."" .
+
+gro-uk:EmploymentStatusCondition a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Employment Status Condition"" ;
+    skos:definition ""A condition concerning the employment status of an individual, such as being employed or unemployed."" .
+
+data:UK_UNIT_00049_subject_9bd362 a gro-uk:ApprenticeRole ;
+    rdfs:label ""Apprentice"" ;
+    skos:definition ""An individual undertaking an apprenticeship."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00049 .
+
+data:UK_UNIT_00049_object_f0d5cf a gro-uk:FundingResource ;
+    rdfs:label ""Apprenticeship Funding"" ;
+    skos:definition ""Funding allocated to support an apprentice's training during their apprenticeship."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00049 .
+
+data:UK_UNIT_00049_action_04c988 a cco:Action ;
+    rdfs:label ""Funding Eligibility Stability"" ;
+    cco:hasActionExpression ""An apprentice's eligibility for funding will not change during the apprenticeship unless their employment status also changes."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00049 .
+
+data:UK_UNIT_00049_condition_c7c26b a gro-uk:EmploymentStatusCondition ;
+    rdfs:label ""Employment Status Change Condition"" ;
+    cco:hasConditionExpression ""unless their employment status also changes (e.g. they become unemployed)"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00049 .
+
+data:UK_UNIT_00049_norm_7de019 a cco:Permission ;
+    rdfs:label ""Apprentice Funding Eligibility Permission"" ;
+    cco:appliesToRole data:UK_UNIT_00049_subject_9bd362 ;
+    cco:hasAction data:UK_UNIT_00049_action_04c988 ;
+    cco:hasObject data:UK_UNIT_00049_object_f0d5cf ;
+    cco:appliesUnder data:UK_UNIT_00049_condition_c7c26b ;
+    prov:wasDerivedFrom data:UK_UNIT_00049 .",Y,P,Y,P
+019,UK-UNIT-00266,EligibilityRule,UK,"If the apprenticeship agreement is incomplete, or not signed, the individual will not have a valid agreement and the provider will therefore not be eligible to receive funding for them. The apprenticeship agreement must include:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-uk:Provider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that delivers apprenticeship training and may receive funding."" .
+
+gro-uk:Funding a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Funding"" ;
+    skos:definition ""Financial resources allocated to support apprenticeship delivery."" .
+
+data:UK_UNIT_00266 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00266"" .
+
+data:UK_UNIT_00266_norm_69b209 a cco:Prohibition ;
+    rdfs:label ""Funding Ineligibility Prohibition"" ;
+    gro:hasSubject data:UK_UNIT_00266_subject_976bfa ;
+    cco:hasAction data:UK_UNIT_00266_action_cf05f0 ;
+    cco:hasObject data:UK_UNIT_00266_object_2337d9 ;
+    cco:appliesUnder data:UK_UNIT_00266_condition_dfca6a ;
+    prov:wasDerivedFrom data:UK_UNIT_00266 .
+
+data:UK_UNIT_00266_subject_976bfa a gro-uk:Provider ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider who may be ineligible to receive funding."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00266 .
+
+data:UK_UNIT_00266_action_cf05f0 a cco:Action ;
+    rdfs:label ""Receive Funding"" ;
+    cco:hasActionExpression ""will not be eligible to receive funding"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00266 .
+
+data:UK_UNIT_00266_object_2337d9 a gro-uk:Funding ;
+    rdfs:label ""Funding"" ;
+    skos:definition ""Funding for the apprenticeship."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00266 .
+
+data:UK_UNIT_00266_condition_dfca6a a cco:Condition ;
+    rdfs:label ""Incomplete or Unsigned Agreement"" ;
+    cco:hasConditionExpression ""If the apprenticeship agreement is incomplete, or not signed"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00266 .",Y,Y,Y,Y
+020,UK-UNIT-00916,EligibilityRule,UK,"Where an apprentice is on a shorter apprenticeship (where the published typical duration of the apprenticeship standard is less than 12 months), or on a foundation apprenticeship, the payment will be delayed until the apprentice resumes their apprenticeship and has reached an overall total of 90 or 242 days in learning.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00916 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00916"" .
+
+gro-uk:FinancialResource a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Financial Resource"" ;
+    skos:definition ""A resource representing monetary value or payment."" .
+
+gro-uk:ApprenticeshipState a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Apprenticeship State"" ;
+    skos:definition ""A condition representing the state of an apprenticeship, such as being on a shorter or foundation apprenticeship."" .
+
+data:UK_UNIT_00916_norm_a81402 a cco:Obligation ;
+    rdfs:label ""Delayed Payment Obligation"" ;
+    cco:hasAction data:UK_UNIT_00916_action_51d4e6 ;
+    cco:hasObject data:UK_UNIT_00916_subject_0c2706 ;
+    cco:appliesUnder data:UK_UNIT_00916_condition_68452d ;
+    prov:wasDerivedFrom data:UK_UNIT_00916 .
+
+data:UK_UNIT_00916_subject_0c2706 a gro-uk:FinancialResource ;
+    rdfs:label ""Payment"" ;
+    skos:definition ""The payment that will be delayed under specified conditions."" ;
+    skos:altLabel ""the payment"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00916 .
+
+data:UK_UNIT_00916_action_51d4e6 a cco:Action ;
+    rdfs:label ""Delay Payment"" ;
+    cco:hasActionExpression ""the payment will be delayed"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00916 .
+
+data:UK_UNIT_00916_condition_68452d a cco:Condition ;
+    rdfs:label ""Shorter or Foundation Apprenticeship"" ;
+    cco:hasConditionExpression ""Where an apprentice is on a shorter apprenticeship (where the published typical duration of the apprenticeship standard is less than 12 months), or on a foundation apprenticeship"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00916 .
+
+data:UK_UNIT_00916_temporal_condition_3f8a2b a cco:Condition ;
+    rdfs:label ""Resumption and Learning Days Threshold"" ;
+    cco:hasConditionExpression ""until the apprentice resumes their apprenticeship and has reached an overall total of 90 or 242 days in learning"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00916 .
+
+data:UK_UNIT_00916_norm_a81402 cco:appliesUnder data:UK_UNIT_00916_temporal_condition_3f8a2b .",P,P,Y,P
+021,USA-UNIT-00159,EligibilityRule,US,"The student (and spouse, if applicable) is not required to file a federal income tax return; or The student is a single parent and has an AGI greater than zero and less than or equal to 225% of the poverty guideline for the applicant's family size and state of residence; or The student is not a single parent and has an AGI greater than zero and less than or equal to 175% of the poverty guideline for the applicant's family size and state of residence.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00159 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00159"" .
+
+gro-us:Student a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A role of an individual enrolled in an educational program"" .
+
+gro-us:SingleParent a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Single Parent"" ;
+    skos:definition ""A condition of being a single parent"" .
+
+gro-us:NotSingleParent a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Not Single Parent"" ;
+    skos:definition ""A condition of not being a single parent"" .
+
+gro-us:FederalIncomeTaxReturn a owl:Class ;
+    rdfs:subClassOf cco:Action ;
+    rdfs:label ""Federal Income Tax Return Filing"" ;
+    skos:definition ""The action of filing a federal income tax return"" .
+
+gro-us:AGIThreshold a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""AGI Threshold"" ;
+    skos:definition ""A condition concerning adjusted gross income relative to poverty guidelines"" .
+
+data:USA_UNIT_00159_subject_6f0a9e a gro-us:Student ;
+    rdfs:label ""Student"" ;
+    skos:definition ""The student (and spouse, if applicable) as the subject of the eligibility rule"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00159 .
+
+data:USA_UNIT_00159_action_9425a8 a cco:Action ;
+    rdfs:label ""Eligibility Criteria Action"" ;
+    cco:hasActionExpression ""is not required to file a federal income tax return; or is a single parent and has an AGI greater than zero and less than or equal to 225% of the poverty guideline; or is not a single parent and has an AGI greater than zero and less than or equal to 175% of the poverty guideline"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00159 .
+
+data:USA_UNIT_00159_condition_eligibility a cco:Condition ;
+    rdfs:label ""Pell Grant Eligibility Criteria"" ;
+    cco:hasConditionExpression ""The student is not required to file a federal income tax return; or The student is a single parent and has an AGI greater than zero and less than or equal to 225% of the poverty guideline for the applicant's family size and state of residence; or The student is not a single parent and has an AGI greater than zero and less than or equal to 175% of the poverty guideline for the applicant's family size and state of residence."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00159 .
+
+data:USA_UNIT_00159_norm_2feaf1 a cco:Permission ;
+    rdfs:label ""Maximum Pell Grant Eligibility"" ;
+    cco:appliesToRole data:USA_UNIT_00159_subject_6f0a9e ;
+    cco:hasAction data:USA_UNIT_00159_action_9425a8 ;
+    cco:appliesUnder data:USA_UNIT_00159_condition_eligibility ;
+    prov:wasDerivedFrom data:USA_UNIT_00159 .",Y,P,P,P
+022,AUS-UNIT-00974,Exception,AU,"| Alternative forms of access to goods |
+| --- |
+| or services essential to the course, |
+| (where the provider also provides |
+| readily available access in another |
+| form at no additional cost to |
+| students) |
+You must not charge fees other than tuition fees unless you have procedures for ensuring that students understand:
+• the student’s total liability for the fees","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00974 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00974"" .
+
+gro-au:ApprovedCourseProvider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""A role held by an entity that is an approved course provider under Australian regulatory provisions."" .
+
+gro-au:NonTuitionFees a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Non-Tuition Fees"" ;
+    skos:definition ""Fees other than tuition fees that may be charged to students."" .
+
+gro-au:StudentFeeLiabilityUnderstandingProcedure a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Fee Liability Understanding Procedure"" ;
+    skos:definition ""Procedures for ensuring that students understand their total liability for fees."" .
+
+data:AUS_UNIT_00974_subject_69b980 a gro-au:ApprovedCourseProvider ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""The approved course provider subject to the prohibition on charging non-tuition fees."" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .
+
+data:AUS_UNIT_00974_action_393d1f a cco:Action ;
+    rdfs:label ""Charge Non-Tuition Fees"" ;
+    cco:hasActionExpression ""must not charge fees other than tuition fees"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .
+
+data:AUS_UNIT_00974_object_95c1de a gro-au:NonTuitionFees ;
+    rdfs:label ""Non-Tuition Fees"" ;
+    skos:definition ""Fees other than tuition fees that are the object of the prohibition."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .
+
+data:AUS_UNIT_00974_exception_condition_7a2f1c a cco:Condition ;
+    rdfs:label ""Student Fee Liability Understanding"" ;
+    cco:hasConditionExpression ""you have procedures for ensuring that students understand the student’s total liability for the fees"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .
+
+data:AUS_UNIT_00974_exception_497dbc a cco:Exception ;
+    rdfs:label ""Student Understanding Exception"" ;
+    skos:definition ""Exception to the prohibition on charging non-tuition fees when the provider has procedures ensuring students understand their total fee liability."" ;
+    cco:hasCondition data:AUS_UNIT_00974_exception_condition_7a2f1c ;
+    cco:modifiesNorm data:AUS_UNIT_00974_norm_f08b18 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .
+
+data:AUS_UNIT_00974_norm_f08b18 a cco:Prohibition ;
+    rdfs:label ""Non-Tuition Fee Prohibition"" ;
+    skos:definition ""Prohibition on approved course providers charging fees other than tuition fees, unless an exception applies."" ;
+    cco:appliesToRole data:AUS_UNIT_00974_subject_69b980 ;
+    cco:hasAction data:AUS_UNIT_00974_action_393d1f ;
+    cco:hasObject data:AUS_UNIT_00974_object_95c1de ;
+    cco:hasException data:AUS_UNIT_00974_exception_497dbc ;
+    prov:wasDerivedFrom data:AUS_UNIT_00974 .",Y,Y,Y,P
+023,CAN-UNIT-00830,Exception,CA,"However, for student loans, the borrower is not discharged from their repayment obligations until seven years after the end of the most recent study period.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00830 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00830"" .
+
+gro-ca:BorrowerRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Borrower Role"" ;
+    skos:definition ""The role of an individual who has borrowed funds under a student loan program."" .
+
+gro-ca:RepaymentObligation a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Repayment Obligation"" ;
+    skos:definition ""The set of repayment duties owed by a borrower under a student loan."" .
+
+gro-ca:StudentLoan a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Loan"" ;
+    skos:definition ""A loan made to a student to finance educational expenses."" .
+
+data:CAN_UNIT_00830_subject_36fc33 a gro-ca:BorrowerRole ;
+    rdfs:label ""Borrower"" ;
+    skos:definition ""The borrower under a student loan."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_action_fdd09f a cco:Action ;
+    rdfs:label ""Discharge from Repayment Obligations"" ;
+    cco:hasActionExpression ""is not discharged from their repayment obligations"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_object_13ba95 a gro-ca:RepaymentObligation ;
+    rdfs:label ""Repayment Obligations"" ;
+    skos:definition ""The repayment obligations from which the borrower is not discharged."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_norm_9a6508 a cco:Obligation ;
+    rdfs:label ""Borrower Repayment Obligation Persistence"" ;
+    cco:appliesToRole data:CAN_UNIT_00830_subject_36fc33 ;
+    cco:hasAction data:CAN_UNIT_00830_action_fdd09f ;
+    cco:hasObject data:CAN_UNIT_00830_object_13ba95 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_exception_7331b8 a cco:Exception ;
+    rdfs:label ""Student Loan Exception"" ;
+    cco:modifiesNorm data:CAN_UNIT_00830_norm_9a6508 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_condition_loan_type a cco:Condition ;
+    rdfs:label ""Student Loan Condition"" ;
+    cco:hasConditionExpression ""for student loans"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_condition_temporal a cco:Condition ;
+    rdfs:label ""Seven-Year Post-Study Period"" ;
+    cco:hasConditionExpression ""until seven years after the end of the most recent study period"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00830 .
+
+data:CAN_UNIT_00830_exception_7331b8 cco:hasCondition data:CAN_UNIT_00830_condition_loan_type ;
+    cco:hasCondition data:CAN_UNIT_00830_condition_temporal .",Y,P,Y,P
+024,UK-UNIT-00214,Exception,UK,These flexibilities apply to new starts and to apprentices currently on- programme where the learning difficulty or disability has been identified and evidenced as a barrier to them achieving the requirements stated in paragraphs 49 to 51.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00214 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00214"" .
+
+gro-uk:Flexibility a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Flexibility"" ;
+    skos:definition ""An accommodation or adjustment applied to regulatory requirements for eligible apprentices."" .
+
+gro-uk:Apprentice a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Apprentice"" ;
+    skos:definition ""A person undertaking an apprenticeship programme."" .
+
+gro-uk:LearningDifficultyOrDisability a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Learning Difficulty or Disability"" ;
+    skos:definition ""A learning difficulty or disability that has been identified and evidenced as a barrier to achieving standard requirements."" .
+
+data:UK_UNIT_00214_subject_42138d a gro-uk:Flexibility ;
+    rdfs:label ""Flexibilities"" ;
+    skos:definition ""Flexibilities that apply to new starts and apprentices currently on-programme under specified conditions."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00214 .
+
+data:UK_UNIT_00214_action_d7a131 a cco:Action ;
+    rdfs:label ""Apply Flexibilities"" ;
+    cco:hasActionExpression ""apply to new starts and to apprentices currently on-programme"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00214 .
+
+data:UK_UNIT_00214_condition_7fd02e a gro-uk:LearningDifficultyOrDisability ;
+    rdfs:label ""Identified Learning Barrier"" ;
+    cco:hasConditionExpression ""where the learning difficulty or disability has been identified and evidenced as a barrier to them achieving the requirements stated in paragraphs 49 to 51"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00214 .
+
+data:UK_UNIT_00214_norm_f9bf79 a cco:Norm ;
+    rdfs:label ""Flexibility Exception for Learning Barriers"" ;
+    cco:hasAction data:UK_UNIT_00214_action_d7a131 ;
+    cco:hasObject data:UK_UNIT_00214_subject_42138d ;
+    cco:appliesUnder data:UK_UNIT_00214_condition_7fd02e ;
+    cco:appliesToRole gro-uk:Apprentice ;
+    prov:wasDerivedFrom data:UK_UNIT_00214 .",P,P,Y,P
+025,USA-UNIT-00229,Exception,US,"There are times when you don't need to verify a student's application. You are, however, still required to resolve conflicting information (except when a student dies during the award year or when they are no longer enrolled and will not re-enroll; see Chapter 5). You must document the basis for the verification exclusion. Other information not excluded must still be verified according to all other requirements.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00229 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00229"" .
+
+gro-us:InstitutionRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Institution Role"" ;
+    skos:definition ""The role of an educational institution responsible for verifying student applications."" .
+
+gro-us:StudentApplication a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Application"" ;
+    skos:definition ""An application submitted by a student for financial aid or other educational benefits."" .
+
+data:USA_UNIT_00229_subject_f09186 a gro-us:InstitutionRole ;
+    rdfs:label ""Institution"" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_object_6176e4 a gro-us:StudentApplication ;
+    rdfs:label ""Student Application"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_action_9e2af1 a cco:Action ;
+    rdfs:label ""Verify Student Application"" ;
+    cco:hasActionExpression ""verify a student's application"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_exception_e70c95 a cco:Exception ;
+    rdfs:label ""Verification Exception"" ;
+    cco:hasAction data:USA_UNIT_00229_action_9e2af1 ;
+    cco:hasObject data:USA_UNIT_00229_object_6176e4 ;
+    cco:appliesToRole data:USA_UNIT_00229_subject_f09186 ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_condition_1 a cco:Condition ;
+    rdfs:label ""Student Death Condition"" ;
+    cco:hasConditionExpression ""a student dies during the award year"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_condition_2 a cco:Condition ;
+    rdfs:label ""No Re-enrollment Condition"" ;
+    cco:hasConditionExpression ""they are no longer enrolled and will not re-enroll"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_exception_e70c95 cco:hasCondition data:USA_UNIT_00229_condition_1, data:USA_UNIT_00229_condition_2 .
+
+data:USA_UNIT_00229_norm_974f29 a cco:Obligation ;
+    rdfs:label ""Resolve Conflicting Information Obligation"" ;
+    cco:hasAction [
+        a cco:Action ;
+        rdfs:label ""Resolve Conflicting Information"" ;
+        cco:hasActionExpression ""resolve conflicting information"" ;
+        prov:wasDerivedFrom data:USA_UNIT_00229
+    ] ;
+    cco:hasObject [
+        a cco:Resource ;
+        rdfs:label ""Conflicting Information"" ;
+        skos:definition ""Information that conflicts with other data in a student's application."" ;
+        prov:wasDerivedFrom data:USA_UNIT_00229
+    ] ;
+    cco:appliesToRole data:USA_UNIT_00229_subject_f09186 ;
+    cco:hasException data:USA_UNIT_00229_exception_e70c95 ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .
+
+data:USA_UNIT_00229_documentation_norm a cco:Obligation ;
+    rdfs:label ""Document Verification Exclusion Basis"" ;
+    cco:hasAction [
+        a cco:Action ;
+        rdfs:label ""Document Exclusion Basis"" ;
+        cco:hasActionExpression ""document the basis for the verification exclusion"" ;
+        prov:wasDerivedFrom data:USA_UNIT_00229
+    ] ;
+    cco:hasObject [
+        a cco:Resource ;
+        rdfs:label ""Verification Exclusion Basis"" ;
+        skos:definition ""The documented reason for excluding a student's application from verification."" ;
+        prov:wasDerivedFrom data:USA_UNIT_00229
+    ] ;
+    cco:appliesToRole data:USA_UNIT_00229_subject_f09186 ;
+    prov:wasDerivedFrom data:USA_UNIT_00229 .",Y,Y,P,P
+026,AUS-UNIT-00081,FundingAllocation,AU,"What happens if a loan amount exceeds your provider fee limit When the department assesses the data you submit, we also monitor student loan caps and provider fee limits. However, you are responsible for monitoring student loans to ensure they don’t exceed your provider fee limit. We do not pay any loan amount that exceeds your provider fee limit. If you exceed the limit, you will need to resolve the situation with your students. That may involve not charging the student tuition fees for the course or part of the course, noting that students are not liable for VSL covered fees where you have exceeded the fee limit. You will also need to amend the student debt records in TCSI. Legislation: Act s 34(3), Act s 56(4)","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-au:ProviderFeeLimitExcessLoanAmount a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Excess Loan Amount"" ;
+    skos:definition ""Any loan amount that exceeds the provider fee limit for an approved course provider"" .
+
+data:AUS_UNIT_00081 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00081"" .
+
+data:AUS_UNIT_00081_object_beaf97 a gro-au:ProviderFeeLimitExcessLoanAmount ;
+    rdfs:label ""Excess Loan Amount"" ;
+    skos:definition ""any loan amount that exceeds your provider fee limit"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .
+
+data:AUS_UNIT_00081_subject_2bca4c a cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The department responsible for assessing data and monitoring student loan caps and provider fee limits"" ;
+    skos:altLabel ""We"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .
+
+data:AUS_UNIT_00081_authority_e853f3 a cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The department as the authority issuing the prohibition"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .
+
+data:AUS_UNIT_00081_action_fd6f7c a cco:Action ;
+    rdfs:label ""Do Not Pay"" ;
+    cco:hasActionExpression ""do not pay"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .
+
+data:AUS_UNIT_00081_condition_460dc5 a cco:Condition ;
+    rdfs:label ""Exceeds Provider Fee Limit"" ;
+    cco:hasConditionExpression ""If you exceed the limit"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .
+
+data:AUS_UNIT_00081_norm_d0e280 a cco:Prohibition ;
+    rdfs:label ""Excess Loan Payment Prohibition"" ;
+    gro:hasSubject data:AUS_UNIT_00081_subject_2bca4c ;
+    cco:hasAction data:AUS_UNIT_00081_action_fd6f7c ;
+    cco:hasObject data:AUS_UNIT_00081_object_beaf97 ;
+    cco:appliesUnder data:AUS_UNIT_00081_condition_460dc5 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00081 .",Y,P,Y,P
+027,CAN-UNIT-00874,FundingAllocation,CA,"Assessment | | | | | | | | | | | | | Reimbursement | | | | | | | | | | | | | Canada Repayment Assistance Program for Students | | | Reduced loan repayment based on income and disability related costs | | | | | | | N/A | | | with Disabilities | | | | | | | | | | | | | Canada Severe Permanent Disability Benefit | | | Forgiveness of federal student loan debt | | | | | | | NSLSC | | | Provincial Programs | | | | | | | | | | | | | BC Supplemental Bursary for Students with | | | $800 and $400 for full-time and part- time students respectively per program year | | | | | | | SABC | | | Disabilities | | | | | | | | | | | | | B.C. Access Grant for Students with Disabilities | | | Up to $1,560 per program year | | | | | | | SABC | | | Assistance Program for Students with Disabilities | | | Up to $12,000 per program year | | | | | | | SABC/PSI* | | | B.C. Access Grant for Deaf Students |","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# Domain classes
+gro-ca:StudentDisabilityFunding a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Disability Funding"" ;
+    skos:definition ""Financial resources allocated to students with disabilities, including grants, bursaries, loan repayment reductions, and loan forgiveness."" .
+
+gro-ca:StudentWithDisabilityRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student with Disability Role"" ;
+    skos:definition ""The role of a student who has a disability, qualifying them for specific funding allocations."" .
+
+gro-ca:FundingAuthority a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Funding Authority"" ;
+    skos:definition ""An organisation responsible for administering and disbursing student disability funding."" .
+
+# Source entity
+data:CAN_UNIT_00874 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00874"" .
+
+# Subject instance
+data:CAN_UNIT_00874_subject_9a002d a gro-ca:StudentWithDisabilityRole ;
+    rdfs:label ""Students with Disabilities"" ;
+    skos:definition ""Students who have disabilities and are eligible for various federal and provincial funding allocations."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00874 .
+
+# Object/Resource instance
+data:CAN_UNIT_00874_object_54951d a gro-ca:StudentDisabilityFunding ;
+    rdfs:label ""Disability Student Funding Bundle"" ;
+    skos:definition ""$800, $400, up to $1,560, up to $12,000 per program year for reduced loan repayment, loan forgiveness, grants, and bursaries."" ;
+    cco:allocatedTo data:CAN_UNIT_00874_subject_9a002d ;
+    prov:wasDerivedFrom data:CAN_UNIT_00874 .
+
+# Authority instance
+data:CAN_UNIT_00874_authority_d3bf43 a gro-ca:FundingAuthority ;
+    rdfs:label ""NSLSC, SABC, SABC/PSI"" ;
+    skos:definition ""The National Student Loans Service Centre, StudentAid BC, and post-secondary institutions jointly administering disability funding."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00874 .
+
+# Norm instance (Permission wrapping the allocation)
+data:CAN_UNIT_00874_norm_d942ca a cco:Permission ;
+    rdfs:label ""Disability Funding Permission"" ;
+    cco:appliesToRole data:CAN_UNIT_00874_subject_9a002d ;
+    cco:hasObject data:CAN_UNIT_00874_object_54951d ;
+    prov:wasDerivedFrom data:CAN_UNIT_00874 .",Y,P,P,P
+028,CAN-UNIT-00453,FundingAllocation,CA,The amount of student financial assistance available to a student is limited by the minimum and maximum interest free loan award amounts set by the Canada Student Financial Assistance Program and by StudentAid BC. The student’s award is based on the federal and provincial need assessments and eligibility for non-repayable federal and provincial grants and bursaries.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-ca:StudentFinancialAssistance a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Financial Assistance"" ;
+    skos:definition ""Financial assistance available to students, limited by minimum and maximum interest free loan award amounts set by the Canada Student Financial Assistance Program and StudentAid BC, and based on federal and provincial need assessments and eligibility for non-repayable grants and bursaries."" .
+
+data:CAN_UNIT_00453 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00453"" .
+
+data:CAN_UNIT_00453_object_fc93f4 a gro-ca:StudentFinancialAssistance ;
+    rdfs:label ""Student Financial Assistance"" ;
+    skos:definition ""The amount of student financial assistance available to a student is limited by the minimum and maximum interest free loan award amounts set by the Canada Student Financial Assistance Program and by StudentAid BC. The student’s award is based on the federal and provincial need assessments and eligibility for non-repayable federal and provincial grants and bursaries."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00453 .
+
+data:CAN_UNIT_00453_subject_148675 a cco:Role ;
+    rdfs:label ""Student Role"" ;
+    skos:definition ""A student eligible for financial assistance under the Canada Student Financial Assistance Program and StudentAid BC."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00453 .
+
+data:CAN_UNIT_00453_authority_8665b8 a cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""Canada Student Financial Assistance Program and StudentAid BC"" ;
+    skos:definition ""The Canada Student Financial Assistance Program and StudentAid BC, which set the minimum and maximum interest free loan award amounts and determine need assessments and eligibility."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00453 .
+
+data:CAN_UNIT_00453_norm_9d2e45 a cco:Permission ;
+    rdfs:label ""Student Financial Assistance Allocation Permission"" ;
+    cco:appliesToRole data:CAN_UNIT_00453_subject_148675 ;
+    cco:hasObject data:CAN_UNIT_00453_object_fc93f4 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00453 .
+
+data:CAN_UNIT_00453_object_fc93f4 cco:allocatedTo data:CAN_UNIT_00453_subject_148675 .",Y,P,Y,P
+029,UK-UNIT-00609,FundingAllocation,UK,Eligible apprentices will also receive the care leavers’ bursary – see paragraphs 108 and 110 for eligibility and payment dates.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-uk:CareLeaversBursary a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Care Leavers' Bursary"" ;
+    skos:definition ""A bursary provided to eligible apprentices who are care leavers, as defined in paragraphs 108 and 110 of the relevant regulation."" .
+
+gro-uk:EligibleApprenticeRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Eligible Apprentice Role"" ;
+    skos:definition ""The role of an apprentice who meets the eligibility criteria for the care leavers' bursary."" .
+
+data:UK_UNIT_00609 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00609"" .
+
+data:UK_UNIT_00609_subject_5564b5 a gro-uk:EligibleApprenticeRole ;
+    rdfs:label ""Eligible Apprentice"" ;
+    skos:definition ""An apprentice who is eligible to receive the care leavers' bursary."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00609 .
+
+data:UK_UNIT_00609_object_513270 a gro-uk:CareLeaversBursary ;
+    rdfs:label ""Care Leavers' Bursary"" ;
+    skos:definition ""The care leavers' bursary that eligible apprentices will receive."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00609 .
+
+data:UK_UNIT_00609_norm_1ecc7b a cco:Permission ;
+    rdfs:label ""Care Leavers' Bursary Allocation"" ;
+    cco:appliesToRole data:UK_UNIT_00609_subject_5564b5 ;
+    cco:hasObject data:UK_UNIT_00609_object_513270 ;
+    prov:wasDerivedFrom data:UK_UNIT_00609 .",Y,P,Y,P
+030,UK-UNIT-00537,FundingAllocation,UK,"300 days after the apprentice’s learning start date, £1,000 will be paid if the apprentice is still undertaking their apprenticeship.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-uk:ApprenticeshipFunding a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprenticeship Funding"" ;
+    skos:definition ""A monetary resource allocated as part of apprenticeship funding arrangements."" .
+
+data:UK_UNIT_00537 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00537"" .
+
+data:UK_UNIT_00537_object_2e56a0 a gro-uk:ApprenticeshipFunding ;
+    rdfs:label ""Apprenticeship Payment"" ;
+    skos:definition ""£1,000"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .
+
+data:UK_UNIT_00537_subject_0d33aa a cco:Role ;
+    rdfs:label ""Apprentice Role"" ;
+    skos:definition ""The role of an apprentice undertaking an apprenticeship."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .
+
+data:UK_UNIT_00537_action_f60878 a cco:Action ;
+    rdfs:label ""Payment Action"" ;
+    cco:hasActionExpression ""will be paid"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .
+
+data:UK_UNIT_00537_condition_1590a9 a cco:Condition ;
+    rdfs:label ""Apprentice Status Condition"" ;
+    cco:hasConditionExpression ""if the apprentice is still undertaking their apprenticeship"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .
+
+data:UK_UNIT_00537_temporal_condition a cco:Condition ;
+    rdfs:label ""Temporal Condition"" ;
+    cco:hasConditionExpression ""300 days after the apprentice’s learning start date"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .
+
+data:UK_UNIT_00537_norm_3190cc a cco:Obligation ;
+    rdfs:label ""Apprenticeship Funding Obligation"" ;
+    cco:appliesToRole data:UK_UNIT_00537_subject_0d33aa ;
+    cco:hasAction data:UK_UNIT_00537_action_f60878 ;
+    cco:hasObject data:UK_UNIT_00537_object_2e56a0 ;
+    cco:appliesUnder data:UK_UNIT_00537_condition_1590a9 ;
+    cco:appliesUnder data:UK_UNIT_00537_temporal_condition ;
+    prov:wasDerivedFrom data:UK_UNIT_00537 .",P,P,Y,P
+031,AUS-UNIT-00348,Obligation,AU,"• divide the tuition fees and loan amounts (to the higher cap) evenly over the remainder of the course for the remaining fee periods • issue an updated Statement of Covered Fees (and subsequent VSL Fee Notices and Commonwealth Assistance Notice) showing the increased loan access. In this example, Sam had no further gap fees to pay for the remainder of their course.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00348 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00348"" .
+
+gro-au:Document a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Document"" ;
+    skos:definition ""A written, printed, or electronic record that provides information or evidence."" .
+
+gro-au:FinancialResource a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Financial Resource"" ;
+    skos:definition ""A resource representing monetary value, such as fees, loans, or funds."" .
+
+data:AUS_UNIT_00348_subject_8962b1 a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that provides educational services and administers tuition fees and loan amounts."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00348 .
+
+data:AUS_UNIT_00348_action_37c338 a cco:Action ;
+    rdfs:label ""Divide Fees and Issue Statements"" ;
+    cco:hasActionExpression ""divide the tuition fees and loan amounts evenly over the remainder of the course for the remaining fee periods and issue an updated Statement of Covered Fees (and subsequent VSL Fee Notices and Commonwealth Assistance Notice) showing the increased loan access"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00348 .
+
+data:AUS_UNIT_00348_object_ca5b2b a cco:Resource ;
+    rdfs:label ""Tuition Fees, Loans, and Notices"" ;
+    skos:definition ""The set of resources involved: tuition fees, loan amounts, Statement of Covered Fees, VSL Fee Notices, and Commonwealth Assistance Notice."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00348 .
+
+data:AUS_UNIT_00348_temporal_condition a cco:Condition ;
+    rdfs:label ""Remaining Fee Periods"" ;
+    cco:hasConditionExpression ""over the remainder of the course for the remaining fee periods"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00348 .
+
+data:AUS_UNIT_00348_norm_88b921 a cco:Obligation ;
+    rdfs:label ""Fee and Loan Division Obligation"" ;
+    gro:hasSubject data:AUS_UNIT_00348_subject_8962b1 ;
+    cco:hasAction data:AUS_UNIT_00348_action_37c338 ;
+    cco:hasObject data:AUS_UNIT_00348_object_ca5b2b ;
+    cco:appliesUnder data:AUS_UNIT_00348_temporal_condition ;
+    prov:wasDerivedFrom data:AUS_UNIT_00348 .",Y,Y,Y,Y
+032,AUS-UNIT-00440,Obligation,AU,• advice that VSL will not be used to pay the covered fees for a part of the course if the student advises you on or before the relevant census day that the student doesn’t want the tuition fees to be paid using VSL • advice that any VETSL debt will remain a personal debt until it is repaid to the Commonwealth. For each part of the course included in the fee period:,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-au:ApprovedCourseProviderRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider Role"" ;
+    skos:definition ""The role of an approved course provider under Australian VET Student Loans legislation."" .
+
+gro-au:VSLAdvice a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""VSL Advice"" ;
+    skos:definition ""Advice regarding VET Student Loans (VSL) usage and VETSL debt obligations."" .
+
+data:AUS_UNIT_00440 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00440"" .
+
+data:AUS_UNIT_00440_norm_2acdde a cco:Obligation ;
+    rdfs:label ""VSL Advice Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00440_subject_d957de ;
+    cco:hasAction data:AUS_UNIT_00440_action_6a7ba7 ;
+    cco:hasObject data:AUS_UNIT_00440_object_3c805f ;
+    cco:appliesUnder data:AUS_UNIT_00440_condition_519d8a ;
+    prov:wasDerivedFrom data:AUS_UNIT_00440 .
+
+data:AUS_UNIT_00440_subject_d957de a gro-au:ApprovedCourseProviderRole ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""The role of an approved course provider who must give VSL advice to students."" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00440 .
+
+data:AUS_UNIT_00440_action_6a7ba7 a cco:Action ;
+    rdfs:label ""Give VSL Advice"" ;
+    cco:hasActionExpression ""give advice that VSL will not be used to pay the covered fees for a part of the course, and advice that any VETSL debt will remain a personal debt until it is repaid to the Commonwealth"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00440 .
+
+data:AUS_UNIT_00440_object_3c805f a gro-au:VSLAdvice ;
+    rdfs:label ""VSL and VETSL Debt Advice"" ;
+    skos:definition ""Advice that VSL will not be used to pay covered fees if the student notifies before census day, and that VETSL debt remains personal until repaid."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00440 .
+
+data:AUS_UNIT_00440_condition_519d8a a cco:Condition ;
+    rdfs:label ""Student Notification Condition"" ;
+    cco:hasConditionExpression ""if the student advises you on or before the relevant census day that the student doesn’t want the tuition fees to be paid using VSL"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00440 .",Y,Y,Y,Y
+033,AUS-UNIT-00606,Obligation,AU,• handle student information [part 45] • determine tuition fees [part 19.1] • manage student withdrawal from approved courses • cancel a student’s enrolment [ part 40.5] after census day • recredit a student’s HELP balance [ part 46] • handle student complaints [part 48].,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00606 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00606"" .
+
+gro-au:RequiredProviderRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Required Provider Role"" ;
+    skos:definition ""The role of a provider required to have certain processes and procedures under Australian regulatory provisions."" .
+
+gro-au:StudentInformation a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Information"" ;
+    skos:definition ""Information pertaining to students handled by providers."" .
+
+gro-au:TuitionFees a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Tuition Fees"" ;
+    skos:definition ""Fees charged for tuition by educational providers."" .
+
+gro-au:StudentWithdrawal a owl:Class ;
+    rdfs:subClassOf cco:Action ;
+    rdfs:label ""Student Withdrawal"" ;
+    skos:definition ""The process of a student withdrawing from an approved course."" .
+
+gro-au:StudentEnrolment a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Enrolment"" ;
+    skos:definition ""The enrolment status of a student in a course."" .
+
+gro-au:HELPBalance a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""HELP Balance"" ;
+    skos:definition ""The balance of a student's Higher Education Loan Program account."" .
+
+gro-au:StudentComplaints a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Student Complaints"" ;
+    skos:definition ""Complaints lodged by students regarding provider services."" .
+
+data:AUS_UNIT_00606_norm_5b736f a cco:Obligation ;
+    rdfs:label ""Provider Processes Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00606_subject_be57bc ;
+    cco:hasAction data:AUS_UNIT_00606_action_7fdc47 ;
+    cco:hasObject data:AUS_UNIT_00606_object_150d25 ;
+    cco:appliesUnder data:AUS_UNIT_00606_condition_9a2b3c ;
+    prov:wasDerivedFrom data:AUS_UNIT_00606 .
+
+data:AUS_UNIT_00606_subject_be57bc a gro-au:RequiredProviderRole ;
+    rdfs:label ""Required Provider Role"" ;
+    skos:definition ""The role of a provider required to have certain processes and procedures under Australian regulatory provisions."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00606 .
+
+data:AUS_UNIT_00606_action_7fdc47 a cco:Action ;
+    rdfs:label ""Handle and Manage Student Matters"" ;
+    cco:hasActionExpression ""handle student information, determine tuition fees, manage student withdrawal, cancel a student’s enrolment after census day, recredit a student’s HELP balance, handle student complaints"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00606 .
+
+data:AUS_UNIT_00606_object_150d25 a cco:Resource ;
+    rdfs:label ""Student-Related Resources"" ;
+    skos:definition ""Aggregate resource encompassing student information, tuition fees, student withdrawal, student enrolment, HELP balance, and student complaints."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00606 .
+
+data:AUS_UNIT_00606_condition_9a2b3c a cco:Condition ;
+    rdfs:label ""After Census Day"" ;
+    cco:hasConditionExpression ""after census day"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00606 .",P,P,P,P
+034,AUS-UNIT-00174,Obligation,AU,"Charging and reporting RPL Fees covered by VSL and other tuition fees for approved courses must be spread across at least 3 census days over 3 periods for the course. This includes RPL units. The only exemption is where compliance with state or territory subsidy funding arrangements applies. You should note that the department is not required to pay a loan amount for a student for a course if we suspect on reasonable grounds that you are not complying with the Act. This includes where you fail to comply with the requirements of the Rules in relation to tuition fees such as sequential and reasonably apportioned fee charging. If the tuition fee you charge for a unit is purely an RPL assessment fee, you must report it with a value against the RPL indicator. If the unit is fundamentally a teaching unit, the value against the RPL indicator will be zero. For information on how to report RPL, see Appendix E. Full details of the reporting requirements are in the TCSI Support coding notes and glossary Recognition of prior learning code - TCSI Support. Legislation: Act s 20(f), Rules 118(1)(b), Rules s 122 – 124","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00174 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00174"" .
+
+gro-au:ApprovedCourseProviderRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider Role"" ;
+    skos:definition ""The role of an approved course provider under Australian VET legislation."" .
+
+gro-au:RPLFee a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""RPL Fee"" ;
+    skos:definition ""A fee for Recognition of Prior Learning covered by VET Student Loans and other tuition fees."" .
+
+gro-au:StateTerritorySubsidyArrangement a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""State/Territory Subsidy Arrangement"" ;
+    skos:definition ""A condition where compliance with state or territory subsidy funding arrangements applies."" .
+
+gro-au:Department a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The Australian Government department responsible for administering the VET Student Loans program."" .
+
+data:AUS_UNIT_00174_subject_fcc4b8 a gro-au:ApprovedCourseProviderRole ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .
+
+data:AUS_UNIT_00174_object_6cbb0e a gro-au:RPLFee ;
+    rdfs:label ""RPL Fees Covered by VSL"" ;
+    skos:definition ""RPL Fees covered by VSL and other tuition fees for approved courses."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .
+
+data:AUS_UNIT_00174_action_e76cdf a cco:Action ;
+    rdfs:label ""Spread Charging and Reporting RPL Fees"" ;
+    cco:hasActionExpression ""must spread charging and reporting RPL Fees covered by VSL and other tuition fees for approved courses across at least 3 census days over 3 periods for the course"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .
+
+data:AUS_UNIT_00174_exception_62fb8f a cco:Exception ;
+    rdfs:label ""State/Territory Subsidy Compliance Exception"" ;
+    cco:hasCondition data:AUS_UNIT_00174_condition_9a2b1c ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174  ;
+    cco:modifiesNorm data:AUS_UNIT_00174_norm_5b6e50  .
+
+data:AUS_UNIT_00174_condition_9a2b1c a gro-au:StateTerritorySubsidyArrangement ;
+    rdfs:label ""State/Territory Subsidy Arrangement"" ;
+    cco:hasConditionExpression ""compliance with state or territory subsidy funding arrangements applies"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .
+
+data:AUS_UNIT_00174_authority_3355b7 a gro-au:Department ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The department responsible for VET Student Loans administration."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .
+
+data:AUS_UNIT_00174_norm_5b6e50 a cco:Obligation ;
+    rdfs:label ""RPL Fee Charging and Reporting Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00174_subject_fcc4b8 ;
+    cco:hasAction data:AUS_UNIT_00174_action_e76cdf ;
+    cco:hasObject data:AUS_UNIT_00174_object_6cbb0e ;
+    cco:hasException data:AUS_UNIT_00174_exception_62fb8f ;
+    prov:wasDerivedFrom data:AUS_UNIT_00174 .",Y,Y,P,P
+035,AUS-UNIT-00145,Obligation,AU,"For each approved course you offer, you must provide the department with a list of the fees charged for the course, including the tuition fees for each part of the course. You must update the list whenever you change the fees you charge for the course. You must provide the list of fees in the approved manner and form.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-au:ApprovedCourseProvider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""A role held by an entity that offers approved courses under Australian regulatory requirements."" .
+
+gro-au:Department a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The government department referenced as the authority in the provision."" .
+
+gro-au:FeeList a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Fee List"" ;
+    skos:definition ""A list of fees charged for an approved course, including tuition fees for each part of the course."" .
+
+data:AUS_UNIT_00145 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00145"" .
+
+data:AUS_UNIT_00145_subject_6c4d0b a gro-au:ApprovedCourseProvider ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""The entity that offers approved courses and is subject to the obligation."" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .
+
+data:AUS_UNIT_00145_authority_b02f8e a gro-au:Department ;
+    rdfs:label ""Department"" ;
+    skos:definition ""The department to which the fee list must be provided."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .
+
+data:AUS_UNIT_00145_object_e14251 a gro-au:FeeList ;
+    rdfs:label ""Fee List"" ;
+    skos:definition ""A list of the fees charged for the course, including the tuition fees for each part of the course."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .
+
+data:AUS_UNIT_00145_action_800a84 a cco:Action ;
+    rdfs:label ""Provide Fee List"" ;
+    cco:hasActionExpression ""provide the department with a list of the fees charged for the course, including the tuition fees for each part of the course"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .
+
+data:AUS_UNIT_00145_condition_8263af a cco:Condition ;
+    rdfs:label ""Approved Course Offered"" ;
+    cco:hasConditionExpression ""For each approved course you offer"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .
+
+data:AUS_UNIT_00145_norm_451a9c a cco:Obligation ;
+    rdfs:label ""Provide Fee List Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00145_subject_6c4d0b ;
+    cco:hasAction data:AUS_UNIT_00145_action_800a84 ;
+    cco:hasObject data:AUS_UNIT_00145_object_e14251 ;
+    cco:appliesUnder data:AUS_UNIT_00145_condition_8263af ;
+    prov:wasDerivedFrom data:AUS_UNIT_00145 .",Y,P,P,P
+036,AUS-UNIT-00694,Obligation,AU,You must: • have clearly defined decision-making processes that ensure accountability for decisions and actions,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00694 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00694"" .
+
+gro-au:ApprovedCourseProvider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""A role held by an organisation that is approved to provide courses under the relevant regulatory framework."" .
+
+data:AUS_UNIT_00694_subject_5587e2 a gro-au:ApprovedCourseProvider ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:altLabel ""You"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00694 .
+
+data:AUS_UNIT_00694_action_20d987 a cco:Action ;
+    rdfs:label ""Define Decision-Making Processes"" ;
+    cco:hasActionExpression ""have clearly defined decision-making processes that ensure accountability for decisions and actions"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00694 .
+
+data:AUS_UNIT_00694_norm_3548ba a cco:Obligation ;
+    rdfs:label ""Decision-Making Process Obligation"" ;
+    cco:appliesToRole data:AUS_UNIT_00694_subject_5587e2 ;
+    cco:hasAction data:AUS_UNIT_00694_action_20d987 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00694 .",Y,Y,Y,Y
+037,CAN-UNIT-00043,Obligation,CA,"Continuously comply with the requirements of the institution’s designation and the StudentAid BC Administration Manual. The Ministry may request B.C. Private Post- Secondary Institutions provide information such as attendance records, withdrawals, and tuition deducted from student financial assistance (for more examples see the StudentAid BC Administration Manual).","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00043 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00043"" .
+
+gro-ca:BCPrivatePostSecondaryInstitution a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""B.C. Private Post-Secondary Institution"" ;
+    skos:definition ""A private post-secondary institution operating in British Columbia, Canada."" .
+
+gro-ca:StudentAidBCAdministrationManual a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""StudentAid BC Administration Manual"" ;
+    skos:definition ""The administrative manual governing the StudentAid BC program in British Columbia, Canada."" .
+
+gro-ca:Ministry a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Ministry"" ;
+    skos:definition ""The Ministry responsible for post-secondary education and student financial assistance in British Columbia, Canada."" .
+
+data:CAN_UNIT_00043_subject_4ebee4 a gro-ca:BCPrivatePostSecondaryInstitution ;
+    rdfs:label ""B.C. Private Post-Secondary Institutions"" ;
+    skos:altLabel ""B.C. Private Post-Secondary Institutions"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+
+data:CAN_UNIT_00043_object_2611e0 a gro-ca:StudentAidBCAdministrationManual ;
+    rdfs:label ""Designation Requirements and Manual"" ;
+    skos:definition ""The requirements of the institution’s designation and the StudentAid BC Administration Manual."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+
+data:CAN_UNIT_00043_authority_f10d0c a gro-ca:Ministry ;
+    rdfs:label ""The Ministry"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+
+data:CAN_UNIT_00043_action_180d6c a cco:Action ;
+    rdfs:label ""Comply with Requirements"" ;
+    cco:hasActionExpression ""Continuously comply with the requirements of the institution’s designation and the StudentAid BC Administration Manual."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+
+data:CAN_UNIT_00043_temporal_condition a cco:Condition ;
+    rdfs:label ""Continuous Compliance"" ;
+    cco:hasConditionExpression ""Continuously"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+
+data:CAN_UNIT_00043_norm_1c5643 a cco:Obligation ;
+    rdfs:label ""Continuous Compliance Obligation"" ;
+    gro:hasSubject data:CAN_UNIT_00043_subject_4ebee4 ;
+    cco:hasAction data:CAN_UNIT_00043_action_180d6c ;
+    cco:hasObject data:CAN_UNIT_00043_object_2611e0 ;
+    cco:appliesUnder data:CAN_UNIT_00043_temporal_condition ;
+    prov:wasDerivedFrom data:CAN_UNIT_00043 .
+",Y,Y,Y,Y
+038,CAN-UNIT-00299,Obligation,CA,"The documentation must: • Describe the disability (providing the specific diagnosis is optional); • Confirm the applicant’s functional limitation(s) are expected to be permanent, or persistent or prolonged; and","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-ca:Document a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Document"" ;
+    skos:definition ""A written or printed record that provides information or evidence."" .
+
+data:CAN_UNIT_00299 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00299"" .
+
+data:CAN_UNIT_00299_norm_fbe0e2 a cco:Obligation ;
+    rdfs:label ""Documentation Obligation"" ;
+    cco:hasAction data:CAN_UNIT_00299_action_4ec1d7 ;
+    gro:hasSubject data:CAN_UNIT_00299_subject_83faad ;
+    prov:wasDerivedFrom data:CAN_UNIT_00299 .
+
+data:CAN_UNIT_00299_subject_83faad a gro-ca:Document ;
+    rdfs:label ""Documentation"" ;
+    skos:definition ""The documentation that must describe the disability and confirm the permanence or persistence of functional limitations."" ;
+    skos:altLabel ""The documentation"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00299 .
+
+data:CAN_UNIT_00299_action_4ec1d7 a cco:Action ;
+    rdfs:label ""Describe and Confirm"" ;
+    cco:hasActionExpression ""must describe the disability and confirm the applicant’s functional limitation(s) are expected to be permanent, or persistent or prolonged"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00299 .",Y,Y,Y,Y
+039,UK-UNIT-00982,Obligation,UK,Providers must hold evidence to assure us that they are using apprenticeship funding appropriately. Most evidence will occur naturally from their normal business process. If evidence is not available funding may be at risk.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00982 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00982"" .
+
+gro-uk:ApprenticeshipProvider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Apprenticeship Provider"" ;
+    skos:definition ""An organisation that delivers apprenticeship training and holds apprenticeship funding."" .
+
+gro-uk:ApprenticeshipFundingEvidence a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprenticeship Funding Evidence"" ;
+    skos:definition ""Documentation or records that demonstrate appropriate use of apprenticeship funding."" .
+
+data:UK_UNIT_00982_subject_33bc8f a gro-uk:ApprenticeshipProvider ;
+    rdfs:label ""Apprenticeship Provider"" ;
+    skos:definition ""An organisation that delivers apprenticeship training and holds apprenticeship funding."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00982 .
+
+data:UK_UNIT_00982_action_ac4da6 a cco:Action ;
+    rdfs:label ""Hold Evidence"" ;
+    cco:hasActionExpression ""must hold evidence to assure us that they are using apprenticeship funding appropriately"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00982 .
+
+data:UK_UNIT_00982_object_6ca950 a gro-uk:ApprenticeshipFundingEvidence ;
+    rdfs:label ""Apprenticeship Funding Evidence"" ;
+    skos:definition ""Documentation or records that demonstrate appropriate use of apprenticeship funding."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00982 .
+
+data:UK_UNIT_00982_exception_3d3f3b a cco:Exception ;
+    rdfs:label ""Funding at Risk Exception"" ;
+    skos:definition ""If evidence is not available, funding may be at risk."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00982  ;
+    cco:modifiesNorm data:UK_UNIT_00982_norm_01a60d  .
+
+data:UK_UNIT_00982_norm_01a60d a cco:Obligation ;
+    rdfs:label ""Hold Apprenticeship Funding Evidence"" ;
+    gro:hasSubject data:UK_UNIT_00982_subject_33bc8f ;
+    cco:hasAction data:UK_UNIT_00982_action_ac4da6 ;
+    cco:hasObject data:UK_UNIT_00982_object_6ca950 ;
+    cco:hasException data:UK_UNIT_00982_exception_3d3f3b ;
+    prov:wasDerivedFrom data:UK_UNIT_00982 .",Y,P,Y,P
+040,UK-UNIT-00381,Obligation,UK,"• Delivered or arranged for the delivery of off-the-job training. If the delivery model is a front-loaded or a block release model, this has been agreed with the employer and documented in the training plan. • Planned for OTJT active learning to take place every calendar month (every 3 calendar months for front-loaded and block release models) and a break in learning has been used where there was no plan (see paragraphs 88.1 to 88.2 and 89.1 to 89.2). • Where relevant, been approved by the relevant regulatory body before delivering apprenticeship training and there is evidence of this approval. • Documented the actual volume of off-the-job training hours on the ILR when the learner exits the apprenticeship (completers and early leavers) and ensured that this value is supported by proof of delivery. The actual hours can be higher than the planned hours (to account for individual provider delivery models). All delivery evidence must be quantifiable and must meet the definition given in paragraphs 77 and 78. No ineligible activities (see paragraph 79) have been included. The evidence should include a broad description of the activity or the session it relates to (e.g. subject title or module / lesson number) to enable a cross-check against the training plan.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00381 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00381"" .
+
+gro-uk:Provider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that delivers or arranges apprenticeship training."" .
+
+gro-uk:OffTheJobTraining a owl:Class ;
+    rdfs:subClassOf cco:Action ;
+    rdfs:label ""Off-the-Job Training"" ;
+    skos:definition ""Training delivered outside the normal work environment as part of an apprenticeship."" .
+
+gro-uk:TrainingPlan a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Training Plan"" ;
+    skos:definition ""A documented plan outlining the training delivery model and schedule."" .
+
+gro-uk:ILR a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Individualised Learner Record"" ;
+    skos:definition ""The Individualised Learner Record used to document training hours and learner data."" .
+
+gro-uk:RegulatoryBody a owl:Class ;
+    rdfs:subClassOf cco:RegulatoryAuthorityAgent ;
+    rdfs:label ""Regulatory Body"" ;
+    skos:definition ""A body responsible for approving apprenticeship training delivery."" .
+
+data:UK_UNIT_00381_norm_d707eb a cco:Obligation ;
+    rdfs:label ""Off-the-Job Training Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00381_subject_15d46c ;
+    cco:hasAction data:UK_UNIT_00381_action_700771 ;
+    cco:hasObject data:UK_UNIT_00381_object_a10361 ;
+    cco:appliesUnder data:UK_UNIT_00381_condition_262f0f ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_subject_15d46c a gro-uk:Provider ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider delivering or arranging apprenticeship training."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_action_700771 a cco:Action ;
+    rdfs:label ""Deliver and Document Training"" ;
+    cco:hasActionExpression ""Delivered or arranged for the delivery of off-the-job training. Planned for OTJT active learning to take place every calendar month (every 3 calendar months for front-loaded and block release models) and a break in learning has been used where there was no plan. Where relevant, been approved by the relevant regulatory body before delivering apprenticeship training and there is evidence of this approval. Documented the actual volume of off-the-job training hours on the ILR when the learner exits the apprenticeship (completers and early leavers) and ensured that this value is supported by proof of delivery. All delivery evidence must be quantifiable and must meet the definition given in paragraphs 77 and 78. No ineligible activities (see paragraph 79) have been included. The evidence should include a broad description of the activity or the session it relates to (e.g. subject title or module / lesson number) to enable a cross-check against the training plan."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_object_a10361 a cco:Resource ;
+    rdfs:label ""Training Resources"" ;
+    skos:definition ""Off-the-job training, training plan, ILR, and evidence of delivery."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_condition_262f0f a cco:Condition ;
+    rdfs:label ""Front-loaded or Block Release Model"" ;
+    cco:hasConditionExpression ""If the delivery model is a front-loaded or a block release model, this has been agreed with the employer and documented in the training plan."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_authority_5e1a49 a gro-uk:RegulatoryBody ;
+    rdfs:label ""Relevant Regulatory Body"" ;
+    skos:definition ""The regulatory body that must approve apprenticeship training delivery where relevant."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00381 .
+
+data:UK_UNIT_00381_norm_d707eb cco:issues data:UK_UNIT_00381_authority_5e1a49 .",Y,P,P,P
+041,UK-UNIT-00765,Obligation,UK,"The provider must directly deliver some of the apprenticeship training and / or on-programme assessment associated with each employer’s apprenticeship programme. By employer’s apprenticeship programme, we mean all of the apprentices that a provider has been contracted to deliver training to, at that employer, irrespective of the occupational area, standard or level.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00765 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00765"" .
+
+gro-uk:ApprenticeshipTrainingAssessment a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprenticeship Training and Assessment"" ;
+    skos:definition ""The apprenticeship training and/or on-programme assessment associated with an employer's apprenticeship programme."" .
+
+gro-uk:EmployerApprenticeshipProgramme a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Employer Apprenticeship Programme"" ;
+    skos:definition ""All of the apprentices that a provider has been contracted to deliver training to, at that employer, irrespective of the occupational area, standard or level."" .
+
+data:UK_UNIT_00765_norm_db4ad1 a cco:Obligation ;
+    rdfs:label ""Direct Delivery Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00765_subject_95c868 ;
+    cco:hasAction data:UK_UNIT_00765_action_32582f ;
+    cco:hasObject data:UK_UNIT_00765_object_a4b789 ;
+    cco:appliesUnder data:UK_UNIT_00765_condition_e3cb0f ;
+    prov:wasDerivedFrom data:UK_UNIT_00765 .
+
+data:UK_UNIT_00765_subject_95c868 a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider of apprenticeship training and assessment."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00765 .
+
+data:UK_UNIT_00765_action_32582f a cco:Action ;
+    rdfs:label ""Directly Deliver Training and Assessment"" ;
+    cco:hasActionExpression ""must directly deliver some of the apprenticeship training and / or on-programme assessment"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00765 .
+
+data:UK_UNIT_00765_object_a4b789 a gro-uk:ApprenticeshipTrainingAssessment ;
+    rdfs:label ""Apprenticeship Training and Assessment"" ;
+    skos:definition ""The apprenticeship training and/or on-programme assessment associated with an employer's apprenticeship programme."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00765 .
+
+data:UK_UNIT_00765_condition_e3cb0f a cco:Condition ;
+    rdfs:label ""Associated with Employer Programme"" ;
+    cco:hasConditionExpression ""associated with each employer’s apprenticeship programme"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00765 .",Y,Y,Y,Y
+042,UK-UNIT-00315,Obligation,UK,"The learning end date must only be recorded when the last piece of learning has been delivered (irrespective of who has delivered the training). 87-90 Clarification: In this section, active learning has been renamed as OTJT active learning, to distinguish it from the new English and maths active learning requirement. Providers must comply with both active learning rules separately where English and / or maths funding is being accessed.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00315 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00315"" .
+
+gro-uk:Provider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that delivers training and must comply with funding rules."" .
+
+gro-uk:LearningEndDate a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Learning End Date"" ;
+    skos:definition ""The date when the last piece of learning has been delivered."" .
+
+data:UK_UNIT_00315_subject_d94a36 a gro-uk:Provider ;
+    rdfs:label ""Provider"" ;
+    skos:altLabel ""Providers"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00315 .
+
+data:UK_UNIT_00315_object_01a3fe a gro-uk:LearningEndDate ;
+    rdfs:label ""Learning End Date"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00315 .
+
+data:UK_UNIT_00315_action_52ea7c a cco:Action ;
+    rdfs:label ""Record Learning End Date"" ;
+    cco:hasActionExpression ""must only record the learning end date when the last piece of learning has been delivered"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00315 .
+
+data:UK_UNIT_00315_condition_557f28 a cco:Condition ;
+    rdfs:label ""Last Learning Delivered"" ;
+    cco:hasConditionExpression ""when the last piece of learning has been delivered (irrespective of who has delivered the training)"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00315 .
+
+data:UK_UNIT_00315_norm_3e8c48 a cco:Obligation ;
+    rdfs:label ""Learning End Date Recording Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00315_subject_d94a36 ;
+    cco:hasAction data:UK_UNIT_00315_action_52ea7c ;
+    cco:hasObject data:UK_UNIT_00315_object_01a3fe ;
+    cco:appliesUnder data:UK_UNIT_00315_condition_557f28 ;
+    prov:wasDerivedFrom data:UK_UNIT_00315 .",Y,Y,Y,Y
+043,UK-UNIT-00935,Obligation,UK,"The provider: • Has evidence of the apprentice’s redundancy. This may be a copy of the apprentice’s dismissal notice (which cites the reason for dismissal as redundancy). In the absence of this, other evidence which would allow one to reasonably conclude that the apprentice has been made redundant is acceptable (e.g. an email informing employees that the business is closing / has closed). See the Glossary definition for the situations which amount to redundancy in law.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00935 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00935"" .
+
+gro-uk:Provider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that delivers training or apprenticeship services."" .
+
+gro-uk:RedundancyEvidence a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Redundancy Evidence"" ;
+    skos:definition ""Documentation or information demonstrating that an apprentice has been made redundant, such as a dismissal notice or business closure email."" .
+
+data:UK_UNIT_00935_subject_bb4b01 a gro-uk:Provider ;
+    rdfs:label ""The Provider"" ;
+    skos:definition ""The organisation responsible for the apprenticeship provision, as referenced in the regulatory text."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00935 .
+
+data:UK_UNIT_00935_object_90c469 a gro-uk:RedundancyEvidence ;
+    rdfs:label ""Apprentice Redundancy Evidence"" ;
+    skos:definition ""Evidence of the apprentice's redundancy, which may include a dismissal notice or other reasonable documentation."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00935 .
+
+data:UK_UNIT_00935_action_9bc0b0 a cco:Action ;
+    rdfs:label ""Possess Redundancy Evidence"" ;
+    cco:hasActionExpression ""has evidence of the apprentice's redundancy"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00935 .
+
+data:UK_UNIT_00935_exception_e51c07 a cco:Exception ;
+    rdfs:label ""Alternative Evidence Exception"" ;
+    skos:definition ""In the absence of a dismissal notice, other evidence which would allow one to reasonably conclude that the apprentice has been made redundant is acceptable."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00935  ;
+    cco:modifiesNorm data:UK_UNIT_00935_norm_d77b4b  .
+
+data:UK_UNIT_00935_norm_d77b4b a cco:Obligation ;
+    rdfs:label ""Provider Redundancy Evidence Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00935_subject_bb4b01 ;
+    cco:hasAction data:UK_UNIT_00935_action_9bc0b0 ;
+    cco:hasObject data:UK_UNIT_00935_object_90c469 ;
+    cco:hasException data:UK_UNIT_00935_exception_e51c07 ;
+    prov:wasDerivedFrom data:UK_UNIT_00935 .",Y,Y,Y,Y
+044,UK-UNIT-00080,Obligation,UK,"The provider must retain evidence of an individual’s eligibility, including:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00080 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00080"" .
+
+gro-uk:EvidenceOfEligibility a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Evidence of Eligibility"" ;
+    skos:definition ""Evidence of an individual's eligibility that must be retained by the provider."" .
+
+data:UK_UNIT_00080_norm_85d100 a cco:Obligation ;
+    rdfs:label ""Retain Eligibility Evidence Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00080_subject_3fd158 ;
+    cco:hasAction data:UK_UNIT_00080_action_1b938c ;
+    cco:hasObject data:UK_UNIT_00080_object_90e879 ;
+    prov:wasDerivedFrom data:UK_UNIT_00080 .
+
+data:UK_UNIT_00080_subject_3fd158 a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider who must retain evidence of an individual's eligibility."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00080 .
+
+data:UK_UNIT_00080_action_1b938c a cco:Action ;
+    rdfs:label ""Retain Evidence"" ;
+    cco:hasActionExpression ""must retain evidence of an individual's eligibility"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00080 .
+
+data:UK_UNIT_00080_object_90e879 a gro-uk:EvidenceOfEligibility ;
+    rdfs:label ""Evidence of Eligibility"" ;
+    skos:definition ""Evidence of an individual's eligibility that must be retained."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00080 .",Y,Y,Y,Y
+045,UK-UNIT-00867,Obligation,UK,Main providers must hold documented details of the apprentice’s placement(s) – this includes the name of the host employer(s) and the duration of the placement(s).,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00867 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00867"" .
+
+gro-uk:MainProvider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Main Provider"" ;
+    skos:definition ""An organisation that acts as a main provider in the context of apprenticeships."" .
+
+gro-uk:PlacementDocumentation a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Placement Documentation"" ;
+    skos:definition ""Documented details of an apprentice's placement, including host employer name and placement duration."" .
+
+data:UK_UNIT_00867_subject_ee86f2 a gro-uk:MainProvider ;
+    rdfs:label ""Main Providers"" ;
+    skos:definition ""Main providers as referenced in the regulatory provision."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00867 .
+
+data:UK_UNIT_00867_action_4f9421 a cco:Action ;
+    rdfs:label ""Hold Placement Documentation"" ;
+    cco:hasActionExpression ""must hold documented details of the apprentice’s placement(s) – this includes the name of the host employer(s) and the duration of the placement(s)"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00867 .
+
+data:UK_UNIT_00867_object_0ea732 a gro-uk:PlacementDocumentation ;
+    rdfs:label ""Placement Details"" ;
+    skos:definition ""Documented details of the apprentice’s placement(s), including the name of the host employer(s) and the duration of the placement(s)."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00867 .
+
+data:UK_UNIT_00867_norm_8a81ed a cco:Obligation ;
+    rdfs:label ""Placement Documentation Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00867_subject_ee86f2 ;
+    cco:hasAction data:UK_UNIT_00867_action_4f9421 ;
+    cco:hasObject data:UK_UNIT_00867_object_0ea732 ;
+    prov:wasDerivedFrom data:UK_UNIT_00867 .",Y,Y,Y,Y
+046,UK-UNIT-00583,Obligation,UK,"Where applicable the provider must apply for, and give, apprentice’s certificates from awarding organisations for achieving a mandatory qualification, and ensure they keep a copy of this in the evidence pack.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00583 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00583"" .
+
+gro-uk:Provider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An entity that delivers training and assessment services within the UK regulatory framework."" .
+
+gro-uk:ApprenticeCertificate a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprentice Certificate"" ;
+    skos:definition ""A certificate awarded to an apprentice upon achieving a mandatory qualification."" .
+
+gro-uk:EvidencePack a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Evidence Pack"" ;
+    skos:definition ""A collection of documents and records maintained as evidence of compliance."" .
+
+gro-uk:AwardingOrganisation a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Awarding Organisation"" ;
+    skos:definition ""An organisation authorised to issue qualifications and certificates."" .
+
+data:UK_UNIT_00583_norm_9b089c a cco:Obligation ;
+    rdfs:label ""Provider Certificate Obligation"" ;
+    cco:appliesToRole data:UK_UNIT_00583_subject_c9c59b ;
+    cco:hasAction data:UK_UNIT_00583_action_237575 ;
+    cco:hasObject data:UK_UNIT_00583_object_4ffe70 ;
+    cco:appliesUnder data:UK_UNIT_00583_condition_3a0683 ;
+    prov:wasDerivedFrom data:UK_UNIT_00583 .
+
+data:UK_UNIT_00583_subject_c9c59b a gro-uk:Provider ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider responsible for applying for, giving, and retaining apprentice certificates."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00583 .
+
+data:UK_UNIT_00583_action_237575 a cco:Action ;
+    rdfs:label ""Apply Give and Retain Certificates"" ;
+    cco:hasActionExpression ""apply for, and give, apprentice’s certificates from awarding organisations for achieving a mandatory qualification, and ensure they keep a copy of this in the evidence pack"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00583 .
+
+data:UK_UNIT_00583_object_4ffe70 a gro-uk:ApprenticeCertificate ;
+    rdfs:label ""Apprentice Certificate"" ;
+    skos:definition ""Apprentice’s certificates from awarding organisations for achieving a mandatory qualification."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00583 .
+
+data:UK_UNIT_00583_condition_3a0683 a cco:Condition ;
+    rdfs:label ""Where Applicable Condition"" ;
+    cco:hasConditionExpression ""Where applicable"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00583 .",Y,P,P,P
+047,UK-UNIT-00685,Obligation,UK,"Where the details of the end-point assessment organisation are not known at the start of the apprenticeship, these must be entered (in TNP2) once they have been confirmed. This field in the ILR must be left blank until the price of the end-point assessment has been confirmed to ensure accuracy.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00685 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00685"" .
+
+gro-uk:EndPointAssessmentOrganisationDetails a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""End-Point Assessment Organisation Details"" ;
+    skos:definition ""Details of the end-point assessment organisation for an apprenticeship"" .
+
+gro-uk:TNP2 a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""TNP2 Record"" ;
+    skos:definition ""A TNP2 record in the ILR system where end-point assessment organisation details are entered"" .
+
+gro-uk:ILRField a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""ILR Field"" ;
+    skos:definition ""A field in the Individualised Learner Record (ILR) that must be left blank until the end-point assessment price is confirmed"" .
+
+data:UK_UNIT_00685_norm_6fdd12 a cco:Obligation ;
+    rdfs:label ""Enter EPA Organisation Details Obligation"" ;
+    cco:appliesToRole data:UK_UNIT_00685_subject_6e9f86 ;
+    cco:hasAction data:UK_UNIT_00685_action_838fac ;
+    cco:hasObject data:UK_UNIT_00685_object_e0db7b ;
+    cco:appliesUnder data:UK_UNIT_00685_condition_6fb5ba ;
+    prov:wasDerivedFrom data:UK_UNIT_00685 .
+
+data:UK_UNIT_00685_subject_6e9f86 a cco:Role ;
+    rdfs:label ""Data Entry Role"" ;
+    skos:definition ""The role responsible for entering end-point assessment organisation details in TNP2"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00685 .
+
+data:UK_UNIT_00685_action_838fac a cco:Action ;
+    rdfs:label ""Enter Details in TNP2"" ;
+    cco:hasActionExpression ""must be entered (in TNP2) once they have been confirmed"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00685 .
+
+data:UK_UNIT_00685_object_e0db7b a gro-uk:EndPointAssessmentOrganisationDetails ;
+    rdfs:label ""EPA Organisation Details"" ;
+    skos:definition ""Details of the end-point assessment organisation"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00685 .
+
+data:UK_UNIT_00685_condition_6fb5ba a cco:Condition ;
+    rdfs:label ""EPA Details Unknown at Start"" ;
+    cco:hasConditionExpression ""Where the details of the end-point assessment organisation are not known at the start of the apprenticeship"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00685 .",P,P,P,P
+048,UK-UNIT-00179,Obligation,UK,The provider must provide written evidence at gateway that the apprentice has attempted the assessment(s). The apprentice will not be required to achieve English and / or maths in order to achieve the apprenticeship.,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00179 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00179"" .
+
+gro-uk:Document a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Document"" ;
+    skos:definition ""A written or printed record that provides evidence or information."" .
+
+data:UK_UNIT_00179_norm_b8611f a cco:Obligation ;
+    rdfs:label ""Provide Written Evidence Obligation"" ;
+    gro:hasSubject data:UK_UNIT_00179_subject_af0880 ;
+    cco:hasAction data:UK_UNIT_00179_action_fe1f11 ;
+    cco:hasObject data:UK_UNIT_00179_object_85a498 ;
+    cco:appliesUnder data:UK_UNIT_00179_condition_5c3a1b ;
+    prov:wasDerivedFrom data:UK_UNIT_00179 .
+
+data:UK_UNIT_00179_subject_af0880 a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The training provider responsible for delivering the apprenticeship."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00179 .
+
+data:UK_UNIT_00179_action_fe1f11 a cco:Action ;
+    rdfs:label ""Provide Written Evidence"" ;
+    cco:hasActionExpression ""must provide written evidence at gateway that the apprentice has attempted the assessment(s)"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00179 .
+
+data:UK_UNIT_00179_object_85a498 a gro-uk:Document ;
+    rdfs:label ""Written Evidence"" ;
+    skos:definition ""Written evidence that the apprentice has attempted the assessment(s)."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00179 .
+
+data:UK_UNIT_00179_condition_5c3a1b a cco:Condition ;
+    rdfs:label ""At Gateway"" ;
+    cco:hasConditionExpression ""at gateway"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00179 .",Y,Y,Y,Y
+049,USA-UNIT-00312,Obligation,US,You must require students selected for verification - either by your school or the Department - to submit the documentation by the date specified by your school (for Campus-Based and Direct Loans) or the Department (for Pell).,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00312 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00312"" .
+
+gro-us:Document a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Document"" ;
+    skos:definition ""A written, printed, or electronic record that provides information or evidence."" .
+
+gro-us:InstitutionRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Institution Role"" ;
+    skos:definition ""The role of an educational institution responsible for administering financial aid programs."" .
+
+gro-us:VerificationSelectionCondition a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Verification Selection Condition"" ;
+    skos:definition ""A condition where students are selected for verification of their financial aid application information."" .
+
+gro-us:SchoolOrDepartmentAuthority a owl:Class ;
+    rdfs:subClassOf cco:RegulatoryAuthorityRole ;
+    rdfs:label ""School or Department Authority"" ;
+    skos:definition ""The authority held by a school or the Department of Education to specify deadlines for documentation submission."" .
+
+data:USA_UNIT_00312_norm_e9c4d9 a cco:Obligation ;
+    rdfs:label ""Require Verification Documentation Submission"" ;
+    cco:appliesToRole data:USA_UNIT_00312_subject_cc3da2 ;
+    cco:hasAction data:USA_UNIT_00312_action_112439 ;
+    cco:hasObject data:USA_UNIT_00312_object_9ca02a ;
+    cco:appliesUnder data:USA_UNIT_00312_condition_ab9e0f ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_subject_cc3da2 a gro-us:InstitutionRole ;
+    rdfs:label ""Institution"" ;
+    skos:altLabel ""You"" ;
+    skos:definition ""The educational institution addressed by the provision, responsible for requiring documentation from students."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_action_112439 a cco:Action ;
+    rdfs:label ""Require Documentation Submission"" ;
+    cco:hasActionExpression ""must require students selected for verification to submit the documentation"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_object_9ca02a a gro-us:Document ;
+    rdfs:label ""Verification Documentation"" ;
+    skos:definition ""The documentation that students selected for verification must submit."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_condition_ab9e0f a gro-us:VerificationSelectionCondition ;
+    rdfs:label ""Student Verification Selection"" ;
+    cco:hasConditionExpression ""students selected for verification - either by your school or the Department"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_authority_73cf04 a gro-us:SchoolOrDepartmentAuthority ;
+    rdfs:label ""School or Department Deadline Authority"" ;
+    skos:definition ""The authority of the school or the Department to specify the deadline for documentation submission, varying by program type."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00312 .
+
+data:USA_UNIT_00312_norm_e9c4d9 cco:appliesUnder data:USA_UNIT_00312_condition_ab9e0f .
+data:USA_UNIT_00312_norm_e9c4d9 cco:issues data:USA_UNIT_00312_authority_73cf04 .",Y,Y,Y,Y
+050,AUS-UNIT-00082,Permission,AU,"If you’re an approved course provider, you can apply to change the conditions of your approval to:","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00082 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00082"" .
+
+gro-au:ApprovedCourseProvider a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:definition ""A role held by an entity that has been approved as a course provider under the relevant regulatory framework."" .
+
+gro-au:ChangeApprovalConditionsAction a owl:Class ;
+    rdfs:subClassOf cco:Action ;
+    rdfs:label ""Change Approval Conditions Action"" ;
+    skos:definition ""The action of applying to change the conditions of an approval held by an approved course provider."" .
+
+data:AUS_UNIT_00082_subject_a88d91 a gro-au:ApprovedCourseProvider ;
+    rdfs:label ""Approved Course Provider"" ;
+    skos:altLabel ""you"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00082 .
+
+data:AUS_UNIT_00082_action_ab49e9 a gro-au:ChangeApprovalConditionsAction ;
+    rdfs:label ""Apply to Change Approval Conditions"" ;
+    cco:hasActionExpression ""apply to change the conditions of your approval"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00082 .
+
+data:AUS_UNIT_00082_condition_a39014 a cco:Condition ;
+    rdfs:label ""Approved Course Provider Status"" ;
+    cco:hasConditionExpression ""If you’re an approved course provider"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00082 .
+
+data:AUS_UNIT_00082_norm_f5a3e2 a cco:Permission ;
+    rdfs:label ""Permission to Apply for Condition Change"" ;
+    cco:appliesToRole data:AUS_UNIT_00082_subject_a88d91 ;
+    cco:hasAction data:AUS_UNIT_00082_action_ab49e9 ;
+    cco:appliesUnder data:AUS_UNIT_00082_condition_a39014 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00082 .",Y,Y,Y,Y
+051,AUS-UNIT-00567,Permission,AU,Unacceptable conduct A student may apply to the Secretary of the department for a recredit of their HELP balance if:,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00567 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00567"" .
+
+gro-au:Student a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A person enrolled in an educational institution or course of study."" .
+
+gro-au:HELPBalance a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""HELP Balance"" ;
+    skos:definition ""The remaining loan entitlement under the Higher Education Loan Program."" .
+
+gro-au:SecretaryOfDepartment a owl:Class ;
+    rdfs:subClassOf cco:RegulatoryAuthorityRole ;
+    rdfs:label ""Secretary of the Department"" ;
+    skos:definition ""The administrative head of a government department, holding regulatory authority."" .
+
+data:AUS_UNIT_00567_norm_01be32 a cco:Permission ;
+    rdfs:label ""HELP Balance Recredit Application Permission"" ;
+    cco:appliesToRole data:AUS_UNIT_00567_subject_598ef1 ;
+    cco:hasAction data:AUS_UNIT_00567_action_c5c2a7 ;
+    cco:hasObject data:AUS_UNIT_00567_object_92fc0f ;
+    cco:appliesUnder data:AUS_UNIT_00567_condition_d3b8f0 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .
+
+data:AUS_UNIT_00567_subject_598ef1 a gro-au:Student ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A student who may apply for a recredit of their HELP balance."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .
+
+data:AUS_UNIT_00567_action_c5c2a7 a cco:Action ;
+    rdfs:label ""Apply for HELP Balance Recredit"" ;
+    cco:hasActionExpression ""may apply to the Secretary of the department for a recredit of their HELP balance"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .
+
+data:AUS_UNIT_00567_object_92fc0f a gro-au:HELPBalance ;
+    rdfs:label ""HELP Balance"" ;
+    skos:definition ""The HELP balance subject to a recredit application."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .
+
+data:AUS_UNIT_00567_condition_d3b8f0 a cco:Condition ;
+    rdfs:label ""Unspecified Condition"" ;
+    cco:hasConditionExpression ""if:"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .
+
+data:AUS_UNIT_00567_authority_a7a2d3 a gro-au:SecretaryOfDepartment ;
+    rdfs:label ""Secretary of the Department"" ;
+    skos:definition ""The Secretary of the department who receives the application for HELP balance recredit."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00567 .",Y,P,Y,P
+052,CAN-UNIT-00691,Permission,CA,"To stop further processing of an application and/or production of award documents, students may choose to cancel their application for part-time student financial assistance if the student loan documents and/or grant funds have not been cashed and funding has not been issued. Procedure","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00691 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00691"" .
+
+gro-ca:Student a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Student"" ;
+    skos:definition ""A person enrolled in an educational program who may be eligible for financial assistance."" .
+
+gro-ca:PartTimeStudentFinancialAssistanceApplication a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Part-Time Student Financial Assistance Application"" ;
+    skos:definition ""An application submitted by a student for part-time financial assistance, including loans and grants."" .
+
+data:CAN_UNIT_00691_subject_b9baa2 a gro-ca:Student ;
+    rdfs:label ""Student"" ;
+    skos:altLabel ""students"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00691 .
+
+data:CAN_UNIT_00691_object_d50fee a gro-ca:PartTimeStudentFinancialAssistanceApplication ;
+    rdfs:label ""Part-Time Student Financial Assistance Application"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00691 .
+
+data:CAN_UNIT_00691_action_f27150 a cco:Action ;
+    rdfs:label ""Cancel Application"" ;
+    cco:hasActionExpression ""choose to cancel their application for part-time student financial assistance"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00691 .
+
+data:CAN_UNIT_00691_condition_13d5c4 a cco:Condition ;
+    rdfs:label ""Funding Not Issued Condition"" ;
+    cco:hasConditionExpression ""if the student loan documents and/or grant funds have not been cashed and funding has not been issued"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00691 .
+
+data:CAN_UNIT_00691_norm_7f80a8 a cco:Permission ;
+    rdfs:label ""Cancel Application Permission"" ;
+    cco:appliesToRole data:CAN_UNIT_00691_subject_b9baa2 ;
+    cco:hasAction data:CAN_UNIT_00691_action_f27150 ;
+    cco:hasObject data:CAN_UNIT_00691_object_d50fee ;
+    cco:appliesUnder data:CAN_UNIT_00691_condition_13d5c4 ;
+    prov:wasDerivedFrom data:CAN_UNIT_00691 .",Y,Y,Y,Y
+053,UK-UNIT-00942,Permission,UK,"adoption pay period to an end (these days are referred to as keeping in touch or KIT days). If an apprentice wishes to use any of their 10 designated KIT days to continue with apprenticeship training, assessment or end-point assessment, they may do so and the provider can continue to support them.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00942 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00942"" .
+
+gro-uk:Apprentice a owl:Class ;
+    rdfs:subClassOf cco:Person ;
+    rdfs:label ""Apprentice"" ;
+    skos:definition ""An individual engaged in apprenticeship training, assessment, or end-point assessment."" .
+
+gro-uk:KITDay a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""KIT Day"" ;
+    skos:definition ""A keeping in touch day designated for an apprentice to continue with apprenticeship training, assessment, or end-point assessment."" .
+
+data:UK_UNIT_00942_norm_edc1fd a cco:Permission ;
+    rdfs:label ""KIT Day Use Permission"" ;
+    gro:hasSubject data:UK_UNIT_00942_subject_96d374 ;
+    cco:hasAction data:UK_UNIT_00942_action_8d815d ;
+    cco:hasObject data:UK_UNIT_00942_object_3cfe6e ;
+    cco:appliesUnder data:UK_UNIT_00942_condition_32425d ;
+    prov:wasDerivedFrom data:UK_UNIT_00942 .
+
+data:UK_UNIT_00942_subject_96d374 a gro-uk:Apprentice ;
+    rdfs:label ""Apprentice"" ;
+    skos:definition ""An apprentice who wishes to use KIT days for training, assessment, or end-point assessment."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00942 .
+
+data:UK_UNIT_00942_action_8d815d a cco:Action ;
+    rdfs:label ""Use KIT Days for Training"" ;
+    cco:hasActionExpression ""may use any of their 10 designated KIT days to continue with apprenticeship training, assessment or end-point assessment"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00942 .
+
+data:UK_UNIT_00942_object_3cfe6e a gro-uk:KITDay ;
+    rdfs:label ""KIT Days"" ;
+    skos:definition ""The 10 designated keeping in touch days that an apprentice may use for apprenticeship training, assessment, or end-point assessment."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00942 .
+
+data:UK_UNIT_00942_condition_32425d a cco:Condition ;
+    rdfs:label ""Apprentice Wish Condition"" ;
+    cco:hasConditionExpression ""If an apprentice wishes to use any of their 10 designated KIT days to continue with apprenticeship training, assessment or end-point assessment"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00942 .",Y,P,Y,P
+054,USA-UNIT-00406,Permission,US,"| Dependency Overrides |
+| --- |
+| HEA Sec. 479A(c) and 480(d)(9)
+GEN-22-15. |
+unusual circumstances by publicly posting the option on their website. An FAA may conduct dependency overrides on a case-by-case basis for students with unusual circumstances. An aid administrator may override only from dependent to independent. If the FAA determines that an override is appropriate, they must maintain the determination with any supporting documentation.
+Human trafficking, as described in the Trafficking Victims Protection Act of 2000 (22 U.S.C. 7101 et seq.); Legally granted refugee or asylum status; Parental abandonment or estrangement; or Student or parental incarceration. In such cases an override might be warranted based upon the student's individual circumstances. These conditions would also not disqualify a student from being a homeless unaccompanied youth or self-supporting and at risk of homelessness. However, none of the conditions listed below, singly or in combination, qualify as unusual circumstances meriting a dependency override.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:USA_UNIT_00406 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00406"" .
+
+gro-us:FAA a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""FAA Role"" ;
+    skos:definition ""Financial Aid Administrator role as referenced in HEA regulations"" .
+
+gro-us:DependencyOverride a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Dependency Override"" ;
+    skos:definition ""A determination to override a student's dependency status from dependent to independent"" .
+
+data:USA_UNIT_00406_subject_efdc2f a gro-us:FAA ;
+    rdfs:label ""FAA"" ;
+    skos:definition ""Financial Aid Administrator"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00406 .
+
+data:USA_UNIT_00406_action_46328d a cco:Action ;
+    rdfs:label ""Conduct Dependency Override"" ;
+    cco:hasActionExpression ""may conduct dependency overrides on a case-by-case basis for students with unusual circumstances"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00406 .
+
+data:USA_UNIT_00406_object_9eec79 a gro-us:DependencyOverride ;
+    rdfs:label ""Dependency Override"" ;
+    skos:definition ""A dependency override determination"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00406 .
+
+data:USA_UNIT_00406_condition_135323 a cco:Condition ;
+    rdfs:label ""Unusual Circumstances Condition"" ;
+    cco:hasConditionExpression ""for students with unusual circumstances"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00406 .
+
+data:USA_UNIT_00406_norm_da7e35 a cco:Permission ;
+    rdfs:label ""FAA Dependency Override Permission"" ;
+    cco:appliesToRole data:USA_UNIT_00406_subject_efdc2f ;
+    cco:hasAction data:USA_UNIT_00406_action_46328d ;
+    cco:hasObject data:USA_UNIT_00406_object_9eec79 ;
+    cco:appliesUnder data:USA_UNIT_00406_condition_135323 ;
+    prov:wasDerivedFrom data:USA_UNIT_00406 .",Y,P,Y,P
+055,AUS-UNIT-00950,Prohibition,AU,"| Short description provisions including civil penalty units and offence
+provisions | | | Act |
+| --- | --- | --- | --- |
+| | Provider fails to comply with the Rules made under subsection 50(1) (that is, | | s50(2) |
+| | Division 3, Part 7 of the Rules) in respect of provision of particular information to | | |
+| | students. | | |
+| | 60 penalty units | | |
+| Strict liability Offence: Provider fails to comply with the Rules made under
+subsection 50(1) (that is, Division 3, Part 7 of the Rules) in respect of provision of
+particular information to students.
+60 penalty units | | | s50(3) |
+| | Provider fails to retain documents and information in accordance with section 51, | | s51(3) |
+| | including as specified in Division 4, Part 7 of the Rules (made under section 51). | | |
+| | 60 penalty units | | |
+| Strict liability offence: Provider fails to retain documents and information in
+accordance with section 51, including as specified in Division 4, Part 7 of the
+Rules (made under section 51).
+60 penalty units | | | s51(4) |","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_00950 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-00950"" .
+
+gro-au:Provider a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that provides educational services under the relevant regulatory framework."" .
+
+gro-au:InformationProvisionRules a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Information Provision Rules"" ;
+    skos:definition ""Rules made under subsection 50(1) requiring providers to give particular information to students."" .
+
+data:AUS_UNIT_00950_subject_e45015 a gro-au:Provider ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""The provider subject to the prohibition on failing to comply with information provision rules."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00950 .
+
+data:AUS_UNIT_00950_object_12c929 a gro-au:InformationProvisionRules ;
+    rdfs:label ""Information Provision Rules"" ;
+    skos:definition ""The rules made under subsection 50(1) in respect of provision of particular information to students."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00950 .
+
+data:AUS_UNIT_00950_action_6dc174 a cco:Action ;
+    rdfs:label ""Fail to Comply with Rules"" ;
+    cco:hasActionExpression ""Provider fails to comply with the Rules made under subsection 50(1) in respect of provision of particular information to students."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_00950 .
+
+data:AUS_UNIT_00950_norm_7c19e0 a cco:Prohibition ;
+    rdfs:label ""Prohibition on Non-Compliance with Rules"" ;
+    gro:hasSubject data:AUS_UNIT_00950_subject_e45015 ;
+    cco:hasAction data:AUS_UNIT_00950_action_6dc174 ;
+    cco:hasObject data:AUS_UNIT_00950_object_12c929 ;
+    prov:wasDerivedFrom data:AUS_UNIT_00950 .",Y,Y,Y,Y
+056,AUS-UNIT-01030,Prohibition,AU,"| Short description provisions including civil penalty units and offence
+provisions | | | Act |
+Provider requires a student to pay fees, which are covered by a VET Student Loan s56(4) (covered fees) where enrolment is accepted on the basis that some or all tuition fees are covered fees . 120 penalty units Provider does not have publicly and readily available on its website (that is, has s57 not published) the tuition fees for a course by the day before the enrolment of a student in an approved course, where enrolment is accepted on the basis that some or all tuition fees are covered fees . 60 penalty units","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:AUS_UNIT_01030 a prov:Entity ;
+    rdfs:label ""Source: AUS-UNIT-01030"" .
+
+gro-au:VETStudentLoanCoveredFees a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""VET Student Loan Covered Fees"" ;
+    skos:definition ""Fees covered by a VET Student Loan where enrolment is accepted on the basis that some or all tuition fees are covered fees."" .
+
+data:AUS_UNIT_01030_norm_5226a5 a cco:Prohibition ;
+    rdfs:label ""Provider Fee Charging Prohibition"" ;
+    gro:hasSubject data:AUS_UNIT_01030_subject_7af66d ;
+    cco:hasAction data:AUS_UNIT_01030_action_5d477f ;
+    cco:hasObject data:AUS_UNIT_01030_object_7e0911 ;
+    cco:appliesUnder data:AUS_UNIT_01030_condition_a3f655 ;
+    prov:wasDerivedFrom data:AUS_UNIT_01030 .
+
+data:AUS_UNIT_01030_subject_7af66d a cco:Organisation ;
+    rdfs:label ""Provider"" ;
+    skos:definition ""An organisation that provides educational services and accepts enrolment on the basis that some or all tuition fees are covered fees."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_01030 .
+
+data:AUS_UNIT_01030_action_5d477f a cco:Action ;
+    rdfs:label ""Require Student Fee Payment"" ;
+    cco:hasActionExpression ""requires a student to pay fees, which are covered by a VET Student Loan (covered fees) where enrolment is accepted on the basis that some or all tuition fees are covered fees"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_01030 .
+
+data:AUS_UNIT_01030_object_7e0911 a gro-au:VETStudentLoanCoveredFees ;
+    rdfs:label ""VET Student Loan Covered Fees"" ;
+    skos:definition ""Fees covered by a VET Student Loan where enrolment is accepted on the basis that some or all tuition fees are covered fees."" ;
+    prov:wasDerivedFrom data:AUS_UNIT_01030 .
+
+data:AUS_UNIT_01030_condition_a3f655 a cco:Condition ;
+    rdfs:label ""Enrolment Based on Covered Fees"" ;
+    cco:hasConditionExpression ""where enrolment is accepted on the basis that some or all tuition fees are covered fees"" ;
+    prov:wasDerivedFrom data:AUS_UNIT_01030 .",Y,Y,Y,Y
+057,CAN-UNIT-00319,Prohibition,CA,• Applicants cannot apply for reimbursement for a previously verified condition within the same loan year. Applicants can apply for reimbursement for verifications for previously,"@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:CAN_UNIT_00319 a prov:Entity ;
+    rdfs:label ""Source: CAN-UNIT-00319"" .
+
+gro-ca:Applicant a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Applicant"" ;
+    skos:definition ""A role representing an individual or entity that applies for something, such as reimbursement."" .
+
+gro-ca:ReimbursementApplication a owl:Class ;
+    rdfs:subClassOf cco:Action ;
+    rdfs:label ""Reimbursement Application"" ;
+    skos:definition ""The action of applying for reimbursement."" .
+
+gro-ca:ReimbursementForPreviouslyVerifiedCondition a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Reimbursement for Previously Verified Condition"" ;
+    skos:definition ""A resource representing reimbursement sought for a condition that has been previously verified."" .
+
+gro-ca:SameLoanYearCondition a owl:Class ;
+    rdfs:subClassOf cco:Condition ;
+    rdfs:label ""Same Loan Year Condition"" ;
+    skos:definition ""A condition specifying that the action occurs within the same loan year."" .
+
+data:CAN_UNIT_00319_norm_ddff8a a cco:Prohibition ;
+    rdfs:label ""Prohibition on Reimbursement Application"" ;
+    cco:appliesToRole data:CAN_UNIT_00319_subject_9371b3 ;
+    cco:hasAction data:CAN_UNIT_00319_action_b03354 ;
+    cco:hasObject data:CAN_UNIT_00319_object_0921ac ;
+    cco:appliesUnder data:CAN_UNIT_00319_condition_41439d ;
+    prov:wasDerivedFrom data:CAN_UNIT_00319 .
+
+data:CAN_UNIT_00319_subject_9371b3 a gro-ca:Applicant ;
+    rdfs:label ""Applicant"" ;
+    skos:definition ""An applicant under the relevant Canadian regulatory scheme."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00319 .
+
+data:CAN_UNIT_00319_action_b03354 a gro-ca:ReimbursementApplication ;
+    rdfs:label ""Apply for Reimbursement"" ;
+    cco:hasActionExpression ""cannot apply for reimbursement"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00319 .
+
+data:CAN_UNIT_00319_object_0921ac a gro-ca:ReimbursementForPreviouslyVerifiedCondition ;
+    rdfs:label ""Reimbursement for Previously Verified Condition"" ;
+    skos:definition ""Reimbursement for a condition that has been previously verified."" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00319 .
+
+data:CAN_UNIT_00319_condition_41439d a gro-ca:SameLoanYearCondition ;
+    rdfs:label ""Within Same Loan Year"" ;
+    cco:hasConditionExpression ""for a previously verified condition within the same loan year"" ;
+    prov:wasDerivedFrom data:CAN_UNIT_00319 .",Y,Y,Y,Y
+058,UK-UNIT-00286,Prohibition,UK,"Where an individual permanently withdraws from the apprenticeship and is no longer an apprentice, the employer must not continue to use the apprentice rate of the national minimum wage. This does not apply to those on a break in learning.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+data:UK_UNIT_00286 a prov:Entity ;
+    rdfs:label ""Source: UK-UNIT-00286"" .
+
+gro-uk:EmployerRole a owl:Class ;
+    rdfs:subClassOf cco:Role ;
+    rdfs:label ""Employer Role"" ;
+    skos:definition ""The role of an employer as defined in UK employment regulations."" .
+
+gro-uk:ApprenticeWageRate a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Apprentice Wage Rate"" ;
+    skos:definition ""The apprentice rate of the national minimum wage as specified in UK regulations."" .
+
+data:UK_UNIT_00286_subject_48a245 a gro-uk:EmployerRole ;
+    rdfs:label ""Employer"" ;
+    skos:definition ""The employer who must not continue to use the apprentice rate."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00286 .
+
+data:UK_UNIT_00286_action_47f1ce a cco:Action ;
+    rdfs:label ""Continue Using Apprentice Rate"" ;
+    cco:hasActionExpression ""must not continue to use the apprentice rate of the national minimum wage"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00286 .
+
+data:UK_UNIT_00286_object_49487d a gro-uk:ApprenticeWageRate ;
+    rdfs:label ""Apprentice Rate of NMW"" ;
+    skos:definition ""The apprentice rate of the national minimum wage."" ;
+    prov:wasDerivedFrom data:UK_UNIT_00286 .
+
+data:UK_UNIT_00286_condition_72dead a cco:Condition ;
+    rdfs:label ""Permanent Withdrawal Condition"" ;
+    cco:hasConditionExpression ""Where an individual permanently withdraws from the apprenticeship and is no longer an apprentice"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00286 .
+
+data:UK_UNIT_00286_exception_568235 a cco:Exception ;
+    rdfs:label ""Break in Learning Exception"" ;
+    cco:hasConditionExpression ""This does not apply to those on a break in learning"" ;
+    prov:wasDerivedFrom data:UK_UNIT_00286  ;
+    cco:modifiesNorm data:UK_UNIT_00286_norm_2402c9 ;
+    cco:hasCondition data:UK_UNIT_00286_condition_72dead  .
+
+data:UK_UNIT_00286_norm_2402c9 a cco:Prohibition ;
+    rdfs:label ""Prohibition on Using Apprentice Rate"" ;
+    cco:appliesToRole data:UK_UNIT_00286_subject_48a245 ;
+    cco:hasAction data:UK_UNIT_00286_action_47f1ce ;
+    cco:hasObject data:UK_UNIT_00286_object_49487d ;
+    cco:appliesUnder data:UK_UNIT_00286_condition_72dead ;
+    cco:hasException data:UK_UNIT_00286_exception_568235 ;
+    prov:wasDerivedFrom data:UK_UNIT_00286 .
+
+data:UK_UNIT_00286_exception_568235 cco:modifiesNorm data:UK_UNIT_00286_norm_2402c9 .",Y,P,Y,P
+059,USA-UNIT-00289,Prohibition,US,"Schools on the Heightened Cash Monitoring 2 (HCM2) and Reimbursement payment methods (see Volume 4 , Chapter 1 of the FSA Handbook ) must, as part of their request for Title IV funds from the Department, submit documentation showing that students were eligible to receive the funds disbursed to them (and for which the schools are seeking reimbursement). Because final determination of student eligibility includes completing verification, HCM2 and reimbursement schools may not make interim disbursements.","@prefix cco:    <https://www.w3id.org/cco/cco#> .
+@prefix gro:    <https://w3id.org/cco-gro/onto#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@prefix data:   <https://w3id.org/cco-gro/data#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+gro-us:HCM2ReimbursementSchool a owl:Class ;
+    rdfs:subClassOf cco:Organisation ;
+    rdfs:label ""HCM2 and Reimbursement School"" ;
+    skos:definition ""An educational institution operating under Heightened Cash Monitoring 2 (HCM2) or Reimbursement payment methods as defined in Volume 4, Chapter 1 of the FSA Handbook."" .
+
+gro-us:InterimDisbursement a owl:Class ;
+    rdfs:subClassOf cco:Resource ;
+    rdfs:label ""Interim Disbursement"" ;
+    skos:definition ""A disbursement of Title IV funds made on an interim basis before final determination of student eligibility, including completion of verification."" .
+
+data:USA_UNIT_00289 a prov:Entity ;
+    rdfs:label ""Source: USA-UNIT-00289"" .
+
+data:USA_UNIT_00289_norm_7de8d4 a cco:Prohibition ;
+    rdfs:label ""Interim Disbursement Prohibition"" ;
+    gro:hasSubject data:USA_UNIT_00289_subject_a2b5cb ;
+    cco:hasAction data:USA_UNIT_00289_action_aa2e54 ;
+    cco:hasObject data:USA_UNIT_00289_object_ec3dc5 ;
+    prov:wasDerivedFrom data:USA_UNIT_00289 .
+
+data:USA_UNIT_00289_subject_a2b5cb a gro-us:HCM2ReimbursementSchool ;
+    rdfs:label ""HCM2 and Reimbursement Schools"" ;
+    skos:definition ""Schools operating under the Heightened Cash Monitoring 2 (HCM2) and Reimbursement payment methods, as referenced in Volume 4, Chapter 1 of the FSA Handbook."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00289 .
+
+data:USA_UNIT_00289_action_aa2e54 a cco:Action ;
+    rdfs:label ""Make Interim Disbursements"" ;
+    cco:hasActionExpression ""may not make interim disbursements"" ;
+    prov:wasDerivedFrom data:USA_UNIT_00289 .
+
+data:USA_UNIT_00289_object_ec3dc5 a gro-us:InterimDisbursement ;
+    rdfs:label ""Interim Disbursements"" ;
+    skos:definition ""Disbursements of Title IV funds made before final determination of student eligibility, including completion of verification."" ;
+    prov:wasDerivedFrom data:USA_UNIT_00289 .",Y,Y,Y,Y
