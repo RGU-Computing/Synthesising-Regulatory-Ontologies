@@ -36,7 +36,7 @@ Full ontology documentation is available at:
 ## Repository Structure
 
 ```
-.
+
 ├── ontology/                    # Synthesised regulatory ontology
 │   ├── per-jurisdiction/         # Per-jurisdiction ontologies (UK, US, CA, AU)
 │   ├── shared/                   # Domain regulatory ontology (69 shared classes)
@@ -49,18 +49,13 @@ Full ontology documentation is available at:
 │   └── consolidation_patterns.md     # Functional equivalence + shared domain superclass
 │
 ├── prompts/                     # LLM prompts (Phase 3 + Phase 4)
-│   ├── decomposition_prompt.txt
-│   ├── generation_prompt.txt
-│   ├── alignment_prompt.txt
-│   └── shared_naming_prompt.txt
+│   ├── decomposition_prompt.md
+│   ├── generation_prompt.md
+│   ├── alignment_prompt.md
+│   └── shared_naming_prompt.md
 │
 ├── shacl-shapes/                # SHACL validation shapes
 │   └── cco_shapes.ttl
-│
-├── evaluation/                  # Evaluation materials
-│   ├── quality_metrics/          # Domain ontology structural metrics
-│   ├── ontology_correctness/     # 69-class correctness review
-│   └── source_faithfulness/      # 59-sample faithfulness annotations
 │
 ├── code and output/                        # Pipeline implementation (Jupyter notebooks) and results of each phase
 │   ├── phase1_preparation/
@@ -71,6 +66,7 @@ Full ontology documentation is available at:
 │        └── code and output
 │   └── phase4_consolidation/
 │        └── code and output
+├── doc/                             # Ontology documentation
 │
 ├── LICENSE
 └── README.md
