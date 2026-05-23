@@ -77,8 +77,6 @@ Full ontology documentation is available at:
 
 ## Key Results
 
-## Key Results
-
 ### Dataset
 
 | Metric | Value |
