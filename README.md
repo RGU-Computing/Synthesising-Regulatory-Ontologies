@@ -57,7 +57,7 @@ Full ontology documentation is available at:
 ├── shacl-shapes/                # SHACL validation shapes
 │   └── cco_shapes.ttl
 │
-├── code and output/                        # Pipeline implementation (Jupyter notebooks) and results of each phase
+├── code/                        # Pipeline implementation (Jupyter notebooks) and results of each phase
 │   ├── phase1_preparation/
 │       └── code and output
 │   ├── phase2_retrieval/
