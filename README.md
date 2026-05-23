@@ -118,5 +118,10 @@ This work is licensed under the [MIT License](LICENSE).
 ## Citation
 
 ```
- Arshad, U., Corsar, D., Nkisi-Orji, I. (2026). *Synthesising Regulatory Ontologies: A Schema and Pattern-Guided Approach*. Available at: https://github.com/RGU-Computing/Synthesising-Regulatory-Ontologies
+@misc{arshad2026synthesising,
+  author = {Arshad, Umair and Corsar, David and Nkisi-Orji, Ikechukwu},
+  title  = {Synthesising Regulatory Ontologies: A Schema and Pattern-Guided Approach},
+  year   = {2026},
+  url    = {https://github.com/RGU-Computing/Synthesising-Regulatory-Ontologies}
+}
 ```
