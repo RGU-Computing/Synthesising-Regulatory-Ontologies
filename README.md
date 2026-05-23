@@ -94,7 +94,7 @@ Full ontology documentation is available at:
 | CCO data properties | 8 |
 | Extraction ODPs | 12 |
 | Consolidation patterns | 2 |
-| Architectural rules in prompts | 18 |
+
 
 ### Retrieval (Phase 2)
 
