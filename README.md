@@ -182,9 +182,23 @@ Full ontology documentation is available at:
 
 The synthesised ontology is evaluated along three dimensions:
 
-- **Quality Metrics** — Domain regulatory ontology has 100% annotation completeness (labels, definitions), 3-level hierarchy, 6.04 average branching factor.
-- **Ontology Correctness** — 72.5% of 69 shared classes rated Correct across all three criteria (name appropriateness, definition accuracy, parent correctness).
-- **Source Faithfulness** — On 59 stratified samples, 55.9% rated Faithful, 42.4% Partial, 1.7% Unfaithful overall.
+- **Quality Metrics** — Domain regulatory ontology contains 69 shared 
+  classes across 10 CCO parents, with 257 per-jurisdiction descendants. 
+  Annotation completeness: 100% labels, 100% definitions, 63.8% comments. 
+  3-level hierarchy with average branching factor of 6.04 (max 46).
+
+- **Ontology Correctness** — 69 shared classes human-reviewed against 
+  three criteria. **72.5% (50/69) rated Correct across all criteria.** 
+  Parent correctness: 94.2% Correct; Name appropriateness: 92.8% Correct; 
+  Definition accuracy: 84.1% Correct (lowest, dominated by definitions 
+  aggregating multiple concepts).
+
+- **Source Faithfulness** — 59 stratified samples (5% of 1,178 validated 
+  chunks) rated along subject, predicate, and object axes. **Overall: 
+  55.9% Faithful, 42.4% Partial, 1.7% Unfaithful.** Subjects most 
+  reliably extracted (84.7% Faithful), followed by objects (72.9%) and 
+  predicates (64.4%). Partial ratings dominated by multi-clause provisions 
+  with lower-granularity capture of secondary clauses.
 
 ---
 
