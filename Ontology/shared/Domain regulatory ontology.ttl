@@ -1,0 +1,1884 @@
+@prefix cco: <https://www.w3id.org/cco/cco#> .
+@prefix gro: <https://w3id.org/cco-gro/onto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix gro-au: <https://w3id.org/cco-gro/onto/au#> .
+@prefix gro-ca: <https://w3id.org/cco-gro/onto/ca#> .
+@prefix gro-uk: <https://w3id.org/cco-gro/onto/uk#> .
+@prefix gro-us: <https://w3id.org/cco-gro/onto/us#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology ;
+   rdfs:label "Domain Regulatory Ontology" ;
+   owl:versionInfo 
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/cco-gro/onto#AcademicEligibilityRequirementPattern
+gro:AcademicEligibilityRequirementPattern rdf:type owl:Class ;
+                                          rdfs:subClassOf cco:Condition ;
+                                          rdfs:comment "The name 'AcademicEligibilityRequirement' captures the universal concept of academic suitability/standing requirements without jurisdiction-specific terms. It is a subclass of cco:Condition and retains only axioms applicable to both aligned classes, satisfying the pattern's constraints on neutrality and universal applicability." ;
+                                          rdfs:label "Academic Eligibility Requirement" ;
+                                          skos:definition "A condition that must be satisfied by a student to demonstrate they meet the academic criteria required for enrollment or continuation in an educational program, as determined by the institution." .
+
+
+###  https://w3id.org/cco-gro/onto#AcademicWithdrawalResourcePattern
+gro:AcademicWithdrawalResourcePattern rdf:type owl:Class ;
+                                      rdfs:subClassOf cco:Resource ;
+                                      rdfs:comment "The name 'AcademicWithdrawalResource' is jurisdiction-neutral, avoids program-specific terminology, and reflects the universal purpose of the classes as resources for recording withdrawal details. It satisfies the pattern's constraints by being a subclass of cco:Resource and ensuring all axioms apply universally across aligned jurisdictions." ;
+                                      rdfs:label "Academic Withdrawal Resource" ;
+                                      skos:definition "A resource used to document or confirm a student's withdrawal from a study period, including details such as the date, time, and specific units of study affected by the withdrawal." .
+
+
+###  https://w3id.org/cco-gro/onto#AgreementGovernanceObligation
+gro:AgreementGovernanceObligation rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Obligation ;
+                                  rdfs:label "Agreement Governance Obligation" ;
+                                  skos:definition "An obligation to establish, maintain, and comply with formal agreements, including documentation, signing, and adherence to agreed terms." .
+
+
+###  https://w3id.org/cco-gro/onto#AncillaryFeePattern
+gro:AncillaryFeePattern rdf:type owl:Class ;
+                        rdfs:subClassOf cco:Resource ;
+                        rdfs:comment "The term 'AncillaryFee' captures the supplementary nature of these charges across jurisdictions. It avoids jurisdiction-specific terms while encompassing mandatory fees, non-tuition fees, and membership fees as subclasses. The name satisfies the pattern's constraints by being jurisdiction-neutral and a subclass of cco:Resource." ;
+                        rdfs:label "Ancillary Fee" ;
+                        skos:definition "A fee or charge associated with educational services or institutional requirements that is not directly related to tuition, academic assessments, or qualification awards." .
+
+
+###  https://w3id.org/cco-gro/onto#ApprenticeshipComplianceObligation
+gro:ApprenticeshipComplianceObligation rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:Obligation ;
+                                       rdfs:label "Apprenticeship Compliance Obligation" ;
+                                       skos:definition "An obligation to comply with procedural, financial, and documentation requirements related to the establishment, execution, and funding of apprenticeship programs." .
+
+
+###  https://w3id.org/cco-gro/onto#ApprenticeshipFundingMisuseProhibition
+gro:ApprenticeshipFundingMisuseProhibition rdf:type owl:Class ;
+                                           rdfs:subClassOf cco:Prohibition ;
+                                           rdfs:label "Prohibition on Misuse of Apprenticeship Funding" ;
+                                           skos:definition "A regulatory norm that prohibits the improper use of funds, rates, or incentives designated for apprenticeship programs." .
+
+
+###  https://w3id.org/cco-gro/onto#ApprenticeshipSupportAndProgressionPermission
+gro:ApprenticeshipSupportAndProgressionPermission rdf:type owl:Class ;
+                                                  rdfs:subClassOf cco:Permission ;
+                                                  rdfs:label "Apprenticeship Support and Progression Permission" ;
+                                                  skos:definition "A permission that allows for the funding, support, training, and progression of apprentices through various stages of their apprenticeship journey." .
+
+
+###  https://w3id.org/cco-gro/onto#AssessmentActionPattern
+gro:AssessmentActionPattern rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Action ;
+                            rdfs:comment "The name 'AssessmentAction' is derived from the common functional purpose of evaluating competence across all jurisdictions. It maintains jurisdiction neutrality by avoiding program-specific terms and correctly positions as a subclass of cco:Action, satisfying the pattern's requirement to retain CCO hierarchy constraints." ;
+                            rdfs:label "Assessment Action" ;
+                            skos:definition "An action taken to evaluate an individual's knowledge, skills, or competence in an educational or training context." .
+
+
+###  https://w3id.org/cco-gro/onto#AssessmentProcessObligation
+gro:AssessmentProcessObligation rdf:type owl:Class ;
+                                rdfs:subClassOf cco:Obligation ;
+                                rdfs:label "Assessment Process Obligation" ;
+                                skos:definition "An obligation to carry out, manage, and maintain various stages and components of an assessment process, including development, execution, independence, documentation, and alignment." .
+
+
+###  https://w3id.org/cco-gro/onto#AssessmentProcessPattern
+gro:AssessmentProcessPattern rdf:type owl:Class ;
+                             rdfs:subClassOf cco:Resource ;
+                             rdfs:comment "The name 'AssessmentProcess' is jurisdiction-neutral, avoiding any region-specific terminology while capturing the core concept of procedural evaluation shared by both aligned classes. It maintains compatibility with the cco:Resource supertype and satisfies all pattern constraints by focusing on the universal aspect of assessment procedures across jurisdictions." ;
+                             rdfs:label "Assessment Process" ;
+                             skos:definition "A structured procedure for conducting and documenting the evaluation of knowledge, skills, or competencies through standardized methods." .
+
+
+###  https://w3id.org/cco-gro/onto#CircumstanceConditionPattern
+gro:CircumstanceConditionPattern rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:Condition ;
+                                 rdfs:comment "The name 'CircumstanceCondition' captures the common element of 'circumstances' across all aligned classes while maintaining jurisdiction neutrality. It is a subclass of cco:Condition as required, and the label/definition avoid jurisdiction-specific terms while reflecting the universal concept of conditions tied to exceptional or changing situations." ;
+                                 rdfs:label "Circumstance Condition" ;
+                                 skos:definition "A condition arising from specific circumstances that may affect eligibility or require adjustment in program requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#ConfirmationAndComplianceObligation
+gro:ConfirmationAndComplianceObligation rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:Obligation ;
+                                        rdfs:label "Confirmation and Compliance Obligation" ;
+                                        skos:definition "An obligation to confirm approvals, complete required declarations, and comply with post-approval or statutory requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#CourseCompletionConditionPattern
+gro:CourseCompletionConditionPattern rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:Condition ;
+                                     rdfs:comment "The name 'CourseCompletionCondition' combines the universal concepts of 'course completion' (from gro-au:CourseRequirement) and 'condition' (from the CCO supertype). It avoids jurisdiction-specific terms while capturing the shared purpose of both classes as requirements for academic completion. The definition explicitly covers both requirement fulfillment and completion verification across jurisdictions." ;
+                                     rdfs:label "Course Completion Condition" ;
+                                     skos:definition "A condition that must be satisfied for the successful completion of an educational program or study period, encompassing both requirements to be met and verification of completion criteria." .
+
+
+###  https://w3id.org/cco-gro/onto#DiscretionaryAuthorityPermission
+gro:DiscretionaryAuthorityPermission rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:Permission ;
+                                     rdfs:label "Discretionary Authority Permission" ;
+                                     skos:definition "A permission norm that grants entities the authority to exercise judgment in considering factors, making determinations, or taking actions within a regulatory framework." .
+
+
+###  https://w3id.org/cco-gro/onto#EducationalLoanDebtPattern
+gro:EducationalLoanDebtPattern rdf:type owl:Class ;
+                               rdfs:subClassOf cco:Resource ;
+                               rdfs:comment "The name 'EducationalLoanDebt' avoids jurisdiction-specific terms while clearly indicating the universal concept of debt from education-related loans. It satisfies the pattern by being a subclass of cco:Resource and ensuring all axioms apply universally across aligned jurisdictions." ;
+                               rdfs:label "Educational Loan Debt" ;
+                               skos:definition "A financial obligation arising from a loan specifically designated to fund educational pursuits, representing the amount owed by a borrower to a lending institution or government program." .
+
+
+###  https://w3id.org/cco-gro/onto#EducationalOrganizationPattern
+gro:EducationalOrganizationPattern rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:Organisation ;
+                                   rdfs:comment "The name 'EducationalOrganization' is jurisdiction-neutral, CamelCase, and accurately reflects the universal role of entities in the cluster across education systems. It satisfies the CCO superclass constraint and avoids domain-specific properties not universally applicable." ;
+                                   rdfs:label "Educational Organization" ;
+                                   skos:definition "An organization involved in providing educational programs, qualifications, or training, and may be responsible for administrative functions related to student enrollment, funding, or eligibility." .
+
+
+###  https://w3id.org/cco-gro/onto#EducationalPeriodPattern
+gro:EducationalPeriodPattern rdf:type owl:Class ;
+                             rdfs:subClassOf cco:Resource ;
+                             rdfs:comment "The name 'EducationalPeriod' combines the core concepts of 'fee period' and 'study period' while remaining jurisdiction-neutral. It satisfies the pattern by being a subclass of cco:Resource, avoiding jurisdiction-specific terms, and capturing the universal concept of a time-bound educational financial framework." ;
+                             rdfs:label "Educational Period" ;
+                             skos:definition "A designated time period associated with an educational program, used for determining financial obligations or support." .
+
+
+###  https://w3id.org/cco-gro/onto#EducationalProgramPattern
+gro:EducationalProgramPattern rdf:type owl:Class ;
+                              rdfs:subClassOf cco:Resource ;
+                              rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                              rdfs:label "Educational Program" ;
+                              skos:definition "A structured course of study or training program offered by an educational provider." .
+
+
+###  https://w3id.org/cco-gro/onto#EligibilityAndRequirementsObligation
+gro:EligibilityAndRequirementsObligation rdf:type owl:Class ;
+                                         rdfs:subClassOf cco:Obligation ;
+                                         rdfs:label "Eligibility and Requirements Obligation" ;
+                                         skos:definition "An obligation to meet, verify, or maintain eligibility criteria and regulatory or programmatic requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#EligibilityAssessmentPattern
+gro:EligibilityAssessmentPattern rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:Action ;
+                                 rdfs:comment "The name 'EligibilityAssessment' is jurisdiction-neutral, reflecting the universal purpose of evaluating eligibility across all aligned classes. It avoids jurisdiction-specific terms while capturing the core function shared by Assessment, Formal Assessment, and Initial Assessment under the cco:Action hierarchy." ;
+                                 rdfs:label "Eligibility Assessment" ;
+                                 skos:definition "A structured evaluation process used to determine an individual's eligibility for a program, service, or funding based on predefined criteria." .
+
+
+###  https://w3id.org/cco-gro/onto#EligibilityBasedFinancialAndEnrollmentPermission
+gro:EligibilityBasedFinancialAndEnrollmentPermission rdf:type owl:Class ;
+                                                     rdfs:subClassOf cco:Permission ;
+                                                     rdfs:label "Eligibility-Based Financial and Enrollment Permission" ;
+                                                     skos:definition "A permission that grants students access to financial assistance, enrollment benefits, or academic status changes based on demonstrated eligibility criteria." .
+
+
+###  https://w3id.org/cco-gro/onto#EligibilityVerificationRolePattern
+gro:EligibilityVerificationRolePattern rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:Role ;
+                                       rdfs:comment "The name 'EligibilityVerificationRole' avoids jurisdiction-specific terms while capturing the universal function of verifying student status across aligned jurisdictions. It maintains compatibility with the cco:Role supertype and ensures all axioms apply consistently to both subclasses." ;
+                                       rdfs:label "Eligibility Verification Role" ;
+                                       skos:definition "A role responsible for verifying a student's eligibility or enrollment status to ensure compliance with institutional or program requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#EnrollmentActionPattern
+gro:EnrollmentActionPattern rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Action ;
+                            rdfs:comment "The name 'EnrollmentAction' is jurisdiction-neutral, CamelCase, and captures the universal concept of actions impacting student enrollment status. It satisfies the pattern by avoiding jurisdiction-specific terms and ensuring all subclasses are functionally equivalent under the shared CCO supertype 'Action'." ;
+                            rdfs:label "Enrollment Action" ;
+                            skos:definition "An action that affects a student's enrollment status in an educational institution, including processes such as enrolling, withdrawing, or applying for leave." .
+
+
+###  https://w3id.org/cco-gro/onto#EnrolmentActionPattern
+gro:EnrolmentActionPattern rdf:type owl:Class ;
+                           rdfs:subClassOf cco:Action ;
+                           rdfs:comment "The name 'EnrolmentAction' captures the common functional purpose of both aligned classes while avoiding jurisdiction-specific terminology. It maintains compatibility with the cco:Action supertype and satisfies the requirement that all axioms hold universally across jurisdictions." ;
+                           rdfs:label "Enrolment Action" ;
+                           skos:definition "An action involving the confirmation or reporting of a student's participation in an educational program, regardless of jurisdiction-specific implementation details." .
+
+
+###  https://w3id.org/cco-gro/onto#EvidenceManagementObligation
+gro:EvidenceManagementObligation rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:Obligation ;
+                                 rdfs:label "Evidence Management Obligation" ;
+                                 skos:definition "An obligation to manage, retain, provide, document, or possess evidence in accordance with regulatory requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#EvidentiaryDocumentPattern
+gro:EvidentiaryDocumentPattern rdf:type owl:Class ;
+                               rdfs:subClassOf cco:Resource ;
+                               rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                               rdfs:label "Evidentiary Document" ;
+                               skos:definition "A document, record, or information resource serving as evidence or documentation in regulatory or eligibility contexts." .
+
+
+###  https://w3id.org/cco-gro/onto#ExcludedCostPattern
+gro:ExcludedCostPattern rdf:type owl:Class ;
+                        rdfs:subClassOf cco:Resource ;
+                        rdfs:comment "The name 'ExcludedCost' is jurisdiction-neutral, captures the universal concept of costs barred from claims, and maintains the CCO hierarchy by subclassing cco:Resource. It avoids domain-specific terms while satisfying cross-jurisdictional applicability." ;
+                        rdfs:label "Excluded Cost" ;
+                        skos:definition "A cost that is explicitly excluded from being claimed or included under a regulatory scheme due to lack of necessity, relevance, or explicit exclusion criteria." .
+
+
+###  https://w3id.org/cco-gro/onto#FeeManagementObligation
+gro:FeeManagementObligation rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Obligation ;
+                            rdfs:label "Fee Management Obligation" ;
+                            skos:definition "An obligation to manage, disclose, structure, and apply fees in a transparent, reasonable, and systematic manner." .
+
+
+###  https://w3id.org/cco-gro/onto#FeePolicyDocumentPattern
+gro:FeePolicyDocumentPattern rdf:type owl:Class ;
+                             rdfs:subClassOf cco:Resource ;
+                             rdfs:comment "The name 'FeePolicyDocument' avoids jurisdiction-specific terms while capturing the core function of both aligned classes as structured documents governing fee-related obligations. It satisfies the pattern by being a subclass of cco:Resource and maintaining jurisdiction-neutral semantics across all aligned instances." ;
+                             rdfs:label "Fee Policy Document" ;
+                             skos:definition "A formal document outlining the structure, calculation, and payment requirements for educational fees charged by an institution." .
+
+
+###  https://w3id.org/cco-gro/onto#FinancialAidAdministratorRolePattern
+gro:FinancialAidAdministratorRolePattern rdf:type owl:Class ;
+                                         rdfs:subClassOf cco:Role ;
+                                         rdfs:comment "The name 'FinancialAidAdministratorRole' combines the common functional domain ('FinancialAid') with the role type ('AdministratorRole'), avoiding jurisdiction-specific terms while maintaining alignment with the CCO:Role supertype. It satisfies the pattern by ensuring universal applicability across jurisdictions and adheres to the constraint of not introducing new root classes above CCO." ;
+                                         rdfs:label "Financial Aid Administrator Role" ;
+                                         skos:definition "A role responsible for administering financial aid programs, including making eligibility determinations and ensuring compliance with relevant regulations." .
+
+
+###  https://w3id.org/cco-gro/onto#FinancialAidResourcePattern
+gro:FinancialAidResourcePattern rdf:type owl:Class ;
+                                rdfs:subClassOf cco:Resource ;
+                                rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                                rdfs:label "Financial Aid Resource" ;
+                                skos:definition "A monetary or financial resource representing aid, funding, loans, grants, bursaries, or scholarships allocated to support students or educational programs." .
+
+
+###  https://w3id.org/cco-gro/onto#FinancialNeedAssessmentInputPattern
+gro:FinancialNeedAssessmentInputPattern rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:Resource ;
+                                        rdfs:comment "Manually named — large transitive cluster (13 members) identified as semantically coherent shared concept after manual review." ;
+                                        rdfs:label "Financial Need Assessment Input" ;
+                                        skos:definition "A financial resource or computed value used as input to assess a student's eligibility for financial aid, encompassing income, contributions, expected contributions, and family financial circumstances." .
+
+
+###  https://w3id.org/cco-gro/onto#FunctionalImpairmentPattern
+gro:FunctionalImpairmentPattern rdf:type owl:Class ;
+                                rdfs:subClassOf cco:Role ;
+                                rdfs:comment "The term 'FunctionalImpairment' captures the common essence of both aligned classes while avoiding jurisdiction-specific terminology. It satisfies the pattern requirements by maintaining compatibility with the cco:Role supertype and ensuring all axioms apply universally across jurisdictions." ;
+                                rdfs:label "Functional Impairment" ;
+                                skos:definition "A condition involving physical, mental, intellectual, cognitive, or sensory limitations that substantially affects an individual's ability to perform everyday activities or engage in learning processes." .
+
+
+###  https://w3id.org/cco-gro/onto#FundingAccessAndAllocationPermission
+gro:FundingAccessAndAllocationPermission rdf:type owl:Class ;
+                                         rdfs:subClassOf cco:Permission ;
+                                         rdfs:label "Funding Access and Allocation Permission" ;
+                                         skos:definition "A permission that authorizes access to, allocation of, or claims against funding resources for educational, assistive, or support purposes." .
+
+
+###  https://w3id.org/cco-gro/onto#FundingApplicationPattern
+gro:FundingApplicationPattern rdf:type owl:Class ;
+                              rdfs:subClassOf cco:Resource ;
+                              rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                              rdfs:label "Funding Application" ;
+                              skos:definition "A formal application or submission for student financial assistance, loan rehabilitation, or other funding programs." .
+
+
+###  https://w3id.org/cco-gro/onto#FundingEligibilityAndDisbursementObligation
+gro:FundingEligibilityAndDisbursementObligation rdf:type owl:Class ;
+                                                rdfs:subClassOf cco:Obligation ;
+                                                rdfs:label "Funding Eligibility and Disbursement Obligation" ;
+                                                skos:definition "An obligation to assess, confirm, and manage eligibility for funding, followed by the proper disbursement or claiming of funds, including direct retention or payment to providers and subcontractors." .
+
+
+###  https://w3id.org/cco-gro/onto#GovernmentOrganizationPattern
+gro:GovernmentOrganizationPattern rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Organisation ;
+                                  rdfs:comment "The name 'GovernmentOrganization' is jurisdiction-neutral, avoids specific program references, and aligns with the confirmed CCO supertype 'Organisation'. It universally captures the shared concept of governmental entities across jurisdictions while adhering to the pattern's constraints." ;
+                                  rdfs:label "Government Organization" ;
+                                  skos:definition "An organization that is part of the government structure, such as a department, agency, or regulatory authority." .
+
+
+###  https://w3id.org/cco-gro/onto#InformationDisclosureObligation
+gro:InformationDisclosureObligation rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:Obligation ;
+                                    rdfs:label "Information Disclosure Obligation" ;
+                                    skos:definition "An obligation to provide specified educational information to students or stakeholders before or during enrolment and throughout the course lifecycle." .
+
+
+###  https://w3id.org/cco-gro/onto#JurisdictionalRegulatorPattern
+gro:JurisdictionalRegulatorPattern rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:RegulatoryAuthorityAgent ;
+                                   rdfs:comment "Manually named due to persistent LLM empty responses across multiple retries." ;
+                                   rdfs:label "Jurisdictional Regulator" ;
+                                   skos:definition "An agent representing a regulatory authority at the jurisdiction level, responsible for overseeing compliance with regulatory frameworks." .
+
+
+###  https://w3id.org/cco-gro/onto#LearnerInformationRecordPattern
+gro:LearnerInformationRecordPattern rdf:type owl:Class ;
+                                    rdfs:subClassOf cco:Resource ;
+                                    rdfs:comment "The name 'LearnerInformationRecord' avoids jurisdiction-specific terms while capturing the core purpose of storing structured learner data across contexts. It satisfies the pattern by aligning with the cco:Resource hierarchy and ensuring all axioms apply universally to the cluster members' shared functionality." ;
+                                    rdfs:label "Learner Information Record" ;
+                                    skos:definition "A data record containing learner-specific information used by educational institutions for administrative, assessment, or protection-related purposes." .
+
+
+###  https://w3id.org/cco-gro/onto#LearningPausePattern
+gro:LearningPausePattern rdf:type owl:Class ;
+                         rdfs:subClassOf cco:Resource ;
+                         rdfs:comment "The name 'LearningPause' is jurisdiction-neutral, combining the universal concepts of 'learning' and 'pause' present in both aligned classes. It avoids jurisdiction-specific terms while accurately reflecting the shared functional equivalence of temporary interruptions in educational engagement across systems." ;
+                         rdfs:label "Learning Pause" ;
+                         skos:definition "A period during which an individual's learning or study activities are formally paused, typically subject to specific duration limits and exceptions." .
+
+
+###  https://w3id.org/cco-gro/onto#LoanAdjustmentResourcePattern
+gro:LoanAdjustmentResourcePattern rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Resource ;
+                                  rdfs:comment "The name 'LoanAdjustmentResource' is CamelCase, jurisdiction-neutral, and reflects the universal concept of loan amount modifications across aligned classes. It satisfies CCO hierarchy constraints by subclassing cco:Resource and avoids domain/range violations by focusing on shared adjustment mechanics rather than jurisdiction-specific programs." ;
+                                  rdfs:label "Loan Adjustment Resource" ;
+                                  skos:definition "A resource representing an adjustment to a loan amount based on eligibility reassessment or changes in funding parameters, converted from grant excess or increased caps." .
+
+
+###  https://w3id.org/cco-gro/onto#LoanAndEnrolmentMisconductProhibition
+gro:LoanAndEnrolmentMisconductProhibition rdf:type owl:Class ;
+                                          rdfs:subClassOf cco:Prohibition ;
+                                          rdfs:label "Prohibition of Misconduct in Loan and Enrolment Practices" ;
+                                          skos:definition "A prohibition on actions involving improper financial demands, loan misrepresentation, unauthorized payment or borrowing, and misleading suggestions related to enrolment or assistance eligibility." .
+
+
+###  https://w3id.org/cco-gro/onto#NoticeAndProcedureObligation
+gro:NoticeAndProcedureObligation rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:Obligation ;
+                                 rdfs:label "Notice and Procedure Obligation" ;
+                                 skos:definition "An obligation to provide formal notices and maintain established procedures in regulatory or administrative processes." .
+
+
+###  https://w3id.org/cco-gro/onto#OrganizationalExecutiveRolePattern
+gro:OrganizationalExecutiveRolePattern rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:Role ;
+                                       rdfs:comment "The name 'OrganizationalExecutiveRole' combines jurisdiction-neutral terms ('Organizational' and 'Executive') to reflect the universal concept of a high-level role responsible for organizational governance or management. It satisfies the pattern's constraints by avoiding jurisdiction-specific vocabulary, maintaining subclassing under cco:Role, and ensuring axioms on the shared class apply universally across aligned jurisdictions." ;
+                                       rdfs:label "Organizational Executive Role" ;
+                                       skos:definition "A role held by an individual who is responsible for the overall governance or executive management of an organization, as defined by applicable legal or regulatory frameworks." .
+
+
+###  https://w3id.org/cco-gro/onto#PaymentObligation
+gro:PaymentObligation rdf:type owl:Class ;
+                      rdfs:subClassOf cco:Obligation ;
+                      rdfs:label "Payment Obligation" ;
+                      skos:definition "An obligation to make, manage, or arrange payments or repayments under specified conditions." .
+
+
+###  https://w3id.org/cco-gro/onto#PostCredentialTrainingPattern
+gro:PostCredentialTrainingPattern rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Resource ;
+                                  rdfs:comment "The name 'PostCredentialTraining' combines the concept of training occurring after initial credentialing (from gro-ca:PostCredentialTrainingPeriod) with the general training purpose (from gro-uk:RepeatedTraining and gro-uk:Learning). It avoids jurisdiction-specific terms, maintains compatibility with the cco:Resource hierarchy, and satisfies universal applicability across all aligned classes." ;
+                                  rdfs:label "Post-Credential Training" ;
+                                  skos:definition "Training required after obtaining a formal credential to meet the accreditation or licensing requirements of a regulated profession, including repeated training, apprenticeship learning, or structured post-credential development periods." .
+
+
+###  https://w3id.org/cco-gro/onto#ProviderComplianceObligation
+gro:ProviderComplianceObligation rdf:type owl:Class ;
+                                 rdfs:subClassOf cco:Obligation ;
+                                 rdfs:label "Provider Compliance Obligation" ;
+                                 skos:definition "Obligations requiring entities to meet eligibility, maintain status, comply with regulations, and uphold transparency and procedural standards as approved providers." .
+
+
+###  https://w3id.org/cco-gro/onto#RecreditAndReborrowPermission
+gro:RecreditAndReborrowPermission rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Permission ;
+                                  rdfs:label "Recredit and Re-borrow Permission" ;
+                                  skos:definition "Permission to recredit a HELP balance or re-borrow repaid amounts under specified conditions." .
+
+
+###  https://w3id.org/cco-gro/onto#RegulatoryAgreementPattern
+gro:RegulatoryAgreementPattern rdf:type owl:Class ;
+                               rdfs:subClassOf cco:Resource ;
+                               rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                               rdfs:label "Regulatory Agreement" ;
+                               skos:definition "A contractual or formal agreement between regulated parties such as providers, employers, or institutions." .
+
+
+###  https://w3id.org/cco-gro/onto#RegulatoryComplianceObligation
+gro:RegulatoryComplianceObligation rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:Obligation ;
+                                   rdfs:label "Regulatory Compliance Obligation" ;
+                                   skos:definition "An obligation to adhere to specified legal, regulatory, or standard-based requirements, including ongoing adherence, information management, and rule referencing." .
+
+
+###  https://w3id.org/cco-gro/onto#RegulatoryDecisionPattern
+gro:RegulatoryDecisionPattern rdf:type owl:Class ;
+                              rdfs:subClassOf cco:Resource ;
+                              rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                              rdfs:label "Regulatory Decision" ;
+                              skos:definition "A formal determination, approval, assessment, or decision issued by a regulatory authority or process." .
+
+
+###  https://w3id.org/cco-gro/onto#RegulatoryOfficialPattern
+gro:RegulatoryOfficialPattern rdf:type owl:Class ;
+                              rdfs:subClassOf cco:RegulatoryAuthorityRole ;
+                              rdfs:comment "Manually named due to persistent LLM empty responses across multiple retries." ;
+                              rdfs:label "Regulatory Official" ;
+                              skos:definition "A role held by an individual or organisation exercising regulatory authority, encompassing regulators, secretaries, and other officials with oversight responsibilities." .
+
+
+###  https://w3id.org/cco-gro/onto#RepaymentActionPattern
+gro:RepaymentActionPattern rdf:type owl:Class ;
+                           rdfs:subClassOf cco:Action ;
+                           rdfs:comment "The name 'RepaymentAction' is jurisdiction-neutral, capturing the universal concept of returning funds across all aligned classes. It satisfies the pattern's criteria by avoiding jurisdiction-specific terms, maintaining compatibility with the cco:Action supertype, and ensuring all axioms apply universally to repayment scenarios regardless of context." ;
+                           rdfs:label "Repayment Action" ;
+                           skos:definition "An action involving the return of funds that were overpaid, borrowed, or received in error, encompassing scenarios such as loan repayments, overpayment corrections, and reimbursement requests." .
+
+
+###  https://w3id.org/cco-gro/onto#SignedDeclarationPattern
+gro:SignedDeclarationPattern rdf:type owl:Class ;
+                             rdfs:subClassOf cco:Resource ;
+                             rdfs:comment "Manually identified theme from decomposition of 120-member transitive cluster into 7 semantically coherent sub-themes after manual review." ;
+                             rdfs:label "Signed Declaration" ;
+                             skos:definition "A signed document or statement attesting to facts or confirming information for regulatory purposes." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentAcademicAndFinancialComplianceObligation
+gro:StudentAcademicAndFinancialComplianceObligation rdf:type owl:Class ;
+                                                    rdfs:subClassOf cco:Obligation ;
+                                                    rdfs:label "Student Academic and Financial Compliance Obligation" ;
+                                                    skos:definition "An obligation requiring students to meet academic progress, enrollment, and financial responsibilities to maintain eligibility and compliance with educational funding and institutional requirements." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentAidModificationConditionPattern
+gro:StudentAidModificationConditionPattern rdf:type owl:Class ;
+                                           rdfs:subClassOf cco:Condition ;
+                                           rdfs:comment "The name 'StudentAidModificationCondition' avoids jurisdiction-specific terms while capturing the universal concept of a condition affecting financial aid. It satisfies the pattern by maintaining compatibility with the cco:Condition supertype and ensuring all axioms apply universally to both withdrawal/deferral and appeal scenarios." ;
+                                           rdfs:label "Student Aid Modification Condition" ;
+                                           skos:definition "A condition that triggers a change in a student's financial aid status due to enrollment adjustments or administrative review processes." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentEnrollmentPattern
+gro:StudentEnrollmentPattern rdf:type owl:Class ;
+                             rdfs:subClassOf cco:Resource ;
+                             rdfs:comment "The name 'StudentEnrollment' is jurisdiction-neutral, combining the core concepts of 'Course Load' and 'Student Enrolment' while avoiding region-specific terminology. It maintains compatibility with the cco:Resource supertype and ensures all axioms apply universally across aligned jurisdictions." ;
+                             rdfs:label "Student Enrollment" ;
+                             skos:definition "The formal registration of a student in one or more academic courses or programs during a specified period, representing their participation status and course commitments." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentGrievanceMechanismPattern
+gro:StudentGrievanceMechanismPattern rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:Resource ;
+                                     rdfs:comment "The name 'StudentGrievanceMechanism' combines the universal concept of student-initiated dispute resolution ('Grievance') with the neutral term 'Mechanism' to encompass both procedural and form-based implementations. It avoids jurisdiction-specific terms while maintaining alignment with the CCO:Resource hierarchy and satisfying cross-jurisdictional axiom constraints." ;
+                                     rdfs:label "Student Grievance Mechanism" ;
+                                     skos:definition "A formal process or form used by students to initiate or resolve complaints or appeals regarding academic or administrative matters within an educational institution." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentProceduralResourcePattern
+gro:StudentProceduralResourcePattern rdf:type owl:Class ;
+                                     rdfs:subClassOf cco:Resource ;
+                                     rdfs:comment "The name 'StudentProceduralResource' combines the universal scope ('Student'), the functional purpose ('Procedural'), and the CCO hierarchy ('Resource'). It avoids jurisdiction-specific terms while capturing the common theme of structured processes or information required of students, satisfying all pattern constraints and review criteria." ;
+                                     rdfs:label "Student Procedural Resource" ;
+                                     skos:definition "A resource representing processes, procedures, or information required for student compliance with enrollment, verification, or documentation requirements across educational contexts." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentRolePattern
+gro:StudentRolePattern rdf:type owl:Class ;
+                       rdfs:subClassOf cco:Role ;
+                       rdfs:comment "Manually named — large transitive cluster (41 members) identified as semantically coherent shared concept after manual review." ;
+                       rdfs:label "Student Role" ;
+                       skos:definition "A role held by an individual enrolled in or applying for an educational program, encompassing variations in dependency status, enrollment status, and program-specific eligibility across jurisdictions." .
+
+
+###  https://w3id.org/cco-gro/onto#StudentWithdrawalManagementPattern
+gro:StudentWithdrawalManagementPattern rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:Resource ;
+                                       rdfs:comment "The name 'StudentWithdrawalManagement' is jurisdiction-neutral, combining the core concepts of withdrawal processes (gro-au) and refund policies (gro-ca). It satisfies the pattern by avoiding jurisdiction-specific terms, maintaining compatibility with the cco:Resource supertype, and ensuring all axioms apply universally to both aligned classes." ;
+                                       rdfs:label "Student Withdrawal Management" ;
+                                       skos:definition "A framework or set of procedures established by educational institutions to manage student withdrawals, including processes for deferral and refund policies." .
+
+
+###  https://w3id.org/cco-gro/onto#TaxRegulatoryAuthorityAgentPattern
+gro:TaxRegulatoryAuthorityAgentPattern rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:RegulatoryAuthorityAgent ;
+                                       rdfs:comment "The name 'TaxRegulatoryAuthorityAgent' reflects the universal function of tax administration and enforcement shared by the aligned classes (IRS, ATO) while maintaining jurisdiction neutrality. It directly extends the confirmed CCO supertype 'RegulatoryAuthorityAgent' and avoids any jurisdiction-specific terminology." ;
+                                       rdfs:label "Tax Regulatory Authority Agent" ;
+                                       skos:definition "A regulatory authority agent responsible for tax collection, administration, and enforcement of tax-related laws within a jurisdiction." .
+
+
+###  https://w3id.org/cco-gro/onto#TotalProgramCostPattern
+gro:TotalProgramCostPattern rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Resource ;
+                            rdfs:comment "The name 'TotalProgramCost' is jurisdiction-neutral, avoiding specific terms like 'tuition' or 'training' while capturing the universal concept of aggregated program expenses. It satisfies the pattern by being a subclass of cco:Resource and ensuring all axioms apply universally across aligned jurisdictions." ;
+                            rdfs:label "Total Program Cost" ;
+                            skos:definition "The total cost of an educational or training program, including tuition, training, and any associated assessments or fees incurred to date." .
+
+
+###  https://w3id.org/cco-gro/onto#TrainingAndDeliveryObligation
+gro:TrainingAndDeliveryObligation rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:Obligation ;
+                                  rdfs:label "Training and Delivery Obligation" ;
+                                  skos:definition "An obligation requiring providers to deliver, manage, and be accountable for training and learning activities, including assessment and off-the-job components." .
+
+
+###  https://w3id.org/cco-gro/onto#TrainingDeliveryAndDocumentationObligation
+gro:TrainingDeliveryAndDocumentationObligation rdf:type owl:Class ;
+                                               rdfs:subClassOf cco:Obligation ;
+                                               rdfs:label "Training Delivery and Documentation Obligation" ;
+                                               skos:definition "An obligation to deliver, document, and maintain records of training activities, including off-the-job training, skill relevance, and planned parameters." .
+
+
+###  https://w3id.org/cco-gro/onto#TrainingProviderOrEmployerPattern
+gro:TrainingProviderOrEmployerPattern rdf:type owl:Class ;
+                                      rdfs:subClassOf cco:Organisation ;
+                                      rdfs:comment "The name 'TrainingProviderOrEmployer' captures the dual role of entities across jurisdictions as either training service providers or employers involved in training partnerships. It avoids jurisdiction-specific terms and aligns with the confirmed CCO supertype 'Organisation', satisfying all pattern constraints." ;
+                                      rdfs:label "Training Provider or Employer" ;
+                                      skos:definition "An organization that either provides training services or is an employer engaged in training arrangements with educational institutions or training providers." .
+
+
+###  https://w3id.org/cco-gro/onto#TuitionFeeChargingAndInclusionProhibition
+gro:TuitionFeeChargingAndInclusionProhibition rdf:type owl:Class ;
+                                              rdfs:subClassOf cco:Prohibition ;
+                                              rdfs:label "Prohibition on Charging and Including Tuition Fees and Associated Costs" ;
+                                              skos:definition "A prohibition on charging excessive, unnecessary, or unauthorized tuition fees and on including non-essential goods, services, or costs within tuition fees." .
+
+
+###  https://w3id.org/cco-gro/onto#TuitionFeeManagementObligation
+gro:TuitionFeeManagementObligation rdf:type owl:Class ;
+                                   rdfs:subClassOf cco:Obligation ;
+                                   rdfs:label "Tuition Fee Management Obligation" ;
+                                   skos:definition "An obligation to manage tuition fees through setting, publishing, explaining, refunding, and disclosing related financial information." .
+
+
+###  https://w3id.org/cco-gro/onto/au#ATO
+gro-au:ATO rdf:type owl:Class ;
+           rdfs:subClassOf gro:TaxRegulatoryAuthorityAgentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AcademicSuitabilityAssessment
+gro-au:AcademicSuitabilityAssessment rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:AssessmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AcademicSuitabilityEvidence
+gro-au:AcademicSuitabilityEvidence rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AcademicallySuitable
+gro-au:AcademicallySuitable rdf:type owl:Class ;
+                            rdfs:subClassOf gro:AcademicEligibilityRequirementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ActualTotalTuitionFee
+gro-au:ActualTotalTuitionFee rdf:type owl:Class ;
+                             rdfs:subClassOf gro:TotalProgramCostPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Approval
+gro-au:Approval rdf:type owl:Class ;
+                rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Assessment
+gro-au:Assessment rdf:type owl:Class ;
+                  rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AssessmentActivity
+gro-au:AssessmentActivity rdf:type owl:Class ;
+                          rdfs:subClassOf gro:AssessmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AssessmentProcedure
+gro-au:AssessmentProcedure rdf:type owl:Class ;
+                           rdfs:subClassOf gro:AssessmentProcessPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#AssessmentResults
+gro-au:AssessmentResults rdf:type owl:Class ;
+                         rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ChangeInCircumstances
+gro-au:ChangeInCircumstances rdf:type owl:Class ;
+                             rdfs:subClassOf gro:CircumstanceConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#CommonwealthAssistanceNotice
+gro-au:CommonwealthAssistanceNotice rdf:type owl:Class ;
+                                    rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Confirmation
+gro-au:Confirmation rdf:type owl:Class ;
+                    rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Course
+gro-au:Course rdf:type owl:Class ;
+              rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#CourseFeeLoan
+gro-au:CourseFeeLoan rdf:type owl:Class ;
+                     rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#CourseRequirement
+gro-au:CourseRequirement rdf:type owl:Class ;
+                         rdfs:subClassOf gro:CourseCompletionConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Decision
+gro-au:Decision rdf:type owl:Class ;
+                rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#DeterminationCourse
+gro-au:DeterminationCourse rdf:type owl:Class ;
+                           rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Document
+gro-au:Document rdf:type owl:Class ;
+                rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#EligibleStudentRole
+gro-au:EligibleStudentRole rdf:type owl:Class ;
+                           rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#EmployerOrIndustryBody
+gro-au:EmployerOrIndustryBody rdf:type owl:Class ;
+                              rdfs:subClassOf gro:TrainingProviderOrEmployerPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#EmploymentContract
+gro-au:EmploymentContract rdf:type owl:Class ;
+                          rdfs:subClassOf gro:RegulatoryAgreementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#EnrolledStudent
+gro-au:EnrolledStudent rdf:type owl:Class ;
+                       rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Enrolment
+gro-au:Enrolment rdf:type owl:Class ;
+                 rdfs:subClassOf gro:EnrollmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#EnrolmentInformation
+gro-au:EnrolmentInformation rdf:type owl:Class ;
+                            rdfs:subClassOf gro:StudentProceduralResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Evidence
+gro-au:Evidence rdf:type owl:Class ;
+                rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ExecutiveOfficer
+gro-au:ExecutiveOfficer rdf:type owl:Class ;
+                        rdfs:subClassOf gro:OrganizationalExecutiveRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#FeeLimit
+gro-au:FeeLimit rdf:type owl:Class ;
+                rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#FeeNotice
+gro-au:FeeNotice rdf:type owl:Class ;
+                 rdfs:subClassOf gro:FeePolicyDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#FeePeriod
+gro-au:FeePeriod rdf:type owl:Class ;
+                 rdfs:subClassOf gro:EducationalPeriodPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#FinancialResource
+gro-au:FinancialResource rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#FundingAllocation
+gro-au:FundingAllocation rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#GovernmentBody
+gro-au:GovernmentBody rdf:type owl:Class ;
+                      rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#GovernmentDepartment
+gro-au:GovernmentDepartment rdf:type owl:Class ;
+                            rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#GrandfatheredStudentRole
+gro-au:GrandfatheredStudentRole rdf:type owl:Class ;
+                                rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#GrievanceProcedure
+gro-au:GrievanceProcedure rdf:type owl:Class ;
+                          rdfs:subClassOf gro:StudentGrievanceMechanismPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#IncreasedLoanCap
+gro-au:IncreasedLoanCap rdf:type owl:Class ;
+                        rdfs:subClassOf gro:LoanAdjustmentResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Information
+gro-au:Information rdf:type owl:Class ;
+                   rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#InformationOrDocument
+gro-au:InformationOrDocument rdf:type owl:Class ;
+                             rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#InformationResource
+gro-au:InformationResource rdf:type owl:Class ;
+                           rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#InternationalStudentRole
+gro-au:InternationalStudentRole rdf:type owl:Class ;
+                                rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#LearnerProtectionInformation
+gro-au:LearnerProtectionInformation rdf:type owl:Class ;
+                                    rdfs:subClassOf gro:LearnerInformationRecordPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ListedCourseProvider
+gro-au:ListedCourseProvider rdf:type owl:Class ;
+                            rdfs:subClassOf gro:TrainingProviderOrEmployerPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#LoanAmount
+gro-au:LoanAmount rdf:type owl:Class ;
+                  rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#LoanAmountRepayment
+gro-au:LoanAmountRepayment rdf:type owl:Class ;
+                           rdfs:subClassOf gro:RepaymentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#MedicalCircumstances
+gro-au:MedicalCircumstances rdf:type owl:Class ;
+                            rdfs:subClassOf gro:CircumstanceConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#NonTuitionFee
+gro-au:NonTuitionFee rdf:type owl:Class ;
+                     rdfs:subClassOf gro:AncillaryFeePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#NonTuitionFees
+gro-au:NonTuitionFees rdf:type owl:Class ;
+                      rdfs:subClassOf gro:AncillaryFeePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Provider
+gro-au:Provider rdf:type owl:Class ;
+                rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ProviderFeeLimitExcessLoanAmount
+gro-au:ProviderFeeLimitExcessLoanAmount rdf:type owl:Class ;
+                                        rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ReconsiderationOfDecision
+gro-au:ReconsiderationOfDecision rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#RegulatoryAuthority
+gro-au:RegulatoryAuthority rdf:type owl:Class ;
+                           rdfs:subClassOf gro:RegulatoryOfficialPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#RegulatoryAuthorityAgent
+gro-au:RegulatoryAuthorityAgent rdf:type owl:Class ;
+                                rdfs:subClassOf gro:JurisdictionalRegulatorPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#RegulatoryAuthorityRole
+gro-au:RegulatoryAuthorityRole rdf:type owl:Class ;
+                               rdfs:subClassOf gro:RegulatoryOfficialPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#ReviewOfficerRole
+gro-au:ReviewOfficerRole rdf:type owl:Class ;
+                         rdfs:subClassOf gro:EligibilityVerificationRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Secretary
+gro-au:Secretary rdf:type owl:Class ;
+                 rdfs:subClassOf gro:RegulatoryOfficialPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#Student
+gro-au:Student rdf:type owl:Class ;
+               rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentData
+gro-au:StudentData rdf:type owl:Class ;
+                   rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentDocumentaryEvidenceProcess
+gro-au:StudentDocumentaryEvidenceProcess rdf:type owl:Class ;
+                                         rdfs:subClassOf gro:StudentProceduralResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentEnrolment
+gro-au:StudentEnrolment rdf:type owl:Class ;
+                        rdfs:subClassOf gro:StudentEnrollmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentOfVSLProvider
+gro-au:StudentOfVSLProvider rdf:type owl:Class ;
+                            rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentRole
+gro-au:StudentRole rdf:type owl:Class ;
+                   rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentWithdrawal
+gro-au:StudentWithdrawal rdf:type owl:Class ;
+                         rdfs:subClassOf gro:EnrollmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#StudentWithdrawalOrDeferral
+gro-au:StudentWithdrawalOrDeferral rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:StudentAidModificationConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#TuitionFeeBenefit
+gro-au:TuitionFeeBenefit rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#TuitionFeeCoveredGoodsAndServices
+gro-au:TuitionFeeCoveredGoodsAndServices rdf:type owl:Class ;
+                                         rdfs:subClassOf gro:AncillaryFeePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#TuitionFeeLoanRefund
+gro-au:TuitionFeeLoanRefund rdf:type owl:Class ;
+                            rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#UnitEnrolment
+gro-au:UnitEnrolment rdf:type owl:Class ;
+                     rdfs:subClassOf gro:EnrolmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#UnnecessaryCost
+gro-au:UnnecessaryCost rdf:type owl:Class ;
+                       rdfs:subClassOf gro:ExcludedCostPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#VETSLDebt
+gro-au:VETSLDebt rdf:type owl:Class ;
+                 rdfs:subClassOf gro:EducationalLoanDebtPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#VETStudentLoanApplication
+gro-au:VETStudentLoanApplication rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#VSLInformation
+gro-au:VSLInformation rdf:type owl:Class ;
+                      rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#VSLStudent
+gro-au:VSLStudent rdf:type owl:Class ;
+                  rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#WithdrawalConfirmationMechanism
+gro-au:WithdrawalConfirmationMechanism rdf:type owl:Class ;
+                                       rdfs:subClassOf gro:AcademicWithdrawalResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/au#WithdrawalDeferralProcess
+gro-au:WithdrawalDeferralProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:StudentWithdrawalManagementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#APSDStudentRole
+gro-ca:APSDStudentRole rdf:type owl:Class ;
+                       rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AccessibilitySupportsFunding
+gro-ca:AccessibilitySupportsFunding rdf:type owl:Class ;
+                                    rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AdultUpgradingGrant
+gro-ca:AdultUpgradingGrant rdf:type owl:Class ;
+                           rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AppealDecision
+gro-ca:AppealDecision rdf:type owl:Class ;
+                      rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AppealProcess
+gro-ca:AppealProcess rdf:type owl:Class ;
+                     rdfs:subClassOf gro:StudentAidModificationConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AppealRequestForm
+gro-ca:AppealRequestForm rdf:type owl:Class ;
+                         rdfs:subClassOf gro:StudentGrievanceMechanismPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Application
+gro-ca:Application rdf:type owl:Class ;
+                   rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ApprenticeshipStudentRole
+gro-ca:ApprenticeshipStudentRole rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Assessment
+gro-ca:Assessment rdf:type owl:Class ;
+                  rdfs:subClassOf gro:EligibilityAssessmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#AviationProgramFunding
+gro-ca:AviationProgramFunding rdf:type owl:Class ;
+                              rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#BCAGExcessLoan
+gro-ca:BCAGExcessLoan rdf:type owl:Class ;
+                      rdfs:subClassOf gro:LoanAdjustmentResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Borrower
+gro-ca:Borrower rdf:type owl:Class ;
+                rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Break
+gro-ca:Break rdf:type owl:Class ;
+             rdfs:subClassOf gro:LearningPausePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#BrokeredProgramOfStudy
+gro-ca:BrokeredProgramOfStudy rdf:type owl:Class ;
+                              rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Bursary
+gro-ca:Bursary rdf:type owl:Class ;
+               rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#CourseApproval
+gro-ca:CourseApproval rdf:type owl:Class ;
+                      rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#CourseLoad
+gro-ca:CourseLoad rdf:type owl:Class ;
+                  rdfs:subClassOf gro:StudentEnrollmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#DefinedTerm
+gro-ca:DefinedTerm rdf:type owl:Class ;
+                   rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#DependantAllowance
+gro-ca:DependantAllowance rdf:type owl:Class ;
+                          rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#DependentStudent
+gro-ca:DependentStudent rdf:type owl:Class ;
+                        rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#DependentStudentRole
+gro-ca:DependentStudentRole rdf:type owl:Class ;
+                            rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Dependents
+gro-ca:Dependents rdf:type owl:Class ;
+                  rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#DisabilityVerification
+gro-ca:DisabilityVerification rdf:type owl:Class ;
+                              rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Document
+gro-ca:Document rdf:type owl:Class ;
+                rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#EligibilitySigningOfficer
+gro-ca:EligibilitySigningOfficer rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:EligibilityVerificationRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#EligiblePartTimeStudentRole
+gro-ca:EligiblePartTimeStudentRole rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#EligibleStudentRole
+gro-ca:EligibleStudentRole rdf:type owl:Class ;
+                           rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#EnrolmentConfirmation
+gro-ca:EnrolmentConfirmation rdf:type owl:Class ;
+                             rdfs:subClassOf gro:EnrolmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ExceptionalCircumstance
+gro-ca:ExceptionalCircumstance rdf:type owl:Class ;
+                               rdfs:subClassOf gro:CircumstanceConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ExecutiveProgram
+gro-ca:ExecutiveProgram rdf:type owl:Class ;
+                        rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ExpectedContribution
+gro-ca:ExpectedContribution rdf:type owl:Class ;
+                            rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FamilyIncome
+gro-ca:FamilyIncome rdf:type owl:Class ;
+                    rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FinancialAidOfficerRole
+gro-ca:FinancialAidOfficerRole rdf:type owl:Class ;
+                               rdfs:subClassOf gro:FinancialAidAdministratorRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FinancialAssistanceProgram
+gro-ca:FinancialAssistanceProgram rdf:type owl:Class ;
+                                  rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FinancialResource
+gro-ca:FinancialResource rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FormalWithdrawalFromStudies
+gro-ca:FormalWithdrawalFromStudies rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:EnrollmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FullTimeStudent
+gro-ca:FullTimeStudent rdf:type owl:Class ;
+                       rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FundingAllocationResource
+gro-ca:FundingAllocationResource rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FundingAndLoanRehabilitationApplication
+gro-ca:FundingAndLoanRehabilitationApplication rdf:type owl:Class ;
+                                               rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#FundingProgram
+gro-ca:FundingProgram rdf:type owl:Class ;
+                      rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#GovernmentBody
+gro-ca:GovernmentBody rdf:type owl:Class ;
+                      rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#GrantFunding
+gro-ca:GrantFunding rdf:type owl:Class ;
+                    rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#IncarceratedOrWarrantedStudentRole
+gro-ca:IncarceratedOrWarrantedStudentRole rdf:type owl:Class ;
+                                          rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#IndependentStudent
+gro-ca:IndependentStudent rdf:type owl:Class ;
+                          rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Institution
+gro-ca:Institution rdf:type owl:Class ;
+                   rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#InternationalExchangeStudent
+gro-ca:InternationalExchangeStudent rdf:type owl:Class ;
+                                    rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#LivingAllowance
+gro-ca:LivingAllowance rdf:type owl:Class ;
+                       rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#MandatoryFees
+gro-ca:MandatoryFees rdf:type owl:Class ;
+                     rdfs:subClassOf gro:AncillaryFeePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#MedicalOrParentalLeaveApplication
+gro-ca:MedicalOrParentalLeaveApplication rdf:type owl:Class ;
+                                         rdfs:subClassOf gro:EnrollmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ModifiedIndependentStudent
+gro-ca:ModifiedIndependentStudent rdf:type owl:Class ;
+                                  rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#NonPunitiveWithdrawalForm
+gro-ca:NonPunitiveWithdrawalForm rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:AcademicWithdrawalResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#NoticeOfAssessment
+gro-ca:NoticeOfAssessment rdf:type owl:Class ;
+                          rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Overaward
+gro-ca:Overaward rdf:type owl:Class ;
+                 rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ParentalLivingAllowance
+gro-ca:ParentalLivingAllowance rdf:type owl:Class ;
+                               rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#PartTimeStudentLoanApplication
+gro-ca:PartTimeStudentLoanApplication rdf:type owl:Class ;
+                                      rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#PersistentOrProlongedDisability
+gro-ca:PersistentOrProlongedDisability rdf:type owl:Class ;
+                                       rdfs:subClassOf gro:FunctionalImpairmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#PostCredentialTrainingPeriod
+gro-ca:PostCredentialTrainingPeriod rdf:type owl:Class ;
+                                    rdfs:subClassOf gro:PostCredentialTrainingPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#PostSecondaryInstitution
+gro-ca:PostSecondaryInstitution rdf:type owl:Class ;
+                                rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Program
+gro-ca:Program rdf:type owl:Class ;
+               rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#Province
+gro-ca:Province rdf:type owl:Class ;
+                rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#RAPApplicant
+gro-ca:RAPApplicant rdf:type owl:Class ;
+                    rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#RefundPolicy
+gro-ca:RefundPolicy rdf:type owl:Class ;
+                    rdfs:subClassOf gro:StudentWithdrawalManagementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#RegulatoryAuthorityAgent
+gro-ca:RegulatoryAuthorityAgent rdf:type owl:Class ;
+                                rdfs:subClassOf gro:JurisdictionalRegulatorPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ReimbursementApplication
+gro-ca:ReimbursementApplication rdf:type owl:Class ;
+                                rdfs:subClassOf gro:RepaymentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#RemediationEvidenceOrPlan
+gro-ca:RemediationEvidenceOrPlan rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#RepaymentAssistancePlan
+gro-ca:RepaymentAssistancePlan rdf:type owl:Class ;
+                               rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ReturningWithdrawnStudentRole
+gro-ca:ReturningWithdrawnStudentRole rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ScholarshipBursaryResource
+gro-ca:ScholarshipBursaryResource rdf:type owl:Class ;
+                                  rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#ScholasticStandingRequirement
+gro-ca:ScholasticStandingRequirement rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:AcademicEligibilityRequirementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#SpousalContributionAmount
+gro-ca:SpousalContributionAmount rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#SpousalExpectedContribution
+gro-ca:SpousalExpectedContribution rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentAidBCEligibleNursingStudent
+gro-ca:StudentAidBCEligibleNursingStudent rdf:type owl:Class ;
+                                          rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentApplyingForASFPrograms
+gro-ca:StudentApplyingForASFPrograms rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentAward
+gro-ca:StudentAward rdf:type owl:Class ;
+                    rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentBorrower
+gro-ca:StudentBorrower rdf:type owl:Class ;
+                       rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentFinancialAssistance
+gro-ca:StudentFinancialAssistance rdf:type owl:Class ;
+                                  rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentFinancialAssistanceApplication
+gro-ca:StudentFinancialAssistanceApplication rdf:type owl:Class ;
+                                             rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentFinancialAssistanceInformation
+gro-ca:StudentFinancialAssistanceInformation rdf:type owl:Class ;
+                                             rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentFinancialAssistanceProgram
+gro-ca:StudentFinancialAssistanceProgram rdf:type owl:Class ;
+                                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentFundingRecipient
+gro-ca:StudentFundingRecipient rdf:type owl:Class ;
+                               rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentLoanDebt
+gro-ca:StudentLoanDebt rdf:type owl:Class ;
+                       rdfs:subClassOf gro:EducationalLoanDebtPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentRole
+gro-ca:StudentRole rdf:type owl:Class ;
+                   rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudentWithAccessibilityChallenges
+gro-ca:StudentWithAccessibilityChallenges rdf:type owl:Class ;
+                                          rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#StudyPeriod
+gro-ca:StudyPeriod rdf:type owl:Class ;
+                   rdfs:subClassOf gro:EducationalPeriodPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#SuccessfulCompletion
+gro-ca:SuccessfulCompletion rdf:type owl:Class ;
+                            rdfs:subClassOf gro:CourseCompletionConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#SuccessfulReinstatementStudent
+gro-ca:SuccessfulReinstatementStudent rdf:type owl:Class ;
+                                      rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#TravelExpenseFunding
+gro-ca:TravelExpenseFunding rdf:type owl:Class ;
+                            rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#TuitionFeePolicy
+gro-ca:TuitionFeePolicy rdf:type owl:Class ;
+                        rdfs:subClassOf gro:FeePolicyDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#VoluntaryContribution
+gro-ca:VoluntaryContribution rdf:type owl:Class ;
+                             rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#WhollyDependentPerson
+gro-ca:WhollyDependentPerson rdf:type owl:Class ;
+                             rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/ca#WorkBCEmploymentServicesFunds
+gro-ca:WorkBCEmploymentServicesFunds rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#AdditionalPayment
+gro-uk:AdditionalPayment rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#AdvancedLearnerLoan
+gro-uk:AdvancedLearnerLoan rdf:type owl:Class ;
+                           rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ApplicationAndSupportingEvidence
+gro-uk:ApplicationAndSupportingEvidence rdf:type owl:Class ;
+                                        rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ApprenticeCertificate
+gro-uk:ApprenticeCertificate rdf:type owl:Class ;
+                             rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ApprenticeshipProgramme
+gro-uk:ApprenticeshipProgramme rdf:type owl:Class ;
+                               rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Approval
+gro-uk:Approval rdf:type owl:Class ;
+                rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#AssessmentAction
+gro-uk:AssessmentAction rdf:type owl:Class ;
+                        rdfs:subClassOf gro:AssessmentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#AwardingBody
+gro-uk:AwardingBody rdf:type owl:Class ;
+                    rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#BreakInLearning
+gro-uk:BreakInLearning rdf:type owl:Class ;
+                       rdfs:subClassOf gro:LearningPausePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#BursaryResource
+gro-uk:BursaryResource rdf:type owl:Class ;
+                       rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Contract
+gro-uk:Contract rdf:type owl:Class ;
+                rdfs:subClassOf gro:RegulatoryAgreementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#DfEFundedCourse
+gro-uk:DfEFundedCourse rdf:type owl:Class ;
+                       rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Document
+gro-uk:Document rdf:type owl:Class ;
+                rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EligibleApprenticeRole
+gro-uk:EligibleApprenticeRole rdf:type owl:Class ;
+                              rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EmployerAgreement
+gro-uk:EmployerAgreement rdf:type owl:Class ;
+                         rdfs:subClassOf gro:RegulatoryAgreementPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EmployerCompetencyStatement
+gro-uk:EmployerCompetencyStatement rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:SignedDeclarationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EndPointAssessmentProcess
+gro-uk:EndPointAssessmentProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:AssessmentProcessPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EvidenceOfEligibility
+gro-uk:EvidenceOfEligibility rdf:type owl:Class ;
+                             rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EvidencePack
+gro-uk:EvidencePack rdf:type owl:Class ;
+                    rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#EvidenceRequirement
+gro-uk:EvidenceRequirement rdf:type owl:Class ;
+                           rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ExcessCostPayment
+gro-uk:ExcessCostPayment rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#FinancialResource
+gro-uk:FinancialResource rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#FormalAssessment
+gro-uk:FormalAssessment rdf:type owl:Class ;
+                        rdfs:subClassOf gro:EligibilityAssessmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#FundingResource
+gro-uk:FundingResource rdf:type owl:Class ;
+                       rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#GovernanceLeadRole
+gro-uk:GovernanceLeadRole rdf:type owl:Class ;
+                          rdfs:subClassOf gro:OrganizationalExecutiveRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#GovernmentBody
+gro-uk:GovernmentBody rdf:type owl:Class ;
+                      rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#GovernmentDepartment
+gro-uk:GovernmentDepartment rdf:type owl:Class ;
+                            rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#IndividualisedLearnerRecord
+gro-uk:IndividualisedLearnerRecord rdf:type owl:Class ;
+                                   rdfs:subClassOf gro:LearnerInformationRecordPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#IneligibleCost
+gro-uk:IneligibleCost rdf:type owl:Class ;
+                      rdfs:subClassOf gro:ExcludedCostPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#InitialAssessment
+gro-uk:InitialAssessment rdf:type owl:Class ;
+                         rdfs:subClassOf gro:EligibilityAssessmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Judgement
+gro-uk:Judgement rdf:type owl:Class ;
+                 rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Learner
+gro-uk:Learner rdf:type owl:Class ;
+               rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Learning
+gro-uk:Learning rdf:type owl:Class ;
+                rdfs:subClassOf gro:PostCredentialTrainingPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#LearningDifficultyOrDisability
+gro-uk:LearningDifficultyOrDisability rdf:type owl:Class ;
+                                      rdfs:subClassOf gro:FunctionalImpairmentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#MaximumFundingAmount
+gro-uk:MaximumFundingAmount rdf:type owl:Class ;
+                            rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#OtherRulesDocument
+gro-uk:OtherRulesDocument rdf:type owl:Class ;
+                          rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Programme
+gro-uk:Programme rdf:type owl:Class ;
+                 rdfs:subClassOf gro:EducationalProgramPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ProviderAdditionalPayment
+gro-uk:ProviderAdditionalPayment rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#ProviderOrEmployer
+gro-uk:ProviderOrEmployer rdf:type owl:Class ;
+                          rdfs:subClassOf gro:TrainingProviderOrEmployerPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Regulator
+gro-uk:Regulator rdf:type owl:Class ;
+                 rdfs:subClassOf gro:RegulatoryOfficialPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#RegulatoryAuthority
+gro-uk:RegulatoryAuthority rdf:type owl:Class ;
+                           rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#RepayOverPayment
+gro-uk:RepayOverPayment rdf:type owl:Class ;
+                        rdfs:subClassOf gro:RepaymentActionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#RepeatedTraining
+gro-uk:RepeatedTraining rdf:type owl:Class ;
+                        rdfs:subClassOf gro:PostCredentialTrainingPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#Review
+gro-uk:Review rdf:type owl:Class ;
+              rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#SelfDeclaration
+gro-uk:SelfDeclaration rdf:type owl:Class ;
+                       rdfs:subClassOf gro:SignedDeclarationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#SignedDeclaration
+gro-uk:SignedDeclaration rdf:type owl:Class ;
+                         rdfs:subClassOf gro:SignedDeclarationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#SignedStatement
+gro-uk:SignedStatement rdf:type owl:Class ;
+                       rdfs:subClassOf gro:SignedDeclarationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#StudentLoan
+gro-uk:StudentLoan rdf:type owl:Class ;
+                   rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#StudentMembershipFee
+gro-uk:StudentMembershipFee rdf:type owl:Class ;
+                            rdfs:subClassOf gro:AncillaryFeePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#SufficientEvidence
+gro-uk:SufficientEvidence rdf:type owl:Class ;
+                          rdfs:subClassOf gro:RegulatoryDecisionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#TrainingCost
+gro-uk:TrainingCost rdf:type owl:Class ;
+                    rdfs:subClassOf gro:TotalProgramCostPattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#TransferAmount
+gro-uk:TransferAmount rdf:type owl:Class ;
+                      rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/uk#WrittenEvidence
+gro-uk:WrittenEvidence rdf:type owl:Class ;
+                       rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#Application
+gro-us:Application rdf:type owl:Class ;
+                   rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#ContributionFromAssets
+gro-us:ContributionFromAssets rdf:type owl:Class ;
+                              rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#Department
+gro-us:Department rdf:type owl:Class ;
+                  rdfs:subClassOf gro:GovernmentOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DependentStudent
+gro-us:DependentStudent rdf:type owl:Class ;
+                        rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DependentStudentWithoutParentalSupport
+gro-us:DependentStudentWithoutParentalSupport rdf:type owl:Class ;
+                                              rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DirectLoanFunds
+gro-us:DirectLoanFunds rdf:type owl:Class ;
+                       rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DirectUnsubsidizedAndPLUSLoans
+gro-us:DirectUnsubsidizedAndPLUSLoans rdf:type owl:Class ;
+                                      rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DirectUnsubsidizedLoan
+gro-us:DirectUnsubsidizedLoan rdf:type owl:Class ;
+                              rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#Document
+gro-us:Document rdf:type owl:Class ;
+                rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#DocumentationItem
+gro-us:DocumentationItem rdf:type owl:Class ;
+                         rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#FAFSAApplication
+gro-us:FAFSAApplication rdf:type owl:Class ;
+                        rdfs:subClassOf gro:FundingApplicationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#FAFSAStudentRole
+gro-us:FAFSAStudentRole rdf:type owl:Class ;
+                        rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#FamilySize
+gro-us:FamilySize rdf:type owl:Class ;
+                  rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#FinancialAidAdministrator
+gro-us:FinancialAidAdministrator rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:FinancialAidAdministratorRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#FinancialResource
+gro-us:FinancialResource rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#GraduateProfessionalStudentRole
+gro-us:GraduateProfessionalStudentRole rdf:type owl:Class ;
+                                       rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#IRS
+gro-us:IRS rdf:type owl:Class ;
+           rdfs:subClassOf gro:TaxRegulatoryAuthorityAgentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#ISIR
+gro-us:ISIR rdf:type owl:Class ;
+            rdfs:subClassOf gro:LearnerInformationRecordPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#IncomeAllowanceCalculation
+gro-us:IncomeAllowanceCalculation rdf:type owl:Class ;
+                                  rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#LateDisbursement
+gro-us:LateDisbursement rdf:type owl:Class ;
+                        rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#LegalDependent
+gro-us:LegalDependent rdf:type owl:Class ;
+                      rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#ParentsAvailableIncome
+gro-us:ParentsAvailableIncome rdf:type owl:Class ;
+                              rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#ParentsContribution
+gro-us:ParentsContribution rdf:type owl:Class ;
+                           rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#ParentsContributionFromAssets
+gro-us:ParentsContributionFromAssets rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#PellGrantMoney
+gro-us:PellGrantMoney rdf:type owl:Class ;
+                      rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#RegulatoryAuthorityAgent
+gro-us:RegulatoryAuthorityAgent rdf:type owl:Class ;
+                                rdfs:subClassOf gro:JurisdictionalRegulatorPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#School
+gro-us:School rdf:type owl:Class ;
+              rdfs:subClassOf gro:EducationalOrganizationPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#SpecialCircumstances
+gro-us:SpecialCircumstances rdf:type owl:Class ;
+                            rdfs:subClassOf gro:CircumstanceConditionPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#StateFinancialAid
+gro-us:StateFinancialAid rdf:type owl:Class ;
+                         rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#StatementOfEducationalPurpose
+gro-us:StatementOfEducationalPurpose rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#Student
+gro-us:Student rdf:type owl:Class ;
+               rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#StudentContributionFromIncome
+gro-us:StudentContributionFromIncome rdf:type owl:Class ;
+                                     rdfs:subClassOf gro:FinancialNeedAssessmentInputPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#StudentRole
+gro-us:StudentRole rdf:type owl:Class ;
+                   rdfs:subClassOf gro:StudentRolePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#TitleIVAid
+gro-us:TitleIVAid rdf:type owl:Class ;
+                  rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#UndergraduateAid
+gro-us:UndergraduateAid rdf:type owl:Class ;
+                        rdfs:subClassOf gro:FinancialAidResourcePattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#VerificationDocument
+gro-us:VerificationDocument rdf:type owl:Class ;
+                            rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#VerificationDocumentation
+gro-us:VerificationDocumentation rdf:type owl:Class ;
+                                 rdfs:subClassOf gro:EvidentiaryDocumentPattern .
+
+
+###  https://w3id.org/cco-gro/onto/us#VerificationInformation
+gro-us:VerificationInformation rdf:type owl:Class ;
+                               rdfs:subClassOf gro:StudentProceduralResourcePattern .
+
+
+###  https://www.w3id.org/cco/cco#Action
+cco:Action rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Condition
+cco:Condition rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Obligation
+cco:Obligation rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Organisation
+cco:Organisation rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Permission
+cco:Permission rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Prohibition
+cco:Prohibition rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#RegulatoryAuthorityAgent
+cco:RegulatoryAuthorityAgent rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#RegulatoryAuthorityRole
+cco:RegulatoryAuthorityRole rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Resource
+cco:Resource rdf:type owl:Class .
+
+
+###  https://www.w3id.org/cco/cco#Role
+cco:Role rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
