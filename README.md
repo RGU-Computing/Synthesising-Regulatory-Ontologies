@@ -20,7 +20,7 @@ The approach is demonstrated on education funding regulations across four jurisd
 ## Documentation
 
 Full ontology documentation is available at:
-**[https://www.w3id.org/cco/cco](https://rgu-computing.github.io/Synthesising-Regulatory-Ontologies/)**
+**[Unified Legislation Regulatory Ontology](https://rgu-computing.github.io/Synthesising-Regulatory-Ontologies/)**
 
 **Note:** The published documentation shows the ontology schema (classes, properties, hierarchy) only. Individual instances (extracted RDF data) are available in the TTL files under `ontology/`.
 
