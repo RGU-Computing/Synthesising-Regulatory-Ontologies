@@ -62,14 +62,15 @@ Full ontology documentation is available at:
 │   ├── ontology_correctness/     # 69-class correctness review
 │   └── source_faithfulness/      # 59-sample faithfulness annotations
 │
-├── code/                        # Pipeline implementation (Jupyter notebooks)
+├── code and output/                        # Pipeline implementation (Jupyter notebooks) and results of each phase
 │   ├── phase1_preparation/
+│       └── code and output
 │   ├── phase2_retrieval/
+│        └── code and output
 │   ├── phase3_extraction_validation/
+│        └── code and output
 │   └── phase4_consolidation/
-│
-├── data/                        # Source document manifests
-│   └── manifests/                # Document inventory and URLs
+│        └── code and output
 │
 ├── LICENSE
 └── README.md
