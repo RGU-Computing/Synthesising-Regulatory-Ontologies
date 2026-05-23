@@ -16,7 +16,7 @@ We present a schema- and pattern-guided approach for regulatory ontology synthes
 The approach is demonstrated on education funding regulations across four jurisdictions (United Kingdom, United States, Canada, Australia), producing a unified legislation regulatory ontology of 1,295 named classes layered over CCO.
 
 <div align="center">
-<img src="docs/model_pipeline.png" width="800" alt="A Schema and Pattern-Guided Approach"/>
+<img src="fig/model_pipeline.png" width="800" alt="A Schema and Pattern-Guided Approach"/>
 </div>
 
 *Figure 1: Overview of the proposed four-phase schema- and pattern-guided pipeline for regulatory ontology synthesis, comprising preparation; retrieval, extraction and validation, and consolidation and evaluation. Blocks marked with the AI icon denote stages in which LLMs are used.*
