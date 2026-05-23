@@ -119,5 +119,5 @@ This work is licensed under the [MIT License](LICENSE).
 
 ```
 Arshad, U., Corsar, D., Nkisi-Orji, I.: Synthesising Regulatory Ontologies:A Schemaand Pattern-Guided Approach 
-Available at: https://github.com/RGU-Computing/CCO
+Available at: https://github.com/RGU-Computing/Synthesising-Regulatory-Ontologies
 ```
