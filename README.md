@@ -16,9 +16,10 @@ We present a schema- and pattern-guided approach for regulatory ontology synthes
 The approach is demonstrated on education funding regulations across four jurisdictions (United Kingdom, United States, Canada, Australia), producing a unified legislation regulatory ontology of 1,295 named classes layered over CCO.
 
 ---
-
 ## Repository Structure
 
+```
+.
 ├── ontology/                    # Synthesised regulatory ontology
 │   ├── per-jurisdiction/         # Per-jurisdiction ontologies (UK, US, CA, AU)
 │   ├── shared/                   # Domain regulatory ontology (69 shared classes)
@@ -54,7 +55,7 @@ The approach is demonstrated on education funding regulations across four jurisd
 │
 ├── LICENSE
 └── README.md
----
+```
 
 ## Key Results
 
