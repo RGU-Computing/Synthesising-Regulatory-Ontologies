@@ -54,8 +54,6 @@ The approach is demonstrated on education funding regulations across four jurisd
 │
 ├── LICENSE
 └── README.md
-
-
 ---
 
 ## Key Results
