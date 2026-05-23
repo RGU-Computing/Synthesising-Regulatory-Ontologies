@@ -75,7 +75,7 @@ Full ontology documentation is available at:
 └── README.md
 ```
 
-## Key Results
+## Results
 
 ### Dataset
 
@@ -94,7 +94,6 @@ Full ontology documentation is available at:
 | CCO data properties | 8 |
 | Extraction ODPs | 12 |
 | Consolidation patterns | 2 |
-
 
 ### Retrieval (Phase 2)
 
@@ -135,30 +134,69 @@ Full ontology documentation is available at:
 | **SKOS alignments produced** | **362** (357 closeMatch, 3 narrowMatch, 2 broadMatch) |
 | Shared cross-jurisdiction classes | 69 (across 10 CCO parents) |
 
-### Unified Ontology
+### Unified Ontology Quality Metrics
+
+Measurements on the published TTL (`ontology/unified/unified_legislation_regulatory.ttl`):
 
 | Metric | Value |
 |---|---|
-| **Total named classes** | **1,295** |
+| **Total named classes** | **1,290** |
 | CCO classes (foundation) | 16 |
 | Shared classes (domain regulatory ontology) | 69 |
-| Jurisdiction-scoped classes | 1,210 (1,000 canonical + 210 retained from per-chunk RDF) |
-| Hierarchy depth | 3 levels |
-| Average branching factor | 6.04 |
-| Max branching factor | 46 |
-| Annotation completeness (labels) | 100% |
-| Annotation completeness (definitions) | 100% |
-| Annotation completeness (comments) | 63.8% |
+| Jurisdiction-scoped classes | 1,205 |
+| Per-jurisdiction breakdown (UK / CA / AU / US) | 449 / 343 / 310 / 103 |
+| Max hierarchy depth | 3 levels |
+| Average branching factor (whole ontology) | 26.49 |
+| Max branching factor (whole ontology) | 803 (cco:Resource) |
+| Parents with children | 65 |
+| Classes with labels | 1,293 (99.8%) |
+| Classes with definitions | 1,293 (99.8%) |
+| Classes with comments | 44 (3.4%) |
+| SKOS cross-jurisdiction alignments | 362 |
 
-### Cross-Jurisdiction Coverage (69 shared classes)
 
-| Coverage | Count | Percentage |
+### Domain Regulatory Ontology Quality Metrics
+
+The domain regulatory ontology is the shared cross-jurisdiction abstraction layer (69 shared classes + 257 per-jurisdiction descendants), constructed during Phase 4 consolidation using the Shared Domain Superclass Pattern.:
+
+**Size**
+
+| Triples | Classes | Shared | Per-jurisdiction |
+|---|---|---|---|
+| 836 | 326 | 69 | 257 |
+
+**Structure**
+
+| CCO parents | Depth | Branching (avg) | Branching (max) |
+|---|---|---|---|
+| 10 | 3 | 6.04 | 46 |
+
+**Annotation**
+
+| Labels | Definitions | Comments |
+|---|---|---|
+| 100% | 100% | 63.8% |
+
+**Cross-Jurisdiction Coverage**
+
+Of the 69 shared classes, 44 have direct per-jurisdiction descendants; the remaining 25 are shared norm-type abstractions without direct subclasses.
+
+| Spans | Count | Percentage |
 |---|---|---|
 | 4 jurisdictions | 6 | 13.6% |
 | 3 jurisdictions | 7 | 15.9% |
 | 2 jurisdictions | 30 | 68.2% |
 | 1 jurisdiction | 1 | 2.3% |
-| Norm-type abstractions (no direct subclasses) | 25 | — |
+
+The largest cluster is `gro:FinancialAidResourcePattern` with 46 per-jurisdiction descendants. Top 5 shared classes by descendant count:
+
+| Shared Class | Descendants |
+|---|---|
+| `gro:FinancialAidResourcePattern` | 46 |
+| `gro:StudentRolePattern` | 41 |
+| `gro:EvidentiaryDocumentPattern` | 25 |
+| `gro:RegulatoryDecisionPattern` | 15 |
+| `gro:FinancialNeedAssessmentInputPattern` | 13 |
 
 ### Evaluation: Ontology Correctness (69 shared classes)
 
@@ -178,28 +216,18 @@ Full ontology documentation is available at:
 | Object | 72.9% | 27.1% | 0.0% |
 | **Overall** | **55.9%** | **42.4%** | **1.7%** |
 
+---
+
 ## Evaluation Summary
 
 The synthesised ontology is evaluated along three dimensions:
 
-- **Quality Metrics** — Domain regulatory ontology contains 69 shared 
-  classes across 10 CCO parents, with 257 per-jurisdiction descendants. 
-  Annotation completeness: 100% labels, 100% definitions, 63.8% comments. 
-  3-level hierarchy with average branching factor of 6.04 (max 46).
+- **Quality Metrics** — Domain regulatory ontology contains 69 shared classes across 10 CCO parents, with 257 per-jurisdiction descendants. Annotation completeness on shared layer: 100% labels, 100% definitions, 63.8% comments (44/69). 3-level hierarchy; branching on shared layer: average 6.04, max 46 (gro:FinancialAidResourcePattern).
 
-- **Ontology Correctness** — 69 shared classes human-reviewed against 
-  three criteria. **72.5% (50/69) rated Correct across all criteria.** 
-  Parent correctness: 94.2% Correct; Name appropriateness: 92.8% Correct; 
-  Definition accuracy: 84.1% Correct (lowest, dominated by definitions 
-  aggregating multiple concepts).
+- **Ontology Correctness** — 69 shared classes human-reviewed against three criteria. **72.5% (50/69) rated Correct across all criteria.** Parent correctness: 94.2% Correct; Name appropriateness: 92.8% Correct; Definition accuracy: 84.1% Correct (lowest, dominated by definitions aggregating multiple concepts).
 
-- **Source Faithfulness** — 59 stratified samples (5% of 1,178 validated 
-  chunks) rated along subject, predicate, and object axes. **Overall: 
-  55.9% Faithful, 42.4% Partial, 1.7% Unfaithful.** Subjects most 
-  reliably extracted (84.7% Faithful), followed by objects (72.9%) and 
-  predicates (64.4%). Partial ratings dominated by multi-clause provisions 
-  with lower-granularity capture of secondary clauses.
-
+- **Source Faithfulness** — 59 stratified samples (5% of 1,178 validated chunks) rated along subject, predicate, and object axes. **Overall: 55.9% Faithful, 42.4% Partial, 1.7% Unfaithful.** Subjects most reliably extracted (84.7% Faithful), followed by objects (72.9%) and predicates (64.4%). Partial ratings dominated by multi-clause provisions with lower-granularity capture of secondary clauses.
+  
 ---
 
 ## Browsing the Ontology
