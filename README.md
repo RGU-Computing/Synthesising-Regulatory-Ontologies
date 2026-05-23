@@ -26,7 +26,8 @@ The approach is demonstrated on education funding regulations across four jurisd
 │   ├── alignments/               # SKOS cross-jurisdiction mappings (362)
 │   └── unified/                  # Unified legislation regulatory ontology
 │
-├── patterns/                    # Pattern library
+├── schema and pattern artefacts/                    # Scema and Pattern
+│   ├── CCO schema                                   # CCO base schema
 │   ├── extraction_odps.json      # 12 extraction ODPs
 │   └── consolidation_patterns.md # Functional equivalence + shared domain superclass
 │
