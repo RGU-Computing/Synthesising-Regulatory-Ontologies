@@ -1,0 +1,442 @@
+{
+  "metadata": {
+    "version": "1.3",
+    "description": "CCO-grounded ODP library for Layer 3 extraction and validation. All classes, properties, and axioms verified against CCO.ttl (version 1.0). Patterns numbered ODP-1 through ODP-12."
+  },
+  "categories": {
+    "A_norm_type": {
+      "label": "Norm Type Patterns",
+      "patterns": [
+        {
+          "id": "ODP-1",
+          "label": "Obligation Pattern",
+          "category": "A",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Obligation", "cco:Role", "cco:Regulation"],
+          "cco_relations": [
+            "cco:appliesToRole (domain: Norm, range: Role)",
+            "cco:specifiesNorm (domain: Regulation, range: Norm)"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "Obligation is mutually disjoint with Permission and Prohibition (owl:AllDisjointClasses).",
+            "Use cco:Obligation - never bare cco:Norm.",
+            "hasApplicabilityStart is FunctionalProperty: if multiple start dates appear in provision text, create separate Norm instances.",
+            "Regulation must have at least one specifiesNorm link (minCardinality 1)."
+          ],
+          "agent_subtype_note": "cco:Person and cco:Organisation are disjoint subclasses of cco:Agent. Type the associated Agent accordingly where determinable.",
+          "slots": {
+            "norm_type": "cco:Obligation",
+            "bearer_role": "cco:Role",
+            "source_regulation": "cco:Regulation with hasValidityStart",
+            "applicability_start": "xsd:date on Obligation instance (optional)"
+          },
+          "distinguish_from": {
+            "ODP-2": "Permission uses 'may', not 'must'.",
+            "ODP-3": "Prohibition uses 'must not', not positive duty.",
+            "ODP-5": "If triggered by a condition, compose with ODP-5."
+          },
+          "retrieval_text": "Must, shall, is required to, has to, must ensure, must verify, must complete, must provide, must submit, must retain, must confirm, must disclose, must register, must comply. An obligation imposes a binding mandatory duty on a regulated party. Common contexts include verification duties, documentation duties, reporting duties, retention duties, and compliance duties. Example provisions: 'The provider must retain evidence of attendance for at least six years.' 'Employers must verify the apprentice eligibility within thirty days.' 'The institution shall submit annual compliance reports by the deadline.' 'Applicants are required to provide supporting documentation for all claims.' 'Schools must confirm enrolment status before disbursement.'",
+          "extraction_disambiguation_rule": "Extract as cco:Obligation only when the duty is mandatory (must, shall, is required to). Modal verbs 'should' and 'ought to' are advisory and should be flagged for manual review rather than extracted as Obligation. If no cco:Role can be identified as the bearer, flag for manual review."
+        },
+        {
+          "id": "ODP-2",
+          "label": "Permission Pattern",
+          "category": "A",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Permission", "cco:Role", "cco:Regulation"],
+          "cco_relations": [
+            "cco:appliesToRole (domain: Norm, range: Role)",
+            "cco:specifiesNorm (domain: Regulation, range: Norm)"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "Permission is mutually disjoint with Obligation and Prohibition (owl:AllDisjointClasses).",
+            "Use cco:Permission - never bare cco:Norm.",
+            "Permission is a subclass of Norm in CCO; it is not merely absence of prohibition.",
+            "hasApplicabilityStart is FunctionalProperty: at most one value per Permission instance."
+          ],
+          "agent_subtype_note": "Type the associated Agent as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "norm_type": "cco:Permission",
+            "bearer_role": "cco:Role",
+            "source_regulation": "cco:Regulation with hasValidityStart",
+            "applicability_start": "xsd:date on Permission instance (optional)"
+          },
+          "distinguish_from": {
+            "ODP-1": "'May' indicates discretion, not duty.",
+            "ODP-3": "Permission allows an action; Prohibition forbids it.",
+            "ODP-6": "Exception-derived permissions should be modeled through ODP-6."
+          },
+          "retrieval_text": "Provider may, student may apply, institution is permitted to, applicant is entitled to, body may grant, party can request, agency may approve, organisation is allowed to, may use, may obtain, has the right to, is eligible to. A permission grants a discretionary right or entitlement to a regulated party. The action is allowed but not required. Example provisions: 'The provider may request an extension of the deadline upon written notice.' 'Eligible students may apply for hardship funding under the relevant scheme.' 'The institution is permitted to use alternative assessment methods.' 'Applicants are entitled to appeal the decision within twenty-one days.'",
+          "extraction_disambiguation_rule": "A normative permission grants a right to an identified cco:Role. If no bearer role can be identified, flag for manual review."
+        },
+        {
+          "id": "ODP-3",
+          "label": "Prohibition Pattern",
+          "category": "A",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Prohibition", "cco:Role", "cco:Regulation"],
+          "cco_relations": [
+            "cco:appliesToRole (domain: Norm, range: Role)",
+            "cco:specifiesNorm (domain: Regulation, range: Norm)"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "Prohibition is mutually disjoint with Obligation and Permission (owl:AllDisjointClasses).",
+            "Use cco:Prohibition - never bare cco:Norm.",
+            "hasApplicabilityStart is FunctionalProperty: at most one value per Prohibition instance."
+          ],
+          "agent_subtype_note": "Type the associated Agent as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "norm_type": "cco:Prohibition",
+            "bearer_role": "cco:Role",
+            "source_regulation": "cco:Regulation with hasValidityStart",
+            "applicability_start": "xsd:date on Prohibition instance (optional)"
+          },
+          "distinguish_from": {
+            "ODP-1": "Prohibition is a negative duty; Obligation is a positive duty.",
+            "ODP-6": "If modified by an exception, compose with ODP-6."
+          },
+          "retrieval_text": "Provider must not, student shall not, institution may not, employer is prohibited from, party cannot, applicant must not engage in, body shall not disclose, agency may not charge, is forbidden from, is not permitted to, must refrain from, may not retain. A prohibition forbids a specified action by a regulated party. The action is restrained, not required. Example provisions: 'The provider must not charge additional fees for the same service.' 'Institutions shall not disclose personal data without consent.' 'Employers are prohibited from deducting training costs from wages.' 'Applicants may not submit duplicate claims for the same period.'",
+          "extraction_disambiguation_rule": "Extract as Prohibition when the provision forbids an action by an identified role. Do not confuse with 'is not required to', which is absence of obligation, not prohibition. 'Should not' is typically advisory and should be flagged for manual review."
+        }
+      ]
+    },
+    "B_core_compliance_structure": {
+      "label": "Core Compliance Structure Patterns",
+      "patterns": [
+        {
+          "id": "ODP-4",
+          "label": "Regulatory Authority Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:RegulatoryAuthorityAgent", "cco:RegulatoryAuthorityRole", "cco:RoleHolding", "cco:Regulation"],
+          "cco_relations": [
+            "cco:holdsRole (domain: Agent, range: RoleHolding)",
+            "cco:hasRole (domain: RoleHolding, range: Role) [FunctionalProperty]",
+            "cco:issues (domain: RegulatoryAuthorityAgent, range: Regulation)"
+          ],
+          "cco_data_properties": [
+            "cco:hasStartTime - FunctionalProperty, exactly 1 per RoleHolding instance, xsd:date (MANDATORY)",
+            "cco:hasEndTime - FunctionalProperty, max 1 per RoleHolding instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "RegulatoryAuthorityAgent requires the full chain in CCO: Agent → holdsRole → RoleHolding → hasRole → RegulatoryAuthorityRole.",
+            "hasRole is FunctionalProperty: one RoleHolding links to exactly one Role.",
+            "hasStartTime is FunctionalProperty: exactly one value per RoleHolding instance.",
+            "Regulation must have at least one specifiesNorm link (minCardinality 1)."
+          ],
+          "agent_subtype_note": "Type the RegulatoryAuthorityAgent further as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "authority_agent": "cco:RegulatoryAuthorityAgent",
+            "authority_role": "cco:RegulatoryAuthorityRole (MANDATORY by CCO definition)",
+            "role_holding": "cco:RoleHolding with hasStartTime (MANDATORY by CCO definition)",
+            "regulation_issued": "cco:Regulation with hasValidityStart"
+          },
+          "distinguish_from": {
+            "ODP-8": "ODP-4 is about the agent issuing the regulation; ODP-8 is about the agent subject to norms."
+          },
+          "retrieval_text": "Issued by the Secretary of State, made by the Minister, published by the Department, approved by the Authority, the regulation is made by, this guidance is issued by, the Agency hereby publishes, the Commissioner has made these rules. A regulatory authority is the minister, department, agency, commission, board, or body that issues, makes, publishes, approves, or promulgates a regulation. Example provisions: 'These regulations are made by the Secretary of State for Education.' 'The Department for Education has issued the following guidance.' 'This funding rule is published by the Education and Skills Funding Agency.' 'The Minister has approved these provisions under section seventeen.'",
+          "extraction_disambiguation_rule": "Use when the provision identifies the issuing or promulgating authority for a regulation, not merely a regulated party subject to the norm."
+        },
+        {
+          "id": "ODP-5",
+          "label": "Conditional Norm Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Obligation", "cco:Permission", "cco:Prohibition", "cco:Condition", "cco:Role"],
+          "cco_relations": [
+            "cco:appliesUnder (domain: Norm, range: Condition)",
+            "cco:appliesToRole (domain: Norm, range: Role)"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasConditionExpression - xsd:string on cco:Condition instance, preserves verbatim condition wording"
+          ],
+          "owl_axioms": [
+            "appliesUnder domain is cco:Norm and applies equally to Obligation, Permission, and Prohibition.",
+            "cco:Condition has no native data properties in CCO other than hasConditionExpression for plain-text storage.",
+            "hasApplicabilityStart is FunctionalProperty: at most one value per Norm instance."
+          ],
+          "slots": {
+            "norm": "cco:Obligation, cco:Permission, or cco:Prohibition",
+            "triggering_condition": "cco:Condition",
+            "bearer_role": "cco:Role",
+            "condition_expression": "xsd:string on cco:Condition via cco:hasConditionExpression"
+          },
+          "distinguish_from": {
+            "ODP-6": "Conditional clause before norm statement suggests ODP-5; modifying clause after norm suggests ODP-6.",
+            "ODP-7": "ODP-7 centers on a resource allocated to an agent; ODP-5 centers on a triggered norm."
+          },
+          "retrieval_text": "If the household income exceeds a threshold, where the applicant is enrolled full-time, when the apprenticeship has commenced, provided that evidence is submitted, subject to satisfactory progress, where costs exceed the cap, in cases where the institution has been approved, on condition that. A conditional norm is a duty, permission, or prohibition that applies only when a stated triggering condition holds. Example provisions: 'If the student withdraws within fourteen days, the provider must refund the tuition fees.' 'Where the apprentice is under nineteen years of age, the employer is entitled to additional funding.' 'When household income exceeds the threshold, the applicant must contribute towards costs.' 'Subject to satisfactory progress, the student may continue to receive funding.'",
+          "extraction_disambiguation_rule": "Use when the condition creates the norm applicability. Position test: conditional clause BEFORE norm statement implies ODP-5. If the clause modifies an already stated norm (AFTER the norm), use ODP-6 instead. Preserve the condition text verbatim via cco:hasConditionExpression."
+        },
+        {
+          "id": "ODP-6",
+          "label": "Exception Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Exception", "cco:Condition", "cco:Obligation", "cco:Permission", "cco:Prohibition"],
+          "cco_relations": [
+            "cco:hasException (domain: Norm, range: Exception)",
+            "cco:hasCondition (domain: Exception, range: Condition)",
+            "cco:modifiesNorm (domain: Exception, range: Norm)"
+          ],
+          "cco_data_properties": [
+            "No data properties on cco:Exception in CCO.",
+            "Temporal properties stay on the base Norm, not on the Exception."
+          ],
+          "owl_axioms": [
+            "Exception is disjoint with Norm (owl:disjointWith); never type an Exception as a Norm.",
+            "Every Exception must have at least one hasCondition link (minCardinality 1) and at least one modifiesNorm link (minCardinality 1).",
+            "One Exception may have multiple Condition instances; hasCondition has open upper bound."
+          ],
+          "slots": {
+            "base_norm": "cco:Obligation, cco:Permission, or cco:Prohibition - MANDATORY",
+            "exception_instance": "cco:Exception",
+            "exception_condition": "cco:Condition - one or more instances"
+          },
+          "distinguish_from": {
+            "ODP-5": "ODP-6 requires an identifiable base norm already stated; ODP-5 brings a norm into effect under a trigger. Position test: modifying clause AFTER norm statement implies ODP-6."
+          },
+          "retrieval_text": "Unless the provider has obtained written approval, except where the regulator has granted a waiver, except that students enrolled before this date are exempt, notwithstanding the requirement above, however this does not apply where, but does not apply to part-time learners, save that, with the exception of. An exception modifies a previously stated duty, permission, or prohibition by limiting or suspending it under one or more conditions. Example provisions: 'The provider must publish fee information by July, except where the regulator has granted an extension.' 'Apprentices must complete twenty per cent off-the-job training, unless they are enrolled under the transition arrangements.' 'Institutions shall not charge above the fee cap, however this does not apply to international students.'",
+          "extraction_disambiguation_rule": "Use when a clause limits or suspends a base norm already stated in the provision. Exception requires an identifiable base norm; if no base norm is stated in the same provision, flag for manual review."
+        },
+        {
+          "id": "ODP-7",
+          "label": "Funding Allocation Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Resource", "cco:Agent", "cco:Regulation", "cco:Obligation", "cco:Permission", "cco:Prohibition", "cco:Role", "cco:RoleHolding", "cco:Condition"],
+          "cco_relations": [
+            "cco:allocatedTo (domain: Resource, range: Agent) - core resource assignment path",
+            "cco:specifiesNorm (domain: Regulation, range: Norm)",
+            "cco:regulates (domain: Regulation, range: Resource) - connects Regulation to Resource, NOT Norm to Resource",
+            "cco:appliesToRole (domain: Norm, range: Role) - only if Role is instantiated",
+            "cco:appliesUnder (domain: Norm, range: Condition) - only if Condition is instantiated",
+            "cco:holdsRole (domain: Agent, range: RoleHolding) - only if RoleHolding is instantiated",
+            "cco:hasRole (domain: RoleHolding, range: Role) [FunctionalProperty]",
+            "cco:hasObject (domain: Norm, range: Resource) - optionally links a Norm to a Resource it governs"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)",
+            "cco:hasStartTime - FunctionalProperty, exactly 1 per RoleHolding instance, xsd:date (MANDATORY if RoleHolding instantiated)",
+            "cco:hasEndTime - FunctionalProperty, max 1 per RoleHolding instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "STRUCTURAL ASYMMETRY: cco:allocatedTo connects Resource directly to Agent (range: Agent). There is no direct Norm-to-Agent link in CCO.",
+            "cco:regulates connects Regulation to Resource, not Norm to Resource. Do not misuse it.",
+            "cco:Resource and cco:Condition have no native data properties in CCO; store identity text as rdfs:label annotation if needed.",
+            "hasRole is FunctionalProperty: one RoleHolding holds exactly one Role.",
+            "Regulation must have at least one specifiesNorm link (minCardinality 1)."
+          ],
+          "agent_subtype_note": "Type the recipient Agent as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "resource": "cco:Resource - identity as rdfs:label annotation",
+            "recipient_agent": "cco:Agent - typed as cco:Person or cco:Organisation where determinable",
+            "governing_norm": "cco:Obligation, cco:Permission, or cco:Prohibition",
+            "regulation": "cco:Regulation with hasValidityStart",
+            "bearer_role": "cco:Role - optional",
+            "role_holding": "cco:RoleHolding with hasStartTime - optional",
+            "eligibility_condition": "cco:Condition - optional"
+          },
+          "distinguish_from": {
+            "ODP-5": "ODP-7 centers on resource-to-agent allocation; ODP-5 centers on triggered norm structure. Compose both when funding is conditional on eligibility."
+          },
+          "retrieval_text": "Grant is paid to, loan is provided to, bursary is allocated to, funding is paid to the provider, maintenance support is given to the student, payment is made to the employer, financial support is allocated to the recipient, tuition support is awarded to, allowance is payable to, funding rate per learner, fee cap, training grant. A funding allocation assigns a monetary or support resource to a recipient agent such as a student, provider, institution, employer, or apprentice. Example provisions: 'Eligible students receive a maintenance loan of up to nine thousand pounds per academic year.' 'The provider is paid a funding rate of fifteen thousand pounds per apprentice.' 'A bursary of two thousand pounds is allocated to learners from low-income households.' 'The employer is entitled to a training incentive payment of three thousand pounds.'",
+          "extraction_disambiguation_rule": "Use only when a specific resource is actually assigned or paid to a recipient agent via allocatedTo. 'May apply for funding' is Permission (ODP-2), not Funding Allocation. 'Eligible students receive X' IS Funding Allocation. If no specific Resource is allocated to a specific Agent, do not extract via ODP-7."
+        },
+        {
+          "id": "ODP-8",
+          "label": "Role-Bearing Subject Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Agent", "cco:Role", "cco:RoleHolding", "cco:Obligation", "cco:Permission", "cco:Prohibition"],
+          "cco_relations": [
+            "cco:holdsRole (domain: Agent, range: RoleHolding)",
+            "cco:hasRole (domain: RoleHolding, range: Role) [FunctionalProperty]",
+            "cco:appliesToRole (domain: Norm, range: Role)"
+          ],
+          "cco_data_properties": [
+            "cco:hasStartTime - FunctionalProperty, exactly 1 per RoleHolding instance, xsd:date (MANDATORY)",
+            "cco:hasEndTime - FunctionalProperty, max 1 per RoleHolding instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "hasRole is FunctionalProperty: one RoleHolding links to exactly one Role. Multiple roles require separate RoleHolding instances.",
+            "appliesToRole is the only direct norm-subject link in CCO; there is no direct Norm-to-Agent property.",
+            "cco:Person and cco:Organisation are disjoint subclasses of cco:Agent."
+          ],
+          "agent_subtype_note": "Type the Agent as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "subject_agent": "cco:Agent",
+            "applicable_role": "cco:Role",
+            "role_holding": "cco:RoleHolding with hasStartTime",
+            "norm": "cco:Obligation, cco:Permission, or cco:Prohibition"
+          },
+          "distinguish_from": {
+            "ODP-4": "ODP-8 is about the regulated party; ODP-4 is about the issuing authority."
+          },
+          "retrieval_text": "The provider, the student, the apprentice, the employer, the institution, the applicant, the holder, the registered training organisation, the approved body, the awarding organisation, the licensed provider, the loan recipient, the office holder, the scheme administrator, the financial aid administrator, the eligible person. A role-bearing subject is the named regulated party who is the bearer of a duty, permission, or prohibition. The provision identifies who is subject to the norm via a definite noun phrase referring to a regulated category. Example provisions: 'The provider is responsible for delivering the approved programme.' 'Apprentices enrolled on the standard are the bearers of these obligations.' 'Employers who have signed the agreement are subject to the following requirements.' 'The registered training organisation must meet all conditions of approval.' 'Financial aid administrators have authority over verification decisions.'",
+          "extraction_disambiguation_rule": "Use when the text identifies who the norm applies to as a regulated category or named subject."
+        },
+        {
+          "id": "ODP-12",
+          "label": "Action Pattern",
+          "category": "B",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Action", "cco:Resource", "cco:Obligation", "cco:Permission", "cco:Prohibition"],
+          "cco_relations": [
+            "cco:hasAction (domain: Norm, range: Action)",
+            "cco:hasObject (domain: Norm, range: Resource)"
+          ],
+          "cco_data_properties": [
+            "cco:hasActionExpression - xsd:string on cco:Action instance, preserves verbatim action wording"
+          ],
+          "owl_axioms": [
+            "Action is a standalone class in CCO; identity is captured through its hasActionExpression text.",
+            "A norm may have zero or more hasAction links.",
+            "When the action targets a specific resource, link the parent norm to that resource via hasObject (cco:hasObject domain is Norm, NOT Action).",
+            "Action and Resource are distinct classes."
+          ],
+          "agent_subtype_note": "The performer of the action is identified through the role-bearer of the parent norm via appliesToRole and RoleHolding, not directly on the Action.",
+          "slots": {
+            "parent_norm": "cco:Obligation, cco:Permission, or cco:Prohibition - MANDATORY",
+            "action_instance": "cco:Action with hasActionExpression as verbatim wording",
+            "action_expression": "xsd:string on cco:Action",
+            "target_resource": "cco:Resource via cco:hasObject on the parent norm"
+          },
+          "distinguish_from": {
+            "ODP-1": "ODP-1 captures deontic force; ODP-12 captures prescribed behaviour.",
+            "ODP-7": "ODP-7 captures resource allocation; ODP-12 captures the behavior operating on a resource.",
+            "ODP-2": "ODP-2 captures permissive force; ODP-12 captures the permitted action.",
+            "ODP-3": "ODP-3 captures prohibitive force; ODP-12 captures the forbidden action.",
+            "ODP-5": "ODP-5 captures conditional applicability; ODP-12 captures the action under that norm."
+          },
+          "retrieval_text": "Submit, complete, register, allocate, provide, retain, notify, apply, determine, verify, disclose, publish, approve, refund, deduct, report, calculate, assess, review, confirm, declare, certify, sign, upload, deliver, transmit, return, file, lodge, supply, demonstrate, document, record, maintain, update. An action is the specific behaviour or verb phrase prescribed by a norm - the deed itself, separate from the modal verb that qualifies it. The action is typically a transitive verb operating on a target object or resource. Example provisions: 'Submit the annual return by 31 October.' 'Apply for the bursary using the prescribed form.' 'Retain all training records for the audit period.' 'Notify the apprentice of any change to the training plan within seven days.' 'Verify household income through documentary evidence before approving the grant.'",
+          "extraction_disambiguation_rule": "Extract an Action when the provision specifies a clear prescribed behaviour (verb phrase with subject from the role-bearer). Distinguish Action from Resource: 'submit' is an Action, 'Form X' is a Resource. Do not treat the modal verb itself ('must', 'may') as the Action."
+        }
+      ]
+    },
+    "C_temporal": {
+      "label": "Temporal Patterns",
+      "patterns": [
+        {
+          "id": "ODP-9",
+          "label": "Norm Temporal Applicability Pattern",
+          "category": "C",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Obligation", "cco:Permission", "cco:Prohibition", "cco:Regulation"],
+          "cco_relations": [
+            "cco:specifiesNorm (domain: Regulation, range: Norm)"
+          ],
+          "cco_data_properties": [
+            "cco:hasApplicabilityStart - FunctionalProperty, max 1 per Norm instance, xsd:date (optional in CCO)",
+            "cco:hasApplicabilityEnd - FunctionalProperty, max 1 per Norm instance, xsd:date (optional)",
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "CRITICAL DISTINCTION: hasApplicabilityStart/End belong on the Norm (when the norm is in force). hasValidityStart/End belong on the Regulation (when the regulation as a formal instrument is valid). Do not conflate or substitute one for the other.",
+            "All four temporal properties are FunctionalProperty: at most one value per instance."
+          ],
+          "slots": {
+            "norm": "cco:Obligation, cco:Permission, or cco:Prohibition",
+            "applicability_start": "xsd:date on Norm (optional)",
+            "applicability_end": "xsd:date on Norm (optional)",
+            "regulation": "cco:Regulation",
+            "validity_start": "xsd:date on Regulation (MANDATORY)"
+          },
+          "distinguish_from": {
+            "ODP-10": "ODP-9 governs when a norm is in force; ODP-10 governs when an agent holds a role.",
+            "ODP-11": "Supersession events require ODP-11 in addition; ODP-9 alone is insufficient."
+          },
+          "retrieval_text": "With effect from 1 August, applies from the start of the academic year, ceases to have effect on 31 July, valid until the next funding round, in force from this date, applicable to provisions commencing after, for cohorts starting on or after, no later than the deadline, by the specified date, expires on. A norm temporal applicability captures when an obligation, permission, or prohibition starts, ends, or remains in force, distinguishing dates of the norm from dates of the regulation. Example provisions: 'This obligation applies with effect from 1 August 2024.' 'The permission ceases to have effect on 31 July 2025.' 'Providers must comply with this requirement for all cohorts starting on or after 1 September.' 'The duty to retain evidence applies for six years from the date of the last payment.'",
+          "extraction_disambiguation_rule": "Use when the provision states dates or temporal window for a norm applicability."
+        },
+        {
+          "id": "ODP-10",
+          "label": "Role-Holding Temporal Pattern",
+          "category": "C",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:RoleHolding", "cco:Agent", "cco:Role"],
+          "cco_relations": [
+            "cco:holdsRole (domain: Agent, range: RoleHolding)",
+            "cco:hasRole (domain: RoleHolding, range: Role) [FunctionalProperty]"
+          ],
+          "cco_data_properties": [
+            "cco:hasStartTime - FunctionalProperty, exactly 1 per RoleHolding instance, xsd:date (MANDATORY)",
+            "cco:hasEndTime - FunctionalProperty, max 1 per RoleHolding instance, xsd:date (optional)"
+          ],
+          "owl_axioms": [
+            "hasRole is FunctionalProperty: one RoleHolding holds exactly one Role.",
+            "hasStartTime and hasEndTime are FunctionalProperty.",
+            "cco:Person and cco:Organisation are disjoint subclasses of cco:Agent."
+          ],
+          "agent_subtype_note": "Type the Agent as cco:Person or cco:Organisation where determinable.",
+          "slots": {
+            "agent": "cco:Agent",
+            "role": "cco:Role",
+            "role_holding": "cco:RoleHolding",
+            "start_time": "xsd:date on RoleHolding (MANDATORY)",
+            "end_time": "xsd:date on RoleHolding (optional)"
+          },
+          "distinguish_from": {
+            "ODP-9": "ODP-10 is about role occupancy over time; ODP-9 is about norm applicability."
+          },
+          "retrieval_text": "Registered as a provider from 1 January, enrolled as a student from September, designated as an approved body, appointed as an officer with effect from, holds office from the date of appointment, approved as an awarding organisation for the period, the person ceased to hold the role on, the institution was de-registered, became eligible on. A role-holding temporal pattern captures when an agent begins, continues, or ceases to hold a role such as approved provider, registered student, designated training body, appointed officer, or accredited assessor. Example provisions: 'The institution is registered as an approved provider from 1 April 2024.' 'The student is enrolled on the programme with effect from 15 September.' 'The body has been designated as an awarding organisation for a three-year period.' 'The officer was appointed on 1 May and ceased to hold the role on 31 October.'",
+          "extraction_disambiguation_rule": "Use when the text gives dates or periods for holding a role rather than dates for the norm itself."
+        },
+        {
+          "id": "ODP-11",
+          "label": "Regulatory Supersession Pattern",
+          "category": "C",
+          "pipeline_layer": "Layer 3",
+          "cco_classes": ["cco:Regulation"],
+          "cco_relations": [
+            "cco:supersedes (domain: Regulation, range: Regulation) [TransitiveProperty]"
+          ],
+          "cco_data_properties": [
+            "cco:hasValidityStart - FunctionalProperty, exactly 1 per Regulation instance, xsd:date (MANDATORY on both instances)",
+            "cco:hasValidityEnd - FunctionalProperty, max 1 per Regulation instance, xsd:date (assert on superseded Regulation if determinable)"
+          ],
+          "owl_axioms": [
+            "cco:supersedes is owl:TransitiveProperty; transitivity is enforced automatically during OWL reasoning.",
+            "Every Regulation instance must have at least one specifiesNorm link (minCardinality 1).",
+            "hasValidityStart is FunctionalProperty: exactly one value per Regulation instance."
+          ],
+          "slots": {
+            "superseding_regulation": "cco:Regulation with hasValidityStart - must have at least one specifiesNorm link",
+            "superseded_regulation": "cco:Regulation with hasValidityStart - must have at least one specifiesNorm link or be flagged for manual completion"
+          },
+          "distinguish_from": {
+            "ODP-9": "ODP-9 records temporal validity or applicability; ODP-11 records legal replacement between regulations."
+          },
+          "retrieval_text": "These regulations replace, the previous funding rules are revoked, this guidance supersedes, the earlier provisions are amended and replaced by, the prior regulation ceases to have effect when replaced by, with effect from this date the new rules supersede, the preceding instrument is hereby revoked, repeal and replace. A regulatory supersession captures one regulation legally replacing, revoking, overriding, or superseding another regulation. It is about relationships between regulations, not just the validity dates of a single norm. Example provisions: 'These regulations supersede the Education Funding Regulations 2020 with effect from 1 August 2024.' 'The 2018 guidance is revoked and replaced by this updated guidance.' 'The previous funding rules cease to have effect on the date this rule takes effect.' 'These provisions amend and replace Schedule 3 of the principal regulation.'",
+          "extraction_disambiguation_rule": "Use when the provision explicitly states that one regulation replaces, revokes, overrides, or supersedes another."
+        }
+      ]
+    }
+  }
+}

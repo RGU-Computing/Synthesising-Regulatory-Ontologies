@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "Core Compliance Ontology (CCO)",
+    "collection": "cco_schema",
+    "cco_base_uri": "http://www.example.org/cco#",
+    "total_classes": 16,
+    "total_object_properties": 14,
+    "total_data_properties": 8,
+    "total_items": 38
+  },
+  "classes": [
+    {
+      "id": "cls:Action",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Action",
+      "local_name": "Action",
+      "uri": "https://www.w3id.org/cco/cco#Action",
+      "skos_definition": "An action is an activity or behaviour that a norm requires, permits, or prohibits.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "hasActionExpression"
+      ],
+      "properties_as_range": [
+        "hasAction"
+      ],
+      "retrieval_text": "Submit, complete, register, allocate, provide, retain, notify, apply, determine, verify, disclose, publish, approve, refund, deduct, report, calculate, assess, review, confirm, declare, certify, sign, upload, deliver, transmit, return, file, lodge, supply, demonstrate, document, record, maintain, update. An action is the specific behaviour or verb phrase prescribed by a norm — the deed itself, separate from the modal verb that qualifies it. Example provisions: 'Submit the annual return by 31 October.' 'Apply for the bursary using the prescribed form.' 'Retain all training records for the audit period.' 'Notify the apprentice of any change to the training plan within seven days.' 'Verify household income through documentary evidence before approving the grant.'",
+      "llm_context_text": "An action is an activity or behaviour that a norm requires, permits, or prohibits. Outgoing relations: has action expression. Incoming relations: has action."
+    },
+    {
+      "id": "cls:Agent",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Agent",
+      "local_name": "Agent",
+      "uri": "https://www.w3id.org/cco/cco#Agent",
+      "skos_definition": "An agent is an entity that can perform actions, hold roles, and be subject to regulatory or compliance requirements.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "holdsRole"
+      ],
+      "properties_as_range": [
+        "allocatedTo"
+      ],
+      "retrieval_text": "Provider, student, employer, institution, applicant, body, organisation, person, department, agency, authority, the Secretary of State, the Minister, the Department for Education, the Education and Skills Funding Agency, the awarding organisation. An agent is any party — individual or organisation — that performs actions, holds roles, or is subject to regulatory requirements. Example provisions: 'The provider is responsible for delivering the programme.' 'Students enrolled on the standard are eligible for support.' 'The Department for Education has issued the following guidance.' 'Approved training organisations must meet the conditions of approval.'",
+      "llm_context_text": "An agent is an entity that can perform actions, hold roles, and be subject to regulatory or compliance requirements. Outgoing relations: holds role. Incoming relations: allocated to."
+    },
+    {
+      "id": "cls:Condition",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Condition",
+      "local_name": "Condition",
+      "uri": "https://www.w3id.org/cco/cco#Condition",
+      "skos_definition": "A condition is a criterion that determines the applicability of a norm or exception.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "hasConditionExpression"
+      ],
+      "properties_as_range": [
+        "appliesUnder",
+        "hasCondition"
+      ],
+      "retrieval_text": "If, where, when, provided that, subject to, on condition that, where applicable, in cases where, if eligible, where costs exceed, when the threshold is exceeded, if income is below, where evidence is submitted, subject to satisfactory progress. A condition is a criterion or trigger that determines when a norm becomes applicable, such as eligibility thresholds, income criteria, age limits, registration status, or submission of evidence. Example provisions: 'If the household income exceeds the threshold, the applicant must contribute.' 'Where the apprentice is under nineteen years of age, additional funding applies.' 'Subject to satisfactory progress, the student may continue to receive funding.' 'Provided that evidence is submitted within thirty days, the claim will be processed.'",
+      "llm_context_text": "A condition is a criterion that determines the applicability of a norm or exception. Outgoing relations: has condition expression. Incoming relations: applies under, has condition."
+    },
+    {
+      "id": "cls:Exception",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Exception",
+      "local_name": "Exception",
+      "uri": "https://www.w3id.org/cco/cco#Exception",
+      "skos_definition": "An exception is a normative statement that modifies the applicability or force of a norm in a particular case.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [
+        {
+          "expr_type": "intersection",
+          "members": [
+            {
+              "expr_type": "restriction",
+              "restriction_type": "minQualifiedCardinality",
+              "on_property": "hasCondition",
+              "on_property_uri": "https://www.w3id.org/cco/cco#hasCondition",
+              "value": "1",
+              "target": {
+                "expr_type": "named_class",
+                "value": "Condition",
+                "uri": "https://www.w3id.org/cco/cco#Condition"
+              }
+            },
+            {
+              "expr_type": "restriction",
+              "restriction_type": "minQualifiedCardinality",
+              "on_property": "modifiesNorm",
+              "on_property_uri": "https://www.w3id.org/cco/cco#modifiesNorm",
+              "value": "1",
+              "target": {
+                "expr_type": "named_class",
+                "value": "Norm",
+                "uri": "https://www.w3id.org/cco/cco#Norm"
+              }
+            }
+          ]
+        }
+      ],
+      "disjoint_with": [
+        "Norm"
+      ],
+      "properties_as_domain": [
+        "hasCondition",
+        "modifiesNorm"
+      ],
+      "properties_as_range": [
+        "hasException"
+      ],
+      "retrieval_text": "Unless the provider has obtained written approval, except where the regulator has granted a waiver, except that students enrolled before this date are exempt, notwithstanding the requirement above, however this does not apply where, but does not apply to part-time learners, save that, with the exception of, provided that the exception applies, where the exemption is granted. An exception is a clause that limits, suspends, or modifies an already stated norm under one or more conditions. Example provisions: 'The provider must publish fee information by July, except where the regulator has granted an extension.' 'Apprentices must complete twenty per cent off-the-job training, unless they are enrolled under the transition arrangements.' 'Institutions shall not charge above the fee cap, however this does not apply to international students.' 'The duty to retain evidence applies for six years, save that records relating to disputes must be retained for the duration of the dispute.'",
+      "llm_context_text": "An exception is a normative statement that modifies the applicability or force of a norm in a particular case. An exception has at least one condition and modifies at least one norm. Distinct from Norm. Outgoing relations: has condition, modifies norm. Incoming relations: has exception."
+    },
+    {
+      "id": "cls:Norm",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Norm",
+      "local_name": "Norm",
+      "uri": "https://www.w3id.org/cco/cco#Norm",
+      "skos_definition": "A norm is a prescriptive rule that specifies what must, may, or must not be done in a regulatory or compliance context.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [
+        {
+          "expr_type": "restriction",
+          "restriction_type": "maxQualifiedCardinality",
+          "on_property": "hasApplicabilityEnd",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasApplicabilityEnd",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        },
+        {
+          "expr_type": "restriction",
+          "restriction_type": "maxQualifiedCardinality",
+          "on_property": "hasApplicabilityStart",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasApplicabilityStart",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        }
+      ],
+      "disjoint_with": [
+        "Exception"
+      ],
+      "properties_as_domain": [
+        "appliesToRole",
+        "appliesUnder",
+        "hasAction",
+        "hasApplicabilityEnd",
+        "hasApplicabilityStart",
+        "hasException",
+        "hasObject"
+      ],
+      "properties_as_range": [
+        "modifiesNorm",
+        "specifiesNorm"
+      ],
+      "retrieval_text": "Must, shall, may, must not, is required to, is permitted to, is prohibited from, is entitled to, has to, cannot, is allowed to. A norm is any prescriptive rule that imposes a duty, grants a permission, or forbids an action on a regulated party such as a provider, student, employer, institution, applicant, or body. Norms include obligations, permissions, and prohibitions. Example provisions: 'The provider must submit annual reports.' 'Eligible students may apply for funding.' 'Institutions shall not exceed the fee cap.' 'Employers are required to register apprentices.'",
+      "llm_context_text": "A norm is a prescriptive rule that specifies what must, may, or must not be done in a regulatory or compliance context. A norm has at most one applicability end date; has at most one applicability start date. Distinct from Exception. Outgoing relations: applies to role, applies under, has action, has applicability end, has applicability start, has exception, has object. Incoming relations: modifies norm, specifies norm."
+    },
+    {
+      "id": "cls:Obligation",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Obligation",
+      "local_name": "Obligation",
+      "uri": "https://www.w3id.org/cco/cco#Obligation",
+      "skos_definition": "An obligation is a norm that specifies what must be done in a regulatory or compliance context.",
+      "superclasses": [
+        "Norm"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [
+        "Permission",
+        "Prohibition"
+      ],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "Must, shall, is required to, has to, must ensure, must verify, must complete, must provide, must submit, must retain, must confirm, must disclose, must register, must comply. An obligation imposes a binding mandatory duty on a regulated party. Common contexts include verification duties, documentation duties, reporting duties, retention duties, and compliance duties. Example provisions: 'The provider must retain evidence of attendance for at least six years.' 'Employers must verify the apprentice eligibility within thirty days.' 'The institution shall submit annual compliance reports by the deadline.' 'Applicants are required to provide supporting documentation for all claims.'",
+      "llm_context_text": "An obligation is a norm that specifies what must be done in a regulatory or compliance context. Obligation is a subclass of Norm. Distinct from Permission, Prohibition."
+    },
+    {
+      "id": "cls:Organisation",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Organisation",
+      "local_name": "Organisation",
+      "uri": "https://www.w3id.org/cco/cco#Organisation",
+      "skos_definition": "An organisation is an institutional agent that can hold roles and participate in regulatory or compliance activities.",
+      "superclasses": [
+        "Agent"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [
+        "Person"
+      ],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "The provider, the institution, the employer, the body, the agency, the department, the authority, the training organisation, the awarding body, the registered training organisation, the approved training provider, the awarding organisation, the Department for Education, the Education and Skills Funding Agency, the recognised body, the licensed provider. An organisation is an institutional party — a provider, institution, employer, agency, department, training body, awarding organisation, or other corporate or governmental entity — that is subject to or issues regulatory requirements. Example provisions: 'The provider must hold approved status throughout the funding period.' 'Employers who have signed the agreement must comply with the apprenticeship requirements.' 'The Department for Education has issued the following guidance.' 'Approved training organisations must meet all conditions of approval.'",
+      "llm_context_text": "An organisation is an institutional agent that can hold roles and participate in regulatory or compliance activities. Organisation is a subclass of Agent. Distinct from Person."
+    },
+    {
+      "id": "cls:Permission",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Permission",
+      "local_name": "Permission",
+      "uri": "https://www.w3id.org/cco/cco#Permission",
+      "skos_definition": "A permission is a norm that specifies what may be done in a regulatory or compliance context.",
+      "superclasses": [
+        "Norm"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [
+        "Obligation",
+        "Prohibition"
+      ],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "Provider may, student may apply, institution is permitted to, applicant is entitled to, body may grant, party can request, agency may approve, organisation is allowed to, may use, may obtain, has the right to, is eligible to. A permission grants a discretionary right or entitlement to a regulated party. The action is allowed but not required. Example provisions: 'The provider may request an extension of the deadline upon written notice.' 'Eligible students may apply for hardship funding under the relevant scheme.' 'The institution is permitted to use alternative assessment methods.' 'Applicants are entitled to appeal the decision within twenty-one days.'",
+      "llm_context_text": "A permission is a norm that specifies what may be done in a regulatory or compliance context. Permission is a subclass of Norm. Distinct from Obligation, Prohibition."
+    },
+    {
+      "id": "cls:Person",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Person",
+      "local_name": "Person",
+      "uri": "https://www.w3id.org/cco/cco#Person",
+      "skos_definition": "A person is an individual human agent.",
+      "superclasses": [
+        "Agent"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [
+        "Organisation"
+      ],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "The student, the apprentice, the applicant, the officer, the holder, the recipient, the individual, the learner, the trainee, the participant, the candidate, the borrower, the designated officer, the office holder, the Secretary of State, the Minister, the Commissioner. A person is an individual human party who is subject to or participates in regulatory requirements as a student, apprentice, applicant, officer, holder, or other named individual. Example provisions: 'The student must verify their identity before enrolment.' 'Each apprentice is entitled to the agreed off-the-job training hours.' 'The Minister has approved these provisions under section seventeen.' 'The officer was appointed on 1 May with effect from that date.'",
+      "llm_context_text": "A person is an individual human agent. Person is a subclass of Agent. Distinct from Organisation."
+    },
+    {
+      "id": "cls:Prohibition",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Prohibition",
+      "local_name": "Prohibition",
+      "uri": "https://www.w3id.org/cco/cco#Prohibition",
+      "skos_definition": "A prohibition is a norm that specifies what must not be done in a regulatory or compliance context.",
+      "superclasses": [
+        "Norm"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [
+        "Obligation",
+        "Permission"
+      ],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "Provider must not, student shall not, institution may not, employer is prohibited from, party cannot, applicant must not engage in, body shall not disclose, agency may not charge, is forbidden from, is not permitted to, must refrain from, may not retain. A prohibition forbids a specified action by a regulated party. The action is restrained, not required. Example provisions: 'The provider must not charge additional fees for the same service.' 'Institutions shall not disclose personal data without consent.' 'Employers are prohibited from deducting training costs from wages.' 'Applicants may not submit duplicate claims for the same period.'",
+      "llm_context_text": "A prohibition is a norm that specifies what must not be done in a regulatory or compliance context. Prohibition is a subclass of Norm. Distinct from Obligation, Permission."
+    },
+    {
+      "id": "cls:Regulation",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Regulation",
+      "local_name": "Regulation",
+      "uri": "https://www.w3id.org/cco/cco#Regulation",
+      "skos_definition": "A regulation is a formal normative instrument that specifies obligations, permissions, or prohibitions in a regulatory or compliance context.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [
+        {
+          "expr_type": "restriction",
+          "restriction_type": "minQualifiedCardinality",
+          "on_property": "specifiesNorm",
+          "on_property_uri": "https://www.w3id.org/cco/cco#specifiesNorm",
+          "value": "1",
+          "target": {
+            "expr_type": "named_class",
+            "value": "Norm",
+            "uri": "https://www.w3id.org/cco/cco#Norm"
+          }
+        },
+        {
+          "expr_type": "restriction",
+          "restriction_type": "qualifiedCardinality",
+          "on_property": "hasValidityStart",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasValidityStart",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        },
+        {
+          "expr_type": "restriction",
+          "restriction_type": "maxQualifiedCardinality",
+          "on_property": "hasValidityEnd",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasValidityEnd",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        }
+      ],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "hasValidityEnd",
+        "hasValidityStart",
+        "regulates",
+        "specifiesNorm",
+        "supersedes"
+      ],
+      "properties_as_range": [
+        "issues",
+        "supersedes"
+      ],
+      "retrieval_text": "A regulation is a formal normative instrument that specifies obligations, permissions, or prohibitions in a regulatory or compliance context. A regulation specifies at least one norm; has exactly one validity start date; has at most one validity end date. Key outgoing relations: has validity end, has validity start, regulates. Key incoming relations: issues, supersedes.",
+      "llm_context_text": "A regulation is a formal normative instrument that specifies obligations, permissions, or prohibitions in a regulatory or compliance context. A regulation specifies at least one norm; has exactly one validity start date; has at most one validity end date. Outgoing relations: has validity end, has validity start, regulates, specifies norm, supersedes. Incoming relations: issues, supersedes."
+    },
+    {
+      "id": "cls:RegulatoryAuthorityAgent",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Regulatory Authority Agent",
+      "local_name": "RegulatoryAuthorityAgent",
+      "uri": "https://www.w3id.org/cco/cco#RegulatoryAuthorityAgent",
+      "skos_definition": "An agent that holds a regulatory authority role and is thereby authorised to issue regulations.",
+      "superclasses": [
+        "Agent"
+      ],
+      "anonymous_superclass_restrictions": [
+        {
+          "expr_type": "intersection",
+          "members": [
+            {
+              "expr_type": "named_class",
+              "value": "Agent",
+              "uri": "https://www.w3id.org/cco/cco#Agent"
+            },
+            {
+              "expr_type": "restriction",
+              "restriction_type": "someValuesFrom",
+              "on_property": "holdsRole",
+              "on_property_uri": "https://www.w3id.org/cco/cco#holdsRole",
+              "value": null,
+              "target": {
+                "expr_type": "intersection",
+                "members": [
+                  {
+                    "expr_type": "named_class",
+                    "value": "RoleHolding",
+                    "uri": "https://www.w3id.org/cco/cco#RoleHolding"
+                  },
+                  {
+                    "expr_type": "restriction",
+                    "restriction_type": "someValuesFrom",
+                    "on_property": "hasRole",
+                    "on_property_uri": "https://www.w3id.org/cco/cco#hasRole",
+                    "value": null,
+                    "target": {
+                      "expr_type": "named_class",
+                      "value": "RegulatoryAuthorityRole",
+                      "uri": "https://www.w3id.org/cco/cco#RegulatoryAuthorityRole"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "issues"
+      ],
+      "properties_as_range": [],
+      "retrieval_text": "An agent that holds a regulatory authority role and is thereby authorised to issue regulations. RegulatoryAuthorityAgent is a subclass of Agent. A regulatory authority agent is an agent and holds at least one role holding and has at least one regulatory authority role. Key outgoing relations: issues.",
+      "llm_context_text": "An agent that holds a regulatory authority role and is thereby authorised to issue regulations. RegulatoryAuthorityAgent is a subclass of Agent. A regulatory authority agent is an agent and holds at least one role holding and has at least one regulatory authority role. Outgoing relations: issues."
+    },
+    {
+      "id": "cls:RegulatoryAuthorityRole",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Regulatory Authority Role",
+      "local_name": "RegulatoryAuthorityRole",
+      "uri": "https://www.w3id.org/cco/cco#RegulatoryAuthorityRole",
+      "skos_definition": "A role that, when held by an agent, authorises that agent to issue regulations.",
+      "superclasses": [
+        "Role"
+      ],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [],
+      "properties_as_range": [],
+      "retrieval_text": "A role that, when held by an agent, authorises that agent to issue regulations. RegulatoryAuthorityRole is a subclass of Role.",
+      "llm_context_text": "A role that, when held by an agent, authorises that agent to issue regulations. RegulatoryAuthorityRole is a subclass of Role."
+    },
+    {
+      "id": "cls:Resource",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Resource",
+      "local_name": "Resource",
+      "uri": "https://www.w3id.org/cco/cco#Resource",
+      "skos_definition": "A resource is a physical, digital, or conceptual asset that is allocated, used, or governed in a regulated activity.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "allocatedTo"
+      ],
+      "properties_as_range": [
+        "hasObject",
+        "regulates"
+      ],
+      "retrieval_text": "Grant, loan, bursary, funding, payment, maintenance support, training grant, tuition fee, fee cap, allowance, financial support, hardship fund, scholarship, incentive payment, stipend, contribution, subsidy, voucher, the apprenticeship levy, tuition fee loan. A resource is any monetary, financial, or asset that is allocated, used, regulated, or governed under a regulation, such as a grant, loan, bursary, tuition fee, payment, allowance, or support payment. Example provisions: 'Eligible students receive a maintenance loan of up to nine thousand pounds per academic year.' 'The provider is paid a funding rate of fifteen thousand pounds per apprentice.' 'A bursary of two thousand pounds is allocated to learners from low-income households.' 'The tuition fee cap is set at nine thousand two hundred and fifty pounds per year.'",
+      "llm_context_text": "A resource is a physical, digital, or conceptual asset that is allocated, used, or governed in a regulated activity. Outgoing relations: allocated to. Incoming relations: has object, regulates."
+    },
+    {
+      "id": "cls:Role",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Role",
+      "local_name": "Role",
+      "uri": "https://www.w3id.org/cco/cco#Role",
+      "skos_definition": "A role is a position held by an agent within a regulatory or compliance context.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [],
+      "disjoint_with": [],
+      "properties_as_domain": [],
+      "properties_as_range": [
+        "appliesToRole",
+        "hasRole"
+      ],
+      "retrieval_text": "Provider role, student role, apprentice role, employer role, applicant role, approved provider, registered training organisation, awarding body, holder of approved status, financial aid administrator, scheme administrator, office holder, loan recipient, designated body, accredited assessor. A role is a regulatory position or category that a regulated party occupies, such as approved provider, registered student, training organisation, employer, applicant, or institution. Example provisions: 'The role of approved provider is held by designated training organisations.' 'Students enrolled as apprentices occupy the apprentice role.' 'The employer role is held by organisations that have signed the apprenticeship agreement.' 'Financial aid administrators occupy a designated administrative role.'",
+      "llm_context_text": "A role is a position held by an agent within a regulatory or compliance context. Incoming relations: applies to role, has role."
+    },
+    {
+      "id": "cls:RoleHolding",
+      "item_type": "class",
+      "collection": "cco_schema",
+      "label": "Role Holding",
+      "local_name": "RoleHolding",
+      "uri": "https://www.w3id.org/cco/cco#RoleHolding",
+      "skos_definition": "RoleHolding is the time-bounded association through which an agent holds a role.",
+      "superclasses": [],
+      "anonymous_superclass_restrictions": [
+        {
+          "expr_type": "restriction",
+          "restriction_type": "qualifiedCardinality",
+          "on_property": "hasRole",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasRole",
+          "value": "1",
+          "target": {
+            "expr_type": "named_class",
+            "value": "Role",
+            "uri": "https://www.w3id.org/cco/cco#Role"
+          }
+        },
+        {
+          "expr_type": "restriction",
+          "restriction_type": "qualifiedCardinality",
+          "on_property": "hasStartTime",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasStartTime",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        },
+        {
+          "expr_type": "restriction",
+          "restriction_type": "maxQualifiedCardinality",
+          "on_property": "hasEndTime",
+          "on_property_uri": "https://www.w3id.org/cco/cco#hasEndTime",
+          "value": "1",
+          "target": {
+            "expr_type": "data_range",
+            "value": "date",
+            "uri": "http://www.w3.org/2001/XMLSchema#date"
+          }
+        }
+      ],
+      "disjoint_with": [],
+      "properties_as_domain": [
+        "hasEndTime",
+        "hasRole",
+        "hasStartTime"
+      ],
+      "properties_as_range": [
+        "holdsRole"
+      ],
+      "retrieval_text": "RoleHolding is the time-bounded association through which an agent holds a role. A role holding has exactly one role; has exactly one start time; has at most one end time. Key outgoing relations: has end time, has role, has start time. Key incoming relations: holds role.",
+      "llm_context_text": "RoleHolding is the time-bounded association through which an agent holds a role. A role holding has exactly one role; has exactly one start time; has at most one end time. Outgoing relations: has end time, has role, has start time. Incoming relations: holds role."
+    }
+  ],
+  "object_properties": [
+    {
+      "id": "op:allocatedTo",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "allocated to",
+      "local_name": "allocatedTo",
+      "uri": "https://www.w3id.org/cco/cco#allocatedTo",
+      "skos_definition": "Relates a resource to the agent to whom that resource is allocated.",
+      "domain": "Resource",
+      "range": "Agent",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a resource to the agent to whom that resource is allocated. Domain: Resource. Range: Agent.",
+      "llm_context_text": "Relates a resource to the agent to whom that resource is allocated. Domain: Resource. Range: Agent."
+    },
+    {
+      "id": "op:appliesToRole",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "applies to role",
+      "local_name": "appliesToRole",
+      "uri": "https://www.w3id.org/cco/cco#appliesToRole",
+      "skos_definition": "Relates a norm to the role to which that norm applies.",
+      "domain": "Norm",
+      "range": "Role",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a norm to the role to which that norm applies. Domain: Norm. Range: Role.",
+      "llm_context_text": "Relates a norm to the role to which that norm applies. Domain: Norm. Range: Role."
+    },
+    {
+      "id": "op:appliesUnder",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "applies under",
+      "local_name": "appliesUnder",
+      "uri": "https://www.w3id.org/cco/cco#appliesUnder",
+      "skos_definition": "Relates a norm to a condition under which that norm becomes applicable.",
+      "domain": "Norm",
+      "range": "Condition",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a norm to a condition under which that norm becomes applicable. Domain: Norm. Range: Condition.",
+      "llm_context_text": "Relates a norm to a condition under which that norm becomes applicable. Domain: Norm. Range: Condition."
+    },
+    {
+      "id": "op:hasAction",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "has action",
+      "local_name": "hasAction",
+      "uri": "https://www.w3id.org/cco/cco#hasAction",
+      "skos_definition": "Relates a norm to the action that the norm requires, permits, or prohibit.",
+      "domain": "Norm",
+      "range": "Action",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a norm to the action that the norm requires, permits, or prohibit. Domain: Norm. Range: Action.",
+      "llm_context_text": "Relates a norm to the action that the norm requires, permits, or prohibit. Domain: Norm. Range: Action."
+    },
+    {
+      "id": "op:hasCondition",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "has condition",
+      "local_name": "hasCondition",
+      "uri": "https://www.w3id.org/cco/cco#hasCondition",
+      "skos_definition": "Relates an exception to a condition under which that exception applies to modify a norm.",
+      "domain": "Exception",
+      "range": "Condition",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates an exception to a condition under which that exception applies to modify a norm. Domain: Exception. Range: Condition.",
+      "llm_context_text": "Relates an exception to a condition under which that exception applies to modify a norm. Domain: Exception. Range: Condition."
+    },
+    {
+      "id": "op:hasException",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "has exception",
+      "local_name": "hasException",
+      "uri": "https://www.w3id.org/cco/cco#hasException",
+      "skos_definition": "Relates a norm to an exception that modifies the applicability or force of that norm in a particular case.",
+      "domain": "Norm",
+      "range": "Exception",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a norm to an exception that modifies the applicability or force of that norm in a particular case. Domain: Norm. Range: Exception.",
+      "llm_context_text": "Relates a norm to an exception that modifies the applicability or force of that norm in a particular case. Domain: Norm. Range: Exception."
+    },
+    {
+      "id": "op:hasObject",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "has object",
+      "local_name": "hasObject",
+      "uri": "https://www.w3id.org/cco/cco#hasObject",
+      "skos_definition": "Relates a norm to the resource that the norm’s action affects or targets.",
+      "domain": "Norm",
+      "range": "Resource",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a norm to the resource that the norm’s action affects or targets. Domain: Norm. Range: Resource.",
+      "llm_context_text": "Relates a norm to the resource that the norm’s action affects or targets. Domain: Norm. Range: Resource."
+    },
+    {
+      "id": "op:hasRole",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "has role",
+      "local_name": "hasRole",
+      "uri": "https://www.w3id.org/cco/cco#hasRole",
+      "skos_definition": "Relates a Role Holding association to the role held by the agent.",
+      "domain": "RoleHolding",
+      "range": "Role",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a Role Holding association to the role held by the agent. Domain: RoleHolding. Range: Role. has role is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a Role Holding association to the role held by the agent. Domain: RoleHolding. Range: Role. has role is functional: each subject has at most one value."
+    },
+    {
+      "id": "op:holdsRole",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "holds role",
+      "local_name": "holdsRole",
+      "uri": "https://www.w3id.org/cco/cco#holdsRole",
+      "skos_definition": "Relates an agent to the time-bounded association through which that agent holds a role.",
+      "domain": "Agent",
+      "range": "RoleHolding",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates an agent to the time-bounded association through which that agent holds a role. Domain: Agent. Range: RoleHolding.",
+      "llm_context_text": "Relates an agent to the time-bounded association through which that agent holds a role. Domain: Agent. Range: RoleHolding."
+    },
+    {
+      "id": "op:issues",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "issues",
+      "local_name": "issues",
+      "uri": "https://www.w3id.org/cco/cco#issues",
+      "skos_definition": "Relates a regulatory authority agent to a regulation that the agent issues.",
+      "domain": "RegulatoryAuthorityAgent",
+      "range": "Regulation",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a regulatory authority agent to a regulation that the agent issues. Domain: RegulatoryAuthorityAgent. Range: Regulation.",
+      "llm_context_text": "Relates a regulatory authority agent to a regulation that the agent issues. Domain: RegulatoryAuthorityAgent. Range: Regulation."
+    },
+    {
+      "id": "op:modifiesNorm",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "modifies norm",
+      "local_name": "modifiesNorm",
+      "uri": "https://www.w3id.org/cco/cco#modifiesNorm",
+      "skos_definition": "Relates an exception to a norm whose applicability or force is modified by that exception.",
+      "domain": "Exception",
+      "range": "Norm",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates an exception to a norm whose applicability or force is modified by that exception. Domain: Exception. Range: Norm.",
+      "llm_context_text": "Relates an exception to a norm whose applicability or force is modified by that exception. Domain: Exception. Range: Norm."
+    },
+    {
+      "id": "op:regulates",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "regulates",
+      "local_name": "regulates",
+      "uri": "https://www.w3id.org/cco/cco#regulates",
+      "skos_definition": "Relates a regulation to a resource that falls within the regulatory scope of that regulation.",
+      "domain": "Regulation",
+      "range": "Resource",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a regulation to a resource that falls within the regulatory scope of that regulation. Domain: Regulation. Range: Resource.",
+      "llm_context_text": "Relates a regulation to a resource that falls within the regulatory scope of that regulation. Domain: Regulation. Range: Resource."
+    },
+    {
+      "id": "op:specifiesNorm",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "specifies norm",
+      "local_name": "specifiesNorm",
+      "uri": "https://www.w3id.org/cco/cco#specifiesNorm",
+      "skos_definition": "Relates a regulation to a norm specified by that regulation.",
+      "domain": "Regulation",
+      "range": "Norm",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a regulation to a norm specified by that regulation. Domain: Regulation. Range: Norm.",
+      "llm_context_text": "Relates a regulation to a norm specified by that regulation. Domain: Regulation. Range: Norm."
+    },
+    {
+      "id": "op:supersedes",
+      "item_type": "object_property",
+      "collection": "cco_schema",
+      "label": "supersedes",
+      "local_name": "supersedes",
+      "uri": "https://www.w3id.org/cco/cco#supersedes",
+      "skos_definition": "Relates a regulation to a previous regulation that the regulation replaces or supersedes within the same regulatory domain.",
+      "domain": "Regulation",
+      "range": "Regulation",
+      "owl_characteristics": [
+        "owl:TransitiveProperty"
+      ],
+      "retrieval_text": "Relates a regulation to a previous regulation that the regulation replaces or supersedes within the same regulatory domain. Domain: Regulation. Range: Regulation. supersedes is transitive: if A supersedes B and B supersedes C then A supersedes C.",
+      "llm_context_text": "Relates a regulation to a previous regulation that the regulation replaces or supersedes within the same regulatory domain. Domain: Regulation. Range: Regulation. supersedes is transitive: if A supersedes B and B supersedes C then A supersedes C."
+    }
+  ],
+  "data_properties": [
+    {
+      "id": "dp:hasActionExpression",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has action expression",
+      "local_name": "hasActionExpression",
+      "uri": "https://www.w3id.org/cco/cco#hasActionExpression",
+      "skos_definition": "Relates an action to a plain text string that records the action description, preserving the wording of the regulatory source text.",
+      "domain": "Action",
+      "range": "string",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates an action to a plain text string that records the action description, preserving the wording of the regulatory source text. Domain: Action. Range: string.",
+      "llm_context_text": "Relates an action to a plain text string that records the action description, preserving the wording of the regulatory source text. Domain: Action. Range: string."
+    },
+    {
+      "id": "dp:hasApplicabilityEnd",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has applicability end",
+      "local_name": "hasApplicabilityEnd",
+      "uri": "https://www.w3id.org/cco/cco#hasApplicabilityEnd",
+      "skos_definition": "Relates a norm to the date on which that norm ceases to be applicable.",
+      "domain": "Norm",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a norm to the date on which that norm ceases to be applicable. Domain: Norm. Range: date. Marks the end of a norm's operative period; this end date is optional. has applicability end is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a norm to the date on which that norm ceases to be applicable. Domain: Norm. Range: date. Marks the end of a norm's operative period; this end date is optional. has applicability end is functional: each subject has at most one value."
+    },
+    {
+      "id": "dp:hasApplicabilityStart",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has applicability start",
+      "local_name": "hasApplicabilityStart",
+      "uri": "https://www.w3id.org/cco/cco#hasApplicabilityStart",
+      "skos_definition": "Relates a norm to the date from which that norm becomes applicable.",
+      "domain": "Norm",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a norm to the date from which that norm becomes applicable. Domain: Norm. Range: date. Marks the start of a norm's operative period. has applicability start is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a norm to the date from which that norm becomes applicable. Domain: Norm. Range: date. Marks the start of a norm's operative period. has applicability start is functional: each subject has at most one value."
+    },
+    {
+      "id": "dp:hasConditionExpression",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has condition expression",
+      "local_name": "hasConditionExpression",
+      "uri": "https://www.w3id.org/cco/cco#hasConditionExpression",
+      "skos_definition": "Relates a condition to a human-readable textual expression that describes the applicability criterion.",
+      "domain": "Condition",
+      "range": "string",
+      "owl_characteristics": [],
+      "retrieval_text": "Relates a condition to a human-readable textual expression that describes the applicability criterion. Domain: Condition. Range: string.",
+      "llm_context_text": "Relates a condition to a human-readable textual expression that describes the applicability criterion. Domain: Condition. Range: string."
+    },
+    {
+      "id": "dp:hasEndTime",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has end time",
+      "local_name": "hasEndTime",
+      "uri": "https://www.w3id.org/cco/cco#hasEndTime",
+      "skos_definition": "Relates a Role Holding association to the date on which it ends.",
+      "domain": "RoleHolding",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a Role Holding association to the date on which it ends. Domain: RoleHolding. Range: date. Marks when an agent ceases holding a role. has end time is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a Role Holding association to the date on which it ends. Domain: RoleHolding. Range: date. Marks when an agent ceases holding a role. has end time is functional: each subject has at most one value."
+    },
+    {
+      "id": "dp:hasStartTime",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has start time",
+      "local_name": "hasStartTime",
+      "uri": "https://www.w3id.org/cco/cco#hasStartTime",
+      "skos_definition": "Relates a Role Holding association to the date on which it begins.",
+      "domain": "RoleHolding",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a Role Holding association to the date on which it begins. Domain: RoleHolding. Range: date. Marks when an agent begins holding a role. has start time is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a Role Holding association to the date on which it begins. Domain: RoleHolding. Range: date. Marks when an agent begins holding a role. has start time is functional: each subject has at most one value."
+    },
+    {
+      "id": "dp:hasValidityEnd",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has validity end",
+      "local_name": "hasValidityEnd",
+      "uri": "https://www.w3id.org/cco/cco#hasValidityEnd",
+      "skos_definition": "Relates a regulation to the date on which its validity ends.",
+      "domain": "Regulation",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a regulation to the date on which its validity ends. Domain: Regulation. Range: date. Marks when a regulation formally expires as an instrument. has validity end is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a regulation to the date on which its validity ends. Domain: Regulation. Range: date. Marks when a regulation formally expires as an instrument. has validity end is functional: each subject has at most one value."
+    },
+    {
+      "id": "dp:hasValidityStart",
+      "item_type": "data_property",
+      "collection": "cco_schema",
+      "label": "has validity start",
+      "local_name": "hasValidityStart",
+      "uri": "https://www.w3id.org/cco/cco#hasValidityStart",
+      "skos_definition": "Relates a regulation to the date on which its validity begins.",
+      "domain": "Regulation",
+      "range": "date",
+      "owl_characteristics": [
+        "owl:FunctionalProperty"
+      ],
+      "retrieval_text": "Relates a regulation to the date on which its validity begins. Domain: Regulation. Range: date. Marks when a regulation formally comes into force as an instrument. has validity start is functional: each subject has at most one value.",
+      "llm_context_text": "Relates a regulation to the date on which its validity begins. Domain: Regulation. Range: date. Marks when a regulation formally comes into force as an instrument. has validity start is functional: each subject has at most one value."
+    }
+  ]
+}
