@@ -82,8 +82,6 @@ The synthesised ontology is evaluated along three dimensions:
 
 ---
 
----
-
 ## Browsing the Ontology
 
 The main artefacts are TTL files in `ontology/`:
@@ -120,7 +118,6 @@ This work is licensed under the [MIT License](LICENSE).
 ## Citation
 
 ```
-Arshad, U., Corsar, D., Nkisi-Orji, I.: Synthesising Regulatory Ontologies:
-A Schemaand Pattern-Guided Approach 
+Arshad, U., Corsar, D., Nkisi-Orji, I.: Synthesising Regulatory Ontologies:A Schemaand Pattern-Guided Approach 
 Available at: https://github.com/RGU-Computing/CCO
 ```
