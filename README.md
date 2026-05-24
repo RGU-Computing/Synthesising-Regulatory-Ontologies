@@ -40,7 +40,6 @@ Full ontology documentation is available at:
 ├── ontology/                    # Synthesised regulatory ontology
 │   ├── per-jurisdiction/         # Per-jurisdiction ontologies (UK, US, CA, AU)
 │   ├── shared/                   # Domain regulatory ontology (69 shared classes)
-│   ├── alignments/               # SKOS cross-jurisdiction mappings (362)
 │   └── unified/                  # Unified legislation regulatory ontology
 │
 ├── schema-and-patterns/             # Schema and pattern artefacts
